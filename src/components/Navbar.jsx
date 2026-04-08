@@ -1,10 +1,21 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { FaFacebookF, FaLinkedinIn, FaInstagram, FaPhoneAlt } from 'react-icons/fa';
 import { IoMenuOutline, IoCloseOutline } from 'react-icons/io5';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  // Scroll detection
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 50);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   const menuItems = [
     "HOMEOWNERS", "PROPERTY MANAGEMENT", "LET", "SELL WITH US",
@@ -15,12 +26,17 @@ const Navbar = () => {
   const locations = ["Leicester", "Kibworth", "Barrow Upon Soar"];
 
   return (
-    // Changed relative to absolute and added max-width for better desktop alignment
-    <nav className="w-full p-6 md:p-10 flex justify-between items-center bg-transparent">
+    <nav
+      className={`w-full p-5 flex justify-between items-center fixed top-0 left-0 z-50 transition-all duration-300 ${
+        isScrolled
+          ? "bg-[#041C55]/90 backdrop-blur-md shadow-lg"
+          : "bg-transparent"
+      }`}
+    >
       {/* Logo */}
       <div className="w-32 md:w-44">
         <img 
-          src="https://berkleyestates.co.uk/wp-content/uploads/2024/12/Screenshot_2024-12-20_151158-removebg-preview.png" 
+          src="logo.png" 
           alt="Berkley Logo" 
           className="w-full h-auto brightness-0 invert" 
         />
@@ -42,7 +58,7 @@ const Navbar = () => {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.3 }}
-            className="fixed inset-0 bg-[#041C55] text-white z-[100] flex flex-col justify-between p-8 md:p-16"
+            className="fixed inset-0 bg-[#041C55] text-white z-100 flex flex-col justify-between p-8 md:p-16"
           >
             {/* Overlay Header */}
             <div className="flex justify-between items-start">
