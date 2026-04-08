@@ -2,16 +2,16 @@ import React from 'react';
 
 const MakeMoveCTA = () => {
   return (
-    <section className="relative w-full py-17 overflow-hidden">
+    <section className="relative w-full py-20 overflow-hidden">
       {/* 1. Background Image with Overlay */}
       <div 
-        className="absolute inset-0 z-0 bg-cover bg-center md:bg-fixed"
+        className="absolute inset-0 z-0 bg-cover"
         style={{ 
-          backgroundImage: `url('/path-to-your-rooftop-image.jpg')`, // Replace with actual path
+          backgroundImage: `url('/cta.webp')`, // Replace with actual path
         }}
       >
         {/* Dark overlay to make text pop - matching the image's moody blue-grey tone */}
-        <div className="absolute inset-0 bg-slate-900/60 backdrop-brightness-75" />
+        <div className="absolute inset-0 bg-black/50 backdrop-brightness-75" />
       </div>
 
       {/* 2. Content Layer */}

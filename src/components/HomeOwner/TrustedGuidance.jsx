@@ -18,7 +18,7 @@ const TrustedGuidance = () => {
           Trusted Guidance for Selling Your Home
         </h2>
         
-        <p className="text-sm md:text-base text-gray-200 leading-relaxed mb-10 max-w-xl">
+        <p className="text-sm md:text-base text-white leading-relaxed mb-10 max-w-xl">
           Selling your home is a major milestone, and we're here to support you every 
           step of the way. Our knowledgeable team understands the intricacies of the 
           property market and provides honest, practical advice to help you secure the 
