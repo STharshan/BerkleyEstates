@@ -6,17 +6,17 @@ const WhyBerkleyEstates = () => {
       <div className="max-w-6xl mx-auto flex flex-col items-center text-center">
         
         {/* Main Heading */}
-        <h2 className="text-3xl text-gray-900 mb-6">
+        <h2 className="text-3xl text-black mb-6">
           Why Berkley Estates
         </h2>
 
         {/* Sub-heading / Tagline */}
-        <h3 className="text-lg  text-gray-800 font-normal mb-10">
+        <h3 className="text-lg  text-black font-normal mb-10">
           Expertise you can trust, service that stands out.
         </h3>
 
         {/* Description Paragraph */}
-        <p className="text-gray-700 leading-relaxed text-base text-left mb-12">
+        <p className="text-black leading-relaxed text-base text-left mb-12">
           As a local agency, we take pride in our strong community ties. Living and 
           working in the areas we serve gives us unparalleled insight into the local 
           property market. Our approach blends professionalism with a personal touch, 

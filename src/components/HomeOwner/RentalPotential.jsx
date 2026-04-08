@@ -18,7 +18,7 @@ const RentalPotential = () => {
           choose the level of involvement that works best for you.
         </p>
 
-        <button className="border border-black px-10 py-3 text-sm font-medium tracking-widest uppercase transition-all duration-300 hover:bg-black hover:text-white">
+        <button className="border border-black px-10 py-3 text-sm font-medium tracking-widest uppercase transition-all duration-300 hover:bg-[#041C55] rounded-sm hover:text-white">
           Find Out More
         </button>
       </div>

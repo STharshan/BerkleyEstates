@@ -1,6 +1,5 @@
 import React from 'react';
 import { HiChevronDown } from 'react-icons/hi2'; // Heroicons v2
-import { MdVerified } from 'react-icons/md';    // Material Design Icons
 
 const HomeownersHero = () => {
   return (
@@ -8,9 +7,9 @@ const HomeownersHero = () => {
       
       {/* 1. Background Image Container */}
       <div 
-        className="absolute inset-0 w-full h-full bg-cover bg-center grayscale brightness-[0.4] md:brightness-50"
+        className="absolute inset-0 w-full h-full bg-cover bg-center brightness-[0.4] md:brightness-50"
         style={{ 
-          backgroundImage: `url('/your-neighborhood-image.jpg')`,
+          backgroundImage: `url('/owner.webp')`,
         }}
       />
 
