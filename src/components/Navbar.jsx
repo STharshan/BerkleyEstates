@@ -36,7 +36,7 @@ const Navbar = () => {
       {/* Logo */}
       <div className="w-32 md:w-44">
         <img 
-          src="logo.png" 
+          src="/logo.png" 
           alt="Berkley Logo" 
           className="w-full h-auto brightness-0 invert" 
         />
