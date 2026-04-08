@@ -3,6 +3,7 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 
 import Home from "./pages/Home";
+import HomeOwner from "./pages/HomeOwner";
 
 
 function App() {
@@ -12,6 +13,7 @@ function App() {
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/homeowners" element={<HomeOwner />} />
       </Routes>
       <Footer />
     </Router>

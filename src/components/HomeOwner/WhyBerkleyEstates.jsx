@@ -1,0 +1,36 @@
+import React from 'react';
+
+const WhyBerkleyEstates = () => {
+  return (
+    <section className="bg-white py-16 px-6 md:py-24 lg:py-32">
+      <div className="max-w-6xl mx-auto flex flex-col items-center text-center">
+        
+        {/* Main Heading */}
+        <h2 className="text-3xl text-gray-900 mb-6">
+          Why Berkley Estates
+        </h2>
+
+        {/* Sub-heading / Tagline */}
+        <h3 className="text-lg  text-gray-800 font-normal mb-10">
+          Expertise you can trust, service that stands out.
+        </h3>
+
+        {/* Description Paragraph */}
+        <p className="text-gray-700 leading-relaxed text-base text-left mb-12">
+          As a local agency, we take pride in our strong community ties. Living and 
+          working in the areas we serve gives us unparalleled insight into the local 
+          property market. Our approach blends professionalism with a personal touch, 
+          ensuring every client gets expert guidance and outstanding results.
+        </p>
+
+        {/* CTA Button */}
+        <button className="border border-black px-5 py-2.5 rounded-sm text-sm tracking-widest uppercase transition-colors duration-300 hover:bg-black hover:text-white">
+          Book Your Valuation
+        </button>
+
+      </div>
+    </section>
+  );
+};
+
+export default WhyBerkleyEstates;
