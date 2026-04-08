@@ -1,7 +1,7 @@
 import React from 'react';
 import { HiChevronDown } from 'react-icons/hi2'; // Heroicons v2
 
-const HomeownersHero = () => {
+const LetHero = () => {
   return (
     <section className="relative w-full h-[60vh] md:h-[80vh] lg:h-screen overflow-hidden bg-black font-sans">
       
@@ -9,7 +9,7 @@ const HomeownersHero = () => {
       <div 
         className="absolute inset-0 w-full h-full bg-cover bg-center brightness-[0.4] md:brightness-50"
         style={{ 
-          backgroundImage: `url('/owner.webp')`,
+          backgroundImage: `url('/let.jpg')`,
         }}
       />
 
@@ -19,7 +19,7 @@ const HomeownersHero = () => {
       {/* 3. Content Layer */}
       <div className="relative z-10 flex flex-col items-center justify-center h-full px-4 text-center">
         <h1 className="text-5xl mb-20 mt-20 font-normal tracking-tight text-white sm:text-7xl">
-          Homeowners
+          Let with us
         </h1>
         
         {/* Animated Icon from React Icons */}
@@ -34,4 +34,4 @@ const HomeownersHero = () => {
   );
 };
 
-export default HomeownersHero;
+export default LetHero;

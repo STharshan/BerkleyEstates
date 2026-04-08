@@ -4,6 +4,7 @@ import Footer from "./components/Footer";
 
 import Home from "./pages/Home";
 import HomeOwner from "./pages/HomeOwner";
+import Let from "./pages/let";
 
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/homeowners" element={<HomeOwner />} />
+        <Route path="/let" element={<Let />} />
       </Routes>
       <Footer />
     </Router>

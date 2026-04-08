@@ -88,7 +88,7 @@ const Navbar = () => {
                     initial={{ x: 40, opacity: 0 }}
                     animate={{ x: 0, opacity: 1 }}
                     transition={{ delay: index * 0.05 }}
-                    href={`#${item.toLowerCase().replace(/\s+/g, '-')}`}
+                    href={`/${item.toLowerCase().replace(/\s+/g, '-')}`}
                     className="text-sm font-semibold tracking-[0.25em] hover:text-blue-300 transition-colors"
                     onClick={() => setIsOpen(false)}
                   >
