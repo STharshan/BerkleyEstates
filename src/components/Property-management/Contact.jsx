@@ -26,14 +26,14 @@ const ContactPropertyManagementSection = () => {
   };
 
   return (
-    <section className="w-full bg-[#f3f3f3] px-5 py-16 md:px-8 lg:px-10 lg:py-24">
+    <section className="w-full bg-white px-5 py-16 md:px-8 lg:px-80 lg:py-24 font-primary">
       <div className="mx-auto max-w-[1150px] font-primary">
         <div className="mx-auto max-w-[1120px] text-center">
-          <h2 className="text-[34px] leading-[1.15] text-[#24364b] md:text-[52px] lg:text-[58px]">
+          <h2 className="text-[28px] leading-[1.15] text-[#333333] md:text-[32px] lg:text-[32px] font-primary">
             Let’s talk about how we can meet your property management needs.
           </h2>
 
-          <p className="mx-auto mt-8 max-w-[1100px] text-[18px] leading-[1.7] text-black md:text-[20px]">
+          <p className="mx-auto mt-8 max-w-[1100px] text-[18px] leading-[1.7] text-black md:text-[18px]">
             Discover the talented agents, creatives, and operational specialists
             behind the Berkley Estates team.
           </p>
@@ -44,7 +44,7 @@ const ContactPropertyManagementSection = () => {
           className="mx-auto mt-14 max-w-[1128px] space-y-10"
         >
           <div>
-            <label className="mb-2 block text-[16px] font-semibold text-black">
+            <label className="mb-2 block text-[14px] font-semibold text-black">
               First Name <span className="text-[#c85b68]">*</span>
             </label>
             <input
@@ -58,7 +58,7 @@ const ContactPropertyManagementSection = () => {
           </div>
 
           <div>
-            <label className="mb-2 block text-[16px] font-semibold text-black">
+            <label className="mb-2 block text-[14px] font-semibold text-black">
               Last Name <span className="text-[#c85b68]">*</span>
             </label>
             <input
@@ -72,7 +72,7 @@ const ContactPropertyManagementSection = () => {
           </div>
 
           <div>
-            <label className="mb-2 block text-[16px] font-semibold text-black">
+            <label className="mb-2 block text-[14px] font-semibold text-black">
               Your Email Address <span className="text-[#c85b68]">*</span>
             </label>
             <input
@@ -86,7 +86,7 @@ const ContactPropertyManagementSection = () => {
           </div>
 
           <div>
-            <label className="mb-2 block text-[16px] font-semibold text-black">
+            <label className="mb-2 block text-[14px] font-semibold text-black">
               Mobile Phone <span className="text-[#c85b68]">*</span>
             </label>
             <input
@@ -101,7 +101,7 @@ const ContactPropertyManagementSection = () => {
 
           <div>
             <div className="mb-2 flex items-center justify-between gap-4">
-              <label className="block text-[16px] font-semibold text-black">
+              <label className="block text-[14px] font-semibold text-black">
                 How can we help?
               </label>
               <span className="text-[15px] text-black">
