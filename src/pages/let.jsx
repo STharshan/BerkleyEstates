@@ -5,7 +5,6 @@ import LandlordServices from '../components/Let/LandlordServices'
 import TenantSection from '../components/Let/TenantSection'
 import PropertyLandingSection from '../components/Let/PropertyLanding'
 import PropertySection from '../components/Let/PropertySection'
-import TestimonialSlider from '../components/Let/TestimonialSlider'
 
 const Let = () => {
   return (
@@ -16,7 +15,6 @@ const Let = () => {
       <TenantSection />
       <PropertyLandingSection />
       <PropertySection />
-      <TestimonialSlider />
     </div>
   )
 }
