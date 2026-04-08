@@ -3,19 +3,19 @@ import React from "react";
 const AboutSection = () => {
   return (
     <section className="w-full bg-[#efefef] py-20 lg:py-28">
-      <div className="mx-auto max-w-[1600px] px-6 md:px-10 lg:px-16">
+      <div className="mx-auto max-w-6xl px-6 md:px-10 lg:px-16">
         {/* Top Section */}
-        <div className="grid grid-cols-1 gap-12 lg:grid-cols-2 lg:gap-16">
-          <div className="max-w-[620px]">
+        <div className="grid grid-cols-1 lg:grid-cols-2">
+          <div className="max-w-120">
             <div className="mb-8 h-px w-full bg-[#3b3b3b]" />
-            <h2 className="text-[42px] font-light leading-[1.05] tracking-[-0.02em] text-[#2f2f2f] md:text-[56px] lg:text-[64px]">
+            <h2 className="text-[42px] font-light leading-none   text-[#2f2f2f] md:text-[46px]">
               Exceptional homes, extraordinary service—more than agents, true
               partners in property
             </h2>
           </div>
 
-          <div className="max-w-[920px] lg:pt-1">
-            <p className="text-[18px] leading-[1.75] text-[#1f1f1f] md:text-[20px]">
+          <div className=" lg:pt-1">
+            <p className="text-xl leading-none text-[#1f1f1f]">
               We are a team of committed professionals passionate about
               providing a seamless and stress-free property experience. Our
               personalised approach, creative marketing strategies, and
@@ -32,10 +32,10 @@ const AboutSection = () => {
         </div>
 
         {/* Middle Image Section */}
-        <div className="mt-20 grid grid-cols-1 items-start gap-y-10 md:grid-cols-2 md:gap-x-10 lg:mt-28 lg:grid-cols-3 lg:gap-x-14 xl:gap-x-20">
+        <div className="mt-20 grid grid-cols-1 items-start gap-y-10 md:grid-cols-2 md:gap-x-10 lg:mt-28 lg:grid-cols-3">
           {/* Left Image */}
           <div className="flex justify-center lg:justify-start lg:pt-28">
-            <div className="w-full max-w-[420px]">
+            <div className="w-full max-w-105">
               <img
                 src="https://berkleyestates.co.uk/wp-content/uploads/2025/01/IMG_0268-1.webp"
                 alt="Berkley Estates home exterior"
@@ -46,7 +46,7 @@ const AboutSection = () => {
 
           {/* Center Image + Text */}
           <div className="flex flex-col items-center lg:-mt-8">
-            <div className="w-full max-w-[420px]">
+            <div className="w-full max-w-105">
               <img
                 src="https://berkleyestates.co.uk/wp-content/uploads/elementor/thumbs/IMG_5418-2-r04po368vqxzr3zyh71sonx8gmbazcx5jlntcmelee.webp"
                 alt="Berkley Estates agent"
@@ -54,8 +54,8 @@ const AboutSection = () => {
               />
             </div>
 
-            <div className="mt-8 w-full max-w-[420px]">
-              <p className="text-[18px] leading-[1.65] text-[#1f1f1f] md:text-[19px]">
+            <div className="mt-8 w-full max-w-105">
+              <p className="text-5 leading-none text-[#1f1f1f]">
                 Building authentic relationships with clients is at the heart of
                 everything we do. We take the time to listen, understand, and
                 connect on a personal level.
@@ -65,7 +65,7 @@ const AboutSection = () => {
 
           {/* Right Image */}
           <div className="flex justify-center lg:justify-end lg:pt-28">
-            <div className="w-full max-w-[420px]">
+            <div className="w-full max-w-105">
               <img
                 src="https://berkleyestates.co.uk/wp-content/uploads/2025/01/IMG_8293-1.webp"
                 alt="Berkley Estates interior"
@@ -77,8 +77,8 @@ const AboutSection = () => {
 
         {/* Bottom Section */}
         <div className="mt-24 grid grid-cols-1 items-center gap-12 lg:mt-28 lg:grid-cols-2 lg:gap-20">
-          <div className="max-w-[760px]">
-            <p className="text-[18px] leading-[1.75] text-[#1f1f1f] md:text-[20px]">
+          <div className="max-w-190">
+            <p className="text-[18px] leading-[1.2] text-[#1f1f1f]">
               Berkley Estates is a leading estate agency with comprehensive
               coverage across Leicestershire, offering expert sales and
               lettings services. Our top-performing sales agents are at the

@@ -18,13 +18,13 @@ const slides = [
 const GallerySection = () => {
   return (
     <section className="w-full bg-[#efede8] py-16 md:py-20">
-      <div className="mx-auto max-w-[1600px] px-5 md:px-8 lg:px-12">
-        <div className="mx-auto mb-10 max-w-[1300px] text-center">
-          <h4 className="text-[28px] font-normal leading-[1.2] text-black md:text-[40px]">
+      <div className="mx-auto max-w-6xl px-5 md:px-8 lg:px-12">
+        <div className="mx-auto mb-10 max-w-325 text-center">
+          <h4 className="text-2xl font-normal leading-[1.2] text-black">
             Unforgettable Abodes
           </h4>
 
-          <p className="mx-auto mt-5 max-w-[1380px] text-[16px] leading-[1.7] text-black md:text-[20px]">
+          <p className="mx-auto mt-5 max-w-285 text-[16px] leading-[1.4] text-black md:text-[20px]">
             Curated selection of homes that have left a lasting impression.
             Each residence tells a story of thoughtful design, meticulous
             details, and timeless appeal. Sold, yet still shaping the vision
@@ -32,7 +32,7 @@ const GallerySection = () => {
           </p>
         </div>
 
-        <div className="relative mx-auto max-w-[1520px]">
+        <div className="relative mx-auto max-w-380">
           <button className="abodes-prev absolute left-4 top-1/2 z-20 -translate-y-1/2 text-white md:left-6">
             <ChevronLeft className="h-10 w-10 md:h-12 md:w-12" strokeWidth={2.5} />
           </button>
@@ -66,7 +66,7 @@ const GallerySection = () => {
                   <img
                     src={image}
                     alt={`Abode ${index + 1}`}
-                    className="block h-[320px] w-full object-cover md:h-[520px] lg:h-[650px]"
+                    className="block h-80 w-full object-cover md:h-120"
                   />
                 </div>
               </SwiperSlide>
