@@ -25,23 +25,23 @@ const propertyPoints = [
 
 const PropertyExpertiseSection = () => {
   return (
-    <section className="w-full bg-[#e9e7e2] px-5 py-16 md:px-32 lg:py-24">
+    <section className="w-full bg-[#D8D6D0] px-5 py-16 md:px-56 lg:py-24">
       <div className="mx-auto grid max-w-[1450px] grid-cols-1 items-start gap-12 lg:grid-cols-[1.05fr_0.95fr] lg:gap-16">
         
         {/* LEFT CONTENT */}
         <div className="font-primary lg:pt-16">
-          <h3 className="text-[18px] uppercase tracking-[0.02em] text-[#2f3f53] md:text-[22px]">
+          <h3 className="text-[18px] uppercase tracking-[0.02em] text-[#333333] md:text-[16px]">
             Handling your property with expertise and care
           </h3>
 
-          <p className="mt-8 max-w-[760px] text-[24px] leading-[1.65] text-black md:text-[34px] md:leading-[1.55]">
+          <p className="mt-8 max-w-[760px] text-[18px] leading-[1.65] text-black md:text-[20px] md:leading-[1.55]">
             Choosing Berkley Estates means collaborating with a team that
             prioritises design, trust, and outstanding service. We’re committed
             to surpassing your expectations and maximising the value of your
             investment.
           </p>
 
-          <ul className="mt-14 space-y-8 pl-7 text-[16px] leading-[1.7] text-black md:text-[18px]">
+          <ul className="mt-10 space-y-4 pl-7 text-[16px] leading-[1.7] text-black md:text-[18px]">
             {propertyPoints.map((item, index) => (
               <li key={index} className="list-disc">
                 <span className="font-semibold">{item.title}</span>{" "}

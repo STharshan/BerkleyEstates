@@ -16,7 +16,7 @@ const LetsTalkSection = () => {
       {/* Content */}
       <div className="relative z-10 mx-auto flex min-h-[560px] max-w-[1400px] items-center justify-center px-5 py-20 md:px-10 lg:min-h-[700px]">
         <div className="flex max-w-[1100px] flex-col items-center text-center font-primary">
-          <h2 className="max-w-[1100px] text-[34px] leading-[1.2] text-white md:text-[48px] lg:text-[56px]">
+          <h2 className="max-w-[1100px] text-[28px] leading-[1.2] text-white md:text-[32px] lg:text-[32px]">
             Leave the details to us and reap the benefits.
           </h2>
 
@@ -28,7 +28,7 @@ const LetsTalkSection = () => {
 
           <a
             href="/contact"
-            className="mt-10 inline-flex min-h-[50px] items-center justify-center border border-white px-8 py-3 text-[14px] font-medium uppercase tracking-[0.04em] text-white transition duration-300 hover:bg-white hover:text-black"
+            className="mt-10 inline-flex min-h-[50px] items-center justify-center border border-white px-6 py-1 text-[16px] font-medium uppercase tracking-[0.04em] text-white transition duration-300  hover:bg-[#001C56] hover:text-white hover:border-[#001C56]"
           >
             Let&apos;s Talk
           </a>

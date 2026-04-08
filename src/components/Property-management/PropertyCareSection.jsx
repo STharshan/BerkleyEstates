@@ -1,7 +1,7 @@
 
 const PropertyCareSection = () => {
   return (
-    <section className="w-full bg-[#f3f3f3] px-5 py-16 md:px-8 md:py-20 lg:py-24 font-primary">
+    <section className="w-full bg-white px-5 py-16 md:px-8 md:py-20 lg:py-24 font-primary">
       <div className="mx-auto flex max-w-[1100px] flex-col items-center text-center ">
         <h2
           className="
@@ -47,9 +47,9 @@ const PropertyCareSection = () => {
             justify-center
             border
             border-[#7d7d7d]
-            px-6
-            py-3
-            text-[12px]
+            py-[12px]
+            px-[24px]
+            text-[16px]
             font-medium
             uppercase
             tracking-[0.04em]

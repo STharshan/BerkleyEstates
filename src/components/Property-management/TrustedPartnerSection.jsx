@@ -68,7 +68,7 @@ const TrustedPartnerSection = () => {
   };
 
   return (
-    <section className="w-full bg-[#efefef] px-5 py-16 md:px-10 lg:py-24">
+    <section className="w-full bg-white px-5 py-16 md:px-10 lg:py-24">
       <div className="mx-auto grid max-w-[1200px] grid-cols-1 items-center gap-10 md:grid-cols-2">
 
         {/* LEFT IMAGE */}
@@ -83,11 +83,11 @@ const TrustedPartnerSection = () => {
         {/* RIGHT CONTENT */}
         <div className="w-full font-primary">
 
-          <h3 className="mb-4 text-[22px] md:text-[26px] lg:text-[30px]">
+          <h3 className="mb-4 text-[22px] md:text-[25px] lg:text-[25px] texr-black">
             Your Trusted Partner
           </h3>
 
-          <p className="mb-6 text-[14px] leading-[1.9] md:text-[15px]">
+          <p className="mb-6 text-[14px] leading-[1.5] md:text-[18px]">
             Finding and keeping reliable tenants to preserving your property’s
             value and staying on top of legal requirements, we handle every
             aspect with precision—giving you the freedom to enjoy worry-free
@@ -109,7 +109,7 @@ const TrustedPartnerSection = () => {
                   {/* HEADER */}
                   <button
                     onClick={() => toggle(index)}
-                    className="flex w-full items-center gap-3 bg-[#f7f7f7] px-4 py-[15px] text-left text-[14px] md:text-[15px]"
+                    className="flex w-full items-center gap-3 bg-white px-4 py-[15px] text-left text-[14px] md:text-[16px]"
                   >
                     <Icon isOpen={isOpen} />
                     <span>{item.title}</span>
@@ -124,7 +124,7 @@ const TrustedPartnerSection = () => {
                     }`}
                   >
                     <div className="overflow-hidden">
-                      <div className="bg-white px-4 py-3 text-[14px] leading-[1.8]">
+                      <div className="bg-white px-4 py-3 text-[16px] leading-[1.8]">
                         {item.content}
                       </div>
                     </div>
