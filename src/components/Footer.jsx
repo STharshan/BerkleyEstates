@@ -13,7 +13,7 @@ export default function Footer() {
             <img
               src="logo.png"
               alt="logo"
-              className="w-[180px]"
+              className="w-45"
             />
           </div>
 
