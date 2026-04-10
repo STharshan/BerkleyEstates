@@ -1,1 +1,9 @@
+
 @import "tailwindcss";
+.font-primary {
+  font-family: "Source Sans Pro", Helvetica, Arial, sans-serif;
+}
+
+.font-serif {
+    font-family: "Times New Roman", Times, serif;;
+}
