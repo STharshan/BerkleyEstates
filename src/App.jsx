@@ -3,9 +3,7 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 
 import Home from "./pages/Home";
-import HomeOwner from "./pages/HomeOwner";
-import Let from "./pages/let";
-
+import Maintenance from "./pages/Maintenance";
 
 function App() {
 
@@ -14,8 +12,7 @@ function App() {
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/homeowners" element={<HomeOwner />} />
-        <Route path="/let" element={<Let />} />
+        <Route path="/maintenance" element={<Maintenance />} />
       </Routes>
       <Footer />
     </Router>
