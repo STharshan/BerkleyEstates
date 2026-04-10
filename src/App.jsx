@@ -3,7 +3,7 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 
 import Home from "./pages/Home";
-import SellwithUs from "./pages/SellwithUs";
+import Propertymanagement from "./pages/Property-management";
 
 function App() {
 
@@ -12,7 +12,7 @@ function App() {
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/sell-berkley-estate" element={<SellwithUs />} />
+        <Route path="/property-management" element={<Propertymanagement />} />
       </Routes>
       <Footer />
     </Router>
