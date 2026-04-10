@@ -1,5 +1,6 @@
 import HeroSection from "../Common/Hero"
 import AboutSection from "../Common/About"
+import TrustedPartnerSection from "../components/Property-management/TrustedPartnerSection"
 const Propertymanagement = () => {
     return (
         <div>
@@ -8,6 +9,7 @@ const Propertymanagement = () => {
         bgImage="/hero-property-management.jpeg"
       />
           <AboutSection id="Propertymanagement" />
+          <TrustedPartnerSection />
         </div>
     )
 }

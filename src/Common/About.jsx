@@ -23,7 +23,7 @@ const AboutSection = ({ id }) => {
         {data.buttonText && (
           <a
             href={data.buttonLink || "/contact"}
-            className="mt-8 inline-flex  items-center justify-center border border-[#7d7d7d] py-[12px] px-[24px] text-[14px] md:text-[15px] font-medium uppercase leading-none text-black transition duration-300 hover:bg-[#001C56] hover:text-white rounded-[3px]"
+            className="mt-9 inline-flex  items-center justify-center border border-[#7d7d7d] py-[12px] px-[24px] text-[14px] md:text-[15px] font-medium uppercase leading-none text-black transition duration-300 hover:bg-[#001C56] hover:text-white rounded-[3px]"
           >
             {data.buttonText}
           </a>
