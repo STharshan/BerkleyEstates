@@ -24,22 +24,21 @@ const Navbar = () => {
   const locations = ["Leicester", "Kibworth", "Barrow Upon Soar"];
 
   return (
-    <>
-      {/* NAVBAR */}
-      <nav
-        className={`w-full px-15 py-4 flex justify-between items-center fixed top-0 left-0 z-200 transition-all duration-300 ${(isScrolled || isOpen)
-            ? "bg-[#041C55] backdrop-blur-md shadow-lg"
-            : "bg-transparent"
-          }`}
-      >
-        {/* Logo */}
-        <div className="w-32 md:w-44">
-          <img
-            src="logo.png"
-            alt="Logo"
-            className="w-full h-auto brightness-0 invert"
-          />
-        </div>
+    <nav
+      className={`w-full p-5 flex justify-between items-center fixed top-0 left-0 z-50 transition-all duration-300 ${
+        isScrolled
+          ? "bg-[#041C55]/90 backdrop-blur-md shadow-lg"
+          : "bg-transparent"
+      }`}
+    >
+      {/* Logo */}
+      <div className="w-32 md:w-44">
+        <img 
+          src="/logo.png" 
+          alt="Berkley Logo" 
+          className="w-full h-auto brightness-0 invert" 
+        />
+      </div>
 
         {/* Toggle Button */}
         <button

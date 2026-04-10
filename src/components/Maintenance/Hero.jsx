@@ -2,12 +2,12 @@ import React from "react";
 
 const HeroSection = () => {
   return (
-    <section className="relative h-screen min-h-163 w-full overflow-hidden">
+    <section className="relative h-screen min-h-[650px] w-full overflow-hidden">
       
       {/* Background Image */}
       <div className="absolute inset-0">
         <img
-          src="/sell.webp"
+          src="/renting-banner.jpg"
           alt="Hero Background"
           className="h-full w-full object-cover"
         />
@@ -21,14 +21,14 @@ const HeroSection = () => {
           md:text-[40px] 
           lg:text-[70px]"
         >
-          Sell Discreetly
+         Maintenance
         </h1>
       </div>
 
       {/* Scroll Down Arrow (Your SVG) */}
       <a
         href="#team"
-        className="absolute bottom-35 left-1/2 z-10 -translate-x-1/2 text-white transition hover:scale-110"
+        className="absolute bottom-8 left-1/2 z-10 -translate-x-1/2 text-white transition hover:scale-110"
       >
         <svg
           viewBox="0 0 320 512"
