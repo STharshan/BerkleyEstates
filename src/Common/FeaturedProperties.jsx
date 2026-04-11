@@ -8,7 +8,7 @@ const FeaturedProperties = ({ id }) => {
   return (
     <section className="w-full bg-white py-20 px-6 md:px-10 lg:px-48">
       <div className="max-w-[1400px] mx-auto">
-        <h3 className="text-[14px] tracking-[2px] uppercase mb-10 text-black font-primary">
+        <h3 className="text-[16px] tracking-[2px] uppercase mb-10 text-[#0A0A0A] font-primary leading-[16px]">
           {sectionData.title}
         </h3>
 
@@ -34,7 +34,7 @@ const FeaturedProperties = ({ id }) => {
                   </p>
                   <div className="text-right">
                     <p className="text-[14px] md:text-[15px] text-black font-primary">{item.price}</p>
-                    <p className="text-[13px] text-gray-500 font-primary mt-1">{item.beds}</p>
+                    <p className="text-[14px] text-black font-primary font-normal mt-1">{item.beds}</p>
                   </div>
                 </div>
               </div>
