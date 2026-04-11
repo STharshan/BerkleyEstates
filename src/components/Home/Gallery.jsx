@@ -8,11 +8,18 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 
 const slides = [
-  "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?q=80&w=1600&auto=format&fit=crop",
-  "https://images.unsplash.com/photo-1494526585095-c41746248156?q=80&w=1600&auto=format&fit=crop",
-  "https://images.unsplash.com/photo-1484154218962-a197022b5858?q=80&w=1600&auto=format&fit=crop",
-  "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?q=80&w=1600&auto=format&fit=crop",
-  "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?q=80&w=1600&auto=format&fit=crop",
+  "s1.webp",
+  "s2.webp",
+  "s3.webp",
+  "s4.webp",
+  "s5.webp",
+  "s6.webp",
+  "s7.webp",
+  "s8.webp",
+  "s9.webp",
+  "s10.webp",
+  "s12.webp",
+  "s13.webp"
 ];
 
 const GallerySection = () => {

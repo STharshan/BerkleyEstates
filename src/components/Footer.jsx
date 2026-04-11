@@ -45,13 +45,13 @@ export default function Footer() {
 
             {/* Social Icons */}
             <div className="flex gap-5 text-2xl mt-5">
-              <a href="#" className="hover:opacity-70">
+              <a href="https://www.facebook.com/berkleyestates" className="hover:opacity-70">
                 <FaFacebookF />
               </a>
-              <a href="#" className="hover:opacity-70">
+              <a href="https://www.linkedin.com/company/berkleyestates/" className="hover:opacity-70">
                 <FaLinkedinIn />
               </a>
-              <a href="#" className="hover:opacity-70">
+              <a href="https://www.instagram.com/berkleyestates/" className="hover:opacity-70">
                 <FaInstagram />
               </a>
             </div>
