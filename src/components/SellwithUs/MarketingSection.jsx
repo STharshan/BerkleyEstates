@@ -5,12 +5,12 @@ const MarketingSection = () => {
       <div className="max-w-[1280px] mx-auto">
         
         {/* Grid eka 1280px athule fit wenna fixed widths nathiwa 1fr units use kara */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-start">
           
           {/* Left Content */}
-          <div className="w-full pt-2">
-            <p className="text-[14px] md:text-[15px] leading-[1.6] text-[#111111] dark:text-white font-primary">
-              At <span className="text-[#3F444B] dark:text-[#FF4B4B] font-semibold">Berkley Estates</span>, 
+          <div className="w-full ">
+            <p className="text-[15px] md:text-[15px] leading-[24px] text-black dark:text-white font-primary">
+              At <span className="text-black  font-semibold">Berkley Estates</span>, 
               we don’t just list properties—we actively
               market them to ensure they reach the right buyers. Our dynamic
               approach leverages the full power of social media, targeted
@@ -31,7 +31,7 @@ const MarketingSection = () => {
             <img
               src="/IMG_9026.jpeg"
               alt="Berkley Estates kitchen interior"
-              className="w-full h-[300px] md:h-[400px] lg:h-[450px] object-cover rounded-sm shadow-sm"
+              className="w-full  h-[300px] md:h-[380px] lg:h-[380px] object-cover rounded-sm shadow-sm"
             />
           </div>
 

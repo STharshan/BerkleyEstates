@@ -2,11 +2,11 @@
 const Partner = () => {
   return (
     <section className="w-full bg-white py-20 lg:py-28">
-      <div className="max-w-[1300px] mx-auto px-6 md:px-14">
-        <div className="grid grid-cols-1 lg:grid-cols-[1fr_650px] gap-14 lg:gap-20 items-center">
+      <div className="max-w-[1300px] mx-auto px-6 md:px-18">
+        <div className="grid grid-cols-1 lg:grid-cols-[1fr_650px] gap-14 lg:gap-0 items-center">
           
           {/* Left Content */}
-          <div className="max-w-[600px]">
+          <div className="max-w-full">
             
             {/* Quote */}
             <div className="text-[70px] md:text-[90px] leading-none text-[#c9c5bf] mb-6 font-serif-new">
@@ -37,7 +37,7 @@ const Partner = () => {
           </div>
 
           {/* Right Image */}
-          <div className="w-full">
+          <div className="w-full 2xl:ms-24 ms-0">
             <img
               src="/DSC09716-1536x994.webp"
               alt="Jake Brogden testimonial"
