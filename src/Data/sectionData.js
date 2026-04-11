@@ -19,6 +19,13 @@ export const about = {
     buttonText: "WHAT'S THE VALUE OF MY HOME?",
     buttonLink: "/valuation"
 
+  },
+
+  Aboutus:{
+ title: "About Us",
+    description: "Berkley Estates & Letting Agents is an independent, local company that operates throughout Leicestershire. Aside from the core services of sales and lettings, we are proud to provide our clients with many additional services. These include commercial; land & development; property management; block management; agriculture; planning consultancy; and mortgage advice. Do you want to know more about Berkley Estates’ Agents?",
+     buttonText: "Speak To Our Team",
+    buttonLink: "/contact"
   }
  
 };
@@ -60,6 +67,34 @@ export const trustedContent = {
     content:
       "We deliver consistent, comprehensive reports on your property’s status, financial performance, and any maintenance work carried out. This transparency ensures you’re always informed and in control while freeing you from the everyday management concerns.",
   },
+    ]
+  },
+ "aboutus": {
+    heading: "OUR VALUES",
+    description: "Exceptional architectural design, genuine relationships, and expert industry guidance are at the heart of everything we do—values embraced by the entire Berkley Estates team.",
+    image: "/IMG_5418-2.webp",
+    accordions: [
+       {
+    title: "Stylistic Strategy",
+    content:
+      "Our keen attention to detail shapes the spaces we design, the marketing we craft, and the way we connect with clients. Every aspect is executed with elegance and originality.",
+  },
+  {
+    title: "Dependability & Integrity",
+    content:
+      "Big life decisions deserve support you can rely on. Our team is warm, approachable, and always understanding. We’re real people who genuinely care. You can trust us to offer honest advice, heartfelt guidance, and our full attention every step of the way.",
+  },
+  {
+    title: "Synergy",
+    content:
+      "Across our four offices, we operate as one united team, driven by the same passion and shared vision. There’s no competition—only collaboration. By combining our expertise and firsthand property experience, we elevate the service you receive.",
+  },
+  {
+    title: "Unity",
+    content:
+      "Leicester, Kibworth, and Barrow Upon Soar are where we belong, and our strong network of family and friends extends throughout the community. Everything we do is driven by a desire to uplift the people and places we cherish.",
+  },
+  
     ]
   },
 

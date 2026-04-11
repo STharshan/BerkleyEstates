@@ -8,7 +8,7 @@ import Let from "./pages/let";
 import Propertymanagement from "./pages/Property-management";
 import Maintenance from "./pages/Maintenance"
 import SellwithUs from "./pages/SellwithUs";
-
+import AboutPage from "./pages/AboutPage";
 function App() {
 
   return (
@@ -20,7 +20,8 @@ function App() {
         <Route path="/let" element={<Let />} />
         <Route path="/property-management" element={<Propertymanagement />} />
        <Route path="/maintenance" element={<Maintenance />} />
-          <Route path="/sell-berkley-estate" element={<SellwithUs />} />
+      <Route path="/sell-berkley-estate" element={<SellwithUs />} />
+        <Route path="/about" element={<AboutPage />} />
       </Routes>
       <Footer />
     </Router>
