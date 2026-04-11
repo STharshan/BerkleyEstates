@@ -45,7 +45,7 @@ const FeaturedProperties = ({ id }) => {
         <div className="flex justify-center mt-14">
           <a
             href={sectionData.buttonLink}
-            className="inline-flex items-center justify-center border border-black px-8 md:px-16 py-4 text-[14px] md:text-[16px] uppercase text-black font-primary tracking-[0.5px] transition-all duration-300 hover:bg-[#B62025] hover:text-white hover:border-transparent"
+            className="inline-flex items-center justify-center border border-black px-8 md:px-16 py-4 text-[14px] md:text-[16px] uppercase text-black font-primary tracking-[0.5px] transition-all duration-300 hover:bg-[#001C56] hover:text-white hover:border-transparent"
           >
             {sectionData.buttonText}
           </a>
