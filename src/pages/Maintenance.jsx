@@ -1,5 +1,5 @@
 import HeroSection from "../Common/Hero"
-import AboutSection from "../Common/About"
+import AboutSection from "../components/Maintenance/about"
 import FixfloSection from "../components/Maintenance/FixFlo"
 const Maintenance = () => {
     return (
@@ -9,8 +9,7 @@ const Maintenance = () => {
             bgImage="/maintenance.jpg"
           />
           
-          {/* Injecting data using id */}
-          <AboutSection id="Maintenance" />
+          <AboutSection />
 
           <FixfloSection />
           
