@@ -8,6 +8,7 @@ import HomeOwner from "./pages/HomeOwner";
 import Maintenance from "./pages/Maintenance";
 import Let from "./pages/let";
 import SellwithUs from "./pages/SellwithUs";
+import Valuation from "./pages/Valuation";
 
 function App() {
 
@@ -21,6 +22,7 @@ function App() {
         <Route path="/maintenance" element={<Maintenance />} />
         <Route path="/let" element={<Let />} />
         <Route path="/sell-with-us" element={<SellwithUs />} />
+        <Route path="/valuation" element={<Valuation /> } />
       </Routes>
       <Footer />
     </Router>
