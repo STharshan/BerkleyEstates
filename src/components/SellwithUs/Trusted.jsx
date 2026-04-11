@@ -1,4 +1,4 @@
-const AboutSection = () => {
+const Trusted = () => {
   return (
     <section className="w-full bg-white py-20 lg:py-28">
       <div className="max-w-[1300px] mx-auto px-6 md:px-10">
@@ -55,4 +55,4 @@ const AboutSection = () => {
   );
 };
 
-export default AboutSection;
+export default Trusted;
