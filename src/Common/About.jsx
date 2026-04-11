@@ -8,14 +8,14 @@ const AboutSection = ({ id }) => {
   if (!data) return null;
 
   return (
-    <section className="w-full bg-white px-5 py-6 md:px-8 md:py-20 lg:py-20 font-primary">
+    <section className="w-full bg-white px-5 py-6 md:px-8 md:py-8 lg:py-20 font-primary">
       <div className="mx-auto flex max-w-[1100px] flex-col items-center text-center">
         
-        <h2 className=" text-[28px]  leading-[28px] md:leading-[32px] text-[#000000] md:text-[28px] lg:text-[32px] font-medium font-primary">
+        <h2 className=" text-[28px]  leading-[28px] md:leading-[32px] text-[#000000] md:text-[32px] lg:text-[32px] font-medium font-primary">
           {data.title}
         </h2>
 
-        <p className="mt-6  text-[14px] leading-[22px] md:leading-[25px] text-[#000000]  font-normal md:text-[16px] lg:text-[16px] font-primary px-0 md:px-24">
+        <p className="mt-6  text-[14px] leading-[22px] md:leading-[25px] text-[#000000]  font-normal md:text-[14px] lg:text-[16px] font-primary px-0 md:px-4 lg:px-24">
           {data.description}
         </p>
 
