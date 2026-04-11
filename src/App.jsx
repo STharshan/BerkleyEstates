@@ -11,6 +11,7 @@ import SellwithUs from "./pages/SellwithUs";
 import AboutPage from "./pages/AboutPage";
 import Contact from "./pages/Contact";
 import PrivacyPolicy from "./pages/PrivacyPolicyPage";
+import ComplaintsProcedure from "./pages/ComplaintsProcedure";
 function App() {
 
   return (
@@ -25,7 +26,8 @@ function App() {
         <Route path="/sell-berkley-estate" element={<SellwithUs />} />
         <Route path="/about" element={<AboutPage />} />
         <Route path="/contact" element={<Contact />} />
-         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+        <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+        <Route path="/complaints" element={<ComplaintsProcedure />} />
       </Routes>
       <Footer />
     </Router>
