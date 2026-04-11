@@ -164,3 +164,38 @@ export const propertyDataStore = {
   },
 
 };
+
+
+
+
+export const allTestimonials = {
+  Propertymanagement: {
+    heading: "What Our Clients Are Saying",
+    subHeading: "Our customers' words speak louder than ours.",
+    reviews: [
+      {
+        text: "As an overseas landlord, Daniel Newton’s excellent communication and management give me real peace of mind. He keeps me informed and ensures my property is well looked after. Highly recommend his professional and reliable service!",
+        author: "Mr Thandi",
+      },
+      {
+        text: "Managing a large portfolio requires trust, and Scott consistently delivers. His proactive approach, clear communication, and attention to detail ensure everything runs smoothly. Highly recommend his expertise and reliability!",
+        author: "Mr Mehta",
+      },
+    ],
+  },
+  
+  aboutus: {
+    heading: "Hear from our clients",
+    subHeading: "No one knows us better than those we do it for.​",
+    reviews: [
+      {
+        text: "Nicole was amazing in helping me find my dream home! She understood exactly what I was looking for and made the whole process stress-free. I couldn’t be happier—thank you, Nicole!",
+        author: "Mr S Singh",
+      },
+      {
+        text: "Sam was incredibly efficient in selling my property and securing my next home in no time. He kept everything running smoothly and made what could have been stressful feel effortless. Huge thanks, Sam!",
+        author: "Mr & Mrs Stone",
+      },
+    ],
+  },
+};

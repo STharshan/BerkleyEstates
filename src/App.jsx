@@ -9,6 +9,7 @@ import Propertymanagement from "./pages/Property-management";
 import Maintenance from "./pages/Maintenance"
 import SellwithUs from "./pages/SellwithUs";
 import AboutPage from "./pages/AboutPage";
+import Contact from "./pages/Contact";
 function App() {
 
   return (
@@ -22,6 +23,7 @@ function App() {
        <Route path="/maintenance" element={<Maintenance />} />
       <Route path="/sell-berkley-estate" element={<SellwithUs />} />
         <Route path="/about" element={<AboutPage />} />
+             <Route path="/contact" element={<Contact />} />
       </Routes>
       <Footer />
     </Router>

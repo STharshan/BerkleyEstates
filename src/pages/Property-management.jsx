@@ -3,7 +3,7 @@ import AboutSection from "../Common/About"
 import TrustedPartnerSection from "../Common/TrustedPartnerSection"
 import LetsTalkSection from "../components/Property-management/LetsTalkSection"
 import PropertyExpertiseSection from "../components/Property-management/PropertyExpertiseSection"
-import TestimonialSection from "../components/Property-management/TestimonialSection"
+import TestimonialSection from "../Common/TestimonialSection"
 import ContactSection from "../components/Property-management/Contact"
 const Propertymanagement = () => {
     return (
@@ -20,7 +20,7 @@ const Propertymanagement = () => {
           <TrustedPartnerSection pageId="Propertymanagement" />
            <LetsTalkSection />
            <PropertyExpertiseSection />
-           <TestimonialSection />
+          <TestimonialSection pageId="Propertymanagement" />
            <ContactSection />
         </div>
     )
