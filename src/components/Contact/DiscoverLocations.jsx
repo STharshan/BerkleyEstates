@@ -24,7 +24,7 @@ const DiscoverLocations = () => {
     <section className="w-full bg-white py-16 md:py-20 lg:py-24 px-4 md:px-8 lg:px-32">
       <div className="max-w-[1520px] mx-auto">
         <div className=" mb-10">
-          <h2 className="text-[28px] md:text-[36px] font-primary text-black mb-4 text-center">
+          <h2 className="text-[25px] md:text-[25px] font-primary text-[#0A0A0A] mb-4 text-center font-medium">
             Discover our locations
           </h2>
           <p className="max-w-[1350px] text-left mx-auto text-[15px] md:text-[16px] leading-[1.8] text-black font-primary">
@@ -47,15 +47,15 @@ const DiscoverLocations = () => {
               </div>
 
               <div className="pt-5 text-black font-primary">
-                <h3 className="text-[16px] md:text-[18px] mb-4">{office.title}</h3>
+                <h3 className="text-[14px] md:text-[14px] mb-4">{office.title}</h3>
 
-                <div className="space-y-1 text-[15px] md:text-[16px] leading-[1.55]">
+                <div className="space-y-1 text-[14px] md:text-[14px] leading-[1.55]">
                   {office.address.map((line, i) => (
                     <p key={i}>{line}</p>
                   ))}
                 </div>
 
-                <p className="mt-5 text-[15px] md:text-[16px]">
+                <p className="mt-5 text-[14px] md:text-[14px]">
                   <span className="font-medium">T: </span>
                   {office.phone}
                 </p>
