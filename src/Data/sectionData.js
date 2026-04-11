@@ -5,6 +5,21 @@ export const about = {
     buttonText: "Speak To Our Team",
     buttonLink: "/contact"
   },
+
+  Maintenance :{
+     title: "Report Maintenance Problem Below",
+    description: "Our easy-to-use maintenance system allows you to report maintenance problems from a large selection of issues. In addition, it also gives recommendations on how you can resolve the issue yourself. If these recommendations aren’t able to resolve your issue, you can fill in any further details about the problem. Also, as well as this, you can attach any photos you are able to take before then submitting it. Then, you will receive a confirmation message that the issue has been submitted. In addition, you will also receive an email with all the details of your reported issue for personal reference. Our maintenance team will then be alerted and be able to take appropriate action.",
+    buttonText: "",
+    buttonLink: ""
+
+  },
+   SellwithUs :{
+     title: "Find Out Your Home’s Value",
+    description: "Selling your property with Berkley Estates ensures you receive the highest level of service, expert local knowledge, and outstanding results. With a strong presence across Leicestershire and South Derbyshire, Berkley’s three offices and talented agents provide unparalleled expertise in the local market. Their best-in-class marketing, combined with a well-established brand and an exceptional track record, means your home will receive maximum exposure to the right buyers. Committed to achieving the best possible price, Berkley Estates offers a full-service approach that makes the selling process seamless, professional, and highly effective.",
+    buttonText: "WHAT'S THE VALUE OF MY HOME?",
+    buttonLink: "/valuation"
+
+  }
  
 };
 
@@ -44,6 +59,71 @@ export const trustedContent = {
     title: "Open and Detailed Reporting",
     content:
       "We deliver consistent, comprehensive reports on your property’s status, financial performance, and any maintenance work carried out. This transparency ensures you’re always informed and in control while freeing you from the everyday management concerns.",
+  },
+    ]
+  },
+
+};
+
+export const propertyDataStore = {
+  "SellwithUs": {
+    title: "FEATURED PROPERTIES",
+    buttonText: "THINKING OF SELLING YOUR HOME?",
+    buttonLink: "/contact",
+    items: [
+      {
+    image: "/p1.jpg",
+    title: "The Moor",
+    price: "£1,400,000 Price Guide",
+    beds: "6 Bedrooms",
+  },
+  {
+    image: "/p2.jpg",
+    title: "Cotes Road",
+    price: "£1,300,000 Price Guide",
+    beds: "6 Bedrooms",
+  },
+  {
+    image: "/p3.jpg",
+    title: "Workhouse Lane",
+    price: "£900,000 Price Guide",
+    beds: "5 Bedrooms",
+  },
+  {
+    image: "/p4.jpg",
+    title: "Manor View Close",
+    price: "£895,000",
+    beds: "4 Bedrooms",
+  },
+  {
+    image: "/p5.jpg",
+    title: "Iris Close",
+    price: "£895,000",
+    beds: "4 Bedrooms",
+  },
+  {
+    image: "/p6.jpg",
+    title: "Ticknall Road",
+    price: "£875,000 Guide Price",
+    beds: "4 Bedrooms",
+  },
+  {
+    image: "/p7.jpg",
+    title: "Mill Street",
+    price: "£850,000 Price Guide",
+    beds: "4 Bedrooms",
+  },
+  {
+    image: "/p8.jpg",
+    title: "Potter Street",
+    price: "£680,000",
+    beds: "5 Bedrooms",
+  },
+  {
+    image: "/p9.jpg",
+    title: "Hinckley Road",
+    price: "£550,000",
+    beds: "4 Bedrooms",
   },
     ]
   },

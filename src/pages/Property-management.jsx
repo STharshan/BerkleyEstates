@@ -3,6 +3,8 @@ import AboutSection from "../Common/About"
 import TrustedPartnerSection from "../Common/TrustedPartnerSection"
 import LetsTalkSection from "../components/Property-management/LetsTalkSection"
 import PropertyExpertiseSection from "../components/Property-management/PropertyExpertiseSection"
+import TestimonialSection from "../components/Property-management/TestimonialSection"
+import ContactSection from "../components/Property-management/Contact"
 const Propertymanagement = () => {
     return (
         <div>
@@ -18,6 +20,8 @@ const Propertymanagement = () => {
           <TrustedPartnerSection pageId="Propertymanagement" />
            <LetsTalkSection />
            <PropertyExpertiseSection />
+           <TestimonialSection />
+           <ContactSection />
         </div>
     )
 }

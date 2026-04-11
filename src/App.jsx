@@ -6,6 +6,8 @@ import Home from "./pages/Home";
 import HomeOwner from "./pages/HomeOwner";
 import Let from "./pages/let";
 import Propertymanagement from "./pages/Property-management";
+import Maintenance from "./pages/Maintenance"
+import SellwithUs from "./pages/SellwithUs";
 
 function App() {
 
@@ -17,7 +19,8 @@ function App() {
         <Route path="/homeowners" element={<HomeOwner />} />
         <Route path="/let" element={<Let />} />
         <Route path="/property-management" element={<Propertymanagement />} />
-
+       <Route path="/maintenance" element={<Maintenance />} />
+          <Route path="/sell-berkley-estate" element={<SellwithUs />} />
       </Routes>
       <Footer />
     </Router>
