@@ -23,11 +23,11 @@ const DiscoverLocations = () => {
   return (
     <section className="w-full bg-white py-16 md:py-20 lg:py-24 px-4 md:px-8 lg:px-32">
       <div className="max-w-[1520px] mx-auto">
-        <div className="text-center mb-10">
-          <h2 className="text-[28px] md:text-[36px] font-primary text-black mb-4">
+        <div className=" mb-10">
+          <h2 className="text-[28px] md:text-[36px] font-primary text-black mb-4 text-center">
             Discover our locations
           </h2>
-          <p className="max-w-[1350px] mx-auto text-[15px] md:text-[16px] leading-[1.8] text-black font-primary">
+          <p className="max-w-[1350px] text-left mx-auto text-[15px] md:text-[16px] leading-[1.8] text-black font-primary">
             Each Berkley Estates office serves as a hub for real estate innovation.
             We’re at our happiest when building authentic relationships with clients;
             if you’d like to chat with our dedicated team of experts, do drop by and
