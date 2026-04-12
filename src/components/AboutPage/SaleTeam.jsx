@@ -1,5 +1,7 @@
-import React, { useState } from 'react';
-import { Mail, Phone } from 'lucide-react';
+import React, { useState, useEffect } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
+import { Phone } from 'lucide-react';
 
 const teamMembers = [
   {
@@ -32,8 +34,23 @@ const teamMembers = [
   },
 ];
 
+const useIsMobile = () => {
+  const [isMobile, setIsMobile] = useState(
+    typeof window !== 'undefined' ? window.innerWidth < 640 : false
+  );
+
+  useEffect(() => {
+    const handler = () => setIsMobile(window.innerWidth < 640);
+    window.addEventListener('resize', handler);
+    return () => window.removeEventListener('resize', handler);
+  }, []);
+
+  return isMobile;
+};
+
 const FlipCard = ({ member, index }) => {
   const [flipped, setFlipped] = useState(false);
+  const isMobile = useIsMobile();
 
   return (
     <div
@@ -42,9 +59,10 @@ const FlipCard = ({ member, index }) => {
       }`}
     >
       <div
-        className={`w-full max-w-md ${member.ratio} relative [perspective:1200px] cursor-pointer`}
-        onMouseEnter={() => setFlipped(true)}
-        onMouseLeave={() => setFlipped(false)}
+        className={`w-full max-w-md ${member.ratio} relative [perspective:1200px] ${!isMobile ? 'cursor-pointer' : ''}`}
+        onMouseEnter={() => !isMobile && setFlipped(true)}
+        onMouseLeave={() => !isMobile && setFlipped(false)}
+        onClick={() => isMobile && setFlipped((prev) => !prev)}
       >
         <div
           className={`relative w-full h-full [transform-style:preserve-3d] transition-transform duration-700 ease-in-out ${
@@ -61,17 +79,17 @@ const FlipCard = ({ member, index }) => {
           </div>
 
           {/* Back */}
-          <div className="absolute inset-0 [backface-visibility:hidden] [transform:rotateY(180deg)] bg-[#0e2045] flex flex-col items-center justify-center gap-5 px-6">
+          <div className="absolute inset-0 [backface-visibility:hidden] [transform:rotateY(180deg)] bg-[#001C56] flex flex-col items-center justify-center gap-5 px-6">
             <a
               href={`mailto:${member.email}`}
-              className="flex items-center gap-3 text-white text-sm hover:opacity-70 transition-opacity duration-200"
+              className="flex items-center gap-3 text-white text-[16px] hover:opacity-70 transition-opacity duration-200"
             >
-              <Mail size={15} className="shrink-0" />
+              <FontAwesomeIcon icon={faEnvelope} size="sm" className="shrink-0 text-white" />
               <span>{member.email}</span>
             </a>
             <a
               href={`tel:${member.phone.replace(/\s/g, '')}`}
-              className="flex items-center gap-3 text-white text-sm hover:opacity-70 transition-opacity duration-200"
+              className="flex items-center gap-3 text-white text-[16px] hover:opacity-70 transition-opacity duration-200"
             >
               <Phone size={15} className="shrink-0" />
               <span>{member.phone}</span>
@@ -80,18 +98,37 @@ const FlipCard = ({ member, index }) => {
         </div>
       </div>
 
-      <p className="mt-4 text-[13px] text-center w-full font-light text-black tracking-tight">
+      <p className="mt-4 text-[16px] text-center w-full font-normal text-black tracking-tight">
         {member.name}
       </p>
+
+      {isMobile && (
+        <div className="mt-2 flex flex-col items-center gap-2">
+          <a
+            href={`mailto:${member.email}`}
+            className="flex items-center gap-2 text-[14px] text-black"
+          >
+            <FontAwesomeIcon icon={faEnvelope} size="sm" className="shrink-0" />
+            <span>{member.email}</span>
+          </a>
+          <a
+            href={`tel:${member.phone.replace(/\s/g, '')}`}
+            className="flex items-center gap-2 text-[14px] text-black"
+          >
+            <Phone size={14} className="shrink-0" />
+            <span>{member.phone}</span>
+          </a>
+        </div>
+      )}
     </div>
   );
 };
 
 const SalesTeam = () => {
   return (
-    <section className="bg-[#D1D1CB] min-h-screen py-16 px-4 font-sans">
+    <section className="bg-[#D1D1CB] min-h-screen py-16 px-4 font-primary">
       <div className="max-w-6xl mx-auto">
-        <h2 className="text-center text-xl font-medium tracking-widest uppercase mb-16 text-gray-800">
+        <h2 className="text-center text-[24px] font-medium tracking-widest uppercase mb-16 text-black">
           Sales
         </h2>
 
