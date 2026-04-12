@@ -1,7 +1,7 @@
 const RightmoveSection = () => {
   return (
     <section className="w-full bg-[#D8D6D0] py-20 md:py-24">
-      <div className="max-w-6xl mx-auto px-6 md:px-10">
+      <div className="max-w-5xl mx-auto px-12 md:px-10 lg:px-24">
         <div className="flex flex-col items-start justify-center">
           <a
             href="https://www.rightmove.co.uk/"
@@ -28,11 +28,11 @@ const RightmoveSection = () => {
             </svg>
           </a>
 
-          <h2 className="text-[24px] md:text-[24px] font-normal text-black leading-tight mb-10 font-primary">
+          <h2 className="text-[22px] md:text-[22px] font-normal text-black leading-tight mb-10 font-primary">
             Extensive Market Presence
           </h2>
 
-          <p className="max-w-5xl text-[16px] md:text-[16px] leading-[1.7] text-black font-normal font-primary pe-16">
+          <p className="max-w-8xl text-[15px] md:text-[15px] leading-[24px] text-black font-normal font-primary ">
             We advertise all our properties on Rightmove, the UK’s most popular
             property portal, ensuring maximum visibility. Combined with our
             active social media presence, we give every home the exposure it

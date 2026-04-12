@@ -1,15 +1,21 @@
-import HeroSection from "../components/Maintenance/Hero"
-import Mainten from "../components/Maintenance/Maintenance"
+import HeroSection from "../Common/Hero"
+import AboutSection from "../components/Maintenance/about"
 import FixfloSection from "../components/Maintenance/FixFlo"
-import { FiX } from "react-icons/fi"
 const Maintenance = () => {
     return (
         <div>
-           <HeroSection />
-           <Mainten />
-           <FixfloSection />
+          <HeroSection
+            title="Maintenance"
+            bgImage="/maintenance.jpg"
+          />
+          
+          <AboutSection />
+
+          <FixfloSection />
+          
+       
         </div>
     )
 }
 
-export default Maintenance
+export default Maintenance;

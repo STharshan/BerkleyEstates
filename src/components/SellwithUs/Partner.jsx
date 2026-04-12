@@ -1,19 +1,20 @@
+
 const Partner = () => {
   return (
     <section className="w-full bg-white py-20 lg:py-28">
-      <div className="max-w-[1300px] mx-auto px-6 md:px-12">
-        <div className="grid grid-cols-1 lg:grid-cols-[1fr_650px] gap-14 lg:gap-20 items-center">
+      <div className="max-w-[1300px] mx-auto px-6 md:px-18">
+        <div className="grid grid-cols-1 lg:grid-cols-[1fr_650px] gap-14 lg:gap-0 items-center">
           
           {/* Left Content */}
-          <div className="max-w-[600px]">
+          <div className="max-w-full">
             
             {/* Quote */}
-            <div className="text-[70px] md:text-[90px] leading-none text-[#c9c5bf] mb-6 font-serif">
+            <div className="text-[70px] md:text-[90px] leading-none text-[#c9c5bf] mb-6 font-serif-new">
               “
             </div>
 
             {/* Paragraph */}
-            <p className="text-[16px] md:text-[17px] leading-[1.4] text-[#2d2d2d] font-primary mb-8 -mt-5">
+            <p className="text-[14px] md:text-[15px] leading-[1.4] text-[#3F444B] font-primary mb-8 -mt-12">
               Recently sold our property through Jake and would highly
               recommend his services. His hard work to get us the sale paid off
               within a week of being on the market, and continued through to
@@ -24,23 +25,23 @@ const Partner = () => {
             </p>
 
             {/* Name */}
-            <h3 className="text-[18px] md:text-[20px] font-medium text-[#2d2d2d] font-primary mb-1">
+            <h3 className="text-[16px] md:text-[16px] font-medium text-[#3F444B] font-primary  leading-[25px] -mt-4">
               Jake Brogden
             </h3>
 
             {/* Role */}
-            <p className="text-[18px] md:text-[20px] text-black font-primary">
+            <p className="text-[16px] md:text-[16px] text-black font-primary">
               Partner
             </p>
 
           </div>
 
           {/* Right Image */}
-          <div className="w-full">
+          <div className="w-full 2xl:ms-24 ms-0">
             <img
               src="/DSC09716-1536x994.webp"
               alt="Jake Brogden testimonial"
-              className="w-full h-[280px] md:h-[380px] lg:h-[420px] object-cover"
+              className=" max-w-full md:max-w-[560px] h-[280px] md:h-[380px] lg:h-[380px] object-cover"
             />
           </div>
 
