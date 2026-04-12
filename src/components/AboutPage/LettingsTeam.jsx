@@ -6,31 +6,31 @@ const teamMembers = [
     name: "Claire Bateman",
     email: "claire.bateman@berkleyestates.co.uk",
     phone: "01509 414 787",
-    image: "https://berkleyestates.co.uk/wp-content/uploads/elementor/thumbs/Claire-Bateman-e1746111498155-r569m6d8vqy32134ahk1q1k0b41zsa1dv2omud0p6o.webp",
+    image: "/Claire-Bateman-e1746111498155-r569m6d8vqy32134ahk1q1k0b41zsa1dv2omud0p6o.webp",
   },
   {
     name: "Julie Yates",
     email: "julie.yates@berkleyestates.co.uk",
     phone: "0116 279 6161",
-    image: "https://berkleyestates.co.uk/wp-content/uploads/elementor/thumbs/Julie-Yates-e1746111671797-r569qozbq34oukiwwxui7eir2rshrwyy5fjmv8bla8.webp",
+    image: "/Julie-Yates-e1746111671797-r569qozbq34oukiwwxui7eir2rshrwyy5fjmv8bla8.webp",
   },
   {
     name: "Daniel Newton",
     email: "daniel.newton@berkleyestates.co.uk",
     phone: "0116 254 4755",
-    image: "https://berkleyestates.co.uk/wp-content/uploads/elementor/thumbs/Daniel-Newton-r3ctn8zhhrpe59i0w9oaualwxc1b37nmk5s86yygzk.jpg",
+    image: "/Daniel-Newton-r3ctn8zhhrpe59i0w9oaualwxc1b37nmk5s86yygzk.jpg",
   },
   {
     name: "Nicola Morgan",
     email: "nicola.morgan@berkleyestates.co.uk",
     phone: "01509 414 787",
-    image: "https://berkleyestates.co.uk/wp-content/uploads/elementor/thumbs/1001379592-rhp0t4jjq7vzfckhj1w08iq5t4dd6zz1of1krp2ge8.jpg",
+    image: "/1001379592-rhp0t4jjq7vzfckhj1w08iq5t4dd6zz1of1krp2ge8.jpg",
   },
   {
     name: "Joseph Slater",
     email: "joseph.slater@berkleyestates.co.uk",
     phone: "0116 254 4755",
-    image: "https://berkleyestates.co.uk/wp-content/uploads/elementor/thumbs/430e41c3-b14e-4ecb-be7f-758e4c1a9155-r65mmwjd3l0opaaxppgbwtne363dadwoe7nk9kb4ow.jpeg",
+    image: "/430e41c3-b14e-4ecb-be7f-758e4c1a9155-r65mmwjd3l0opaaxppgbwtne363dadwoe7nk9kb4ow.jpeg",
   },
 ];
 
