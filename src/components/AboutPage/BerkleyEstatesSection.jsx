@@ -1,17 +1,17 @@
 import React from "react";
 
 const imagesTop = [
-  "https://berkleyestates.co.uk/wp-content/uploads/elementor/thumbs/image00002-scaled-r5g2kjpj9kwe3xnexl0mg75ndfukxe3rhxqon459mo.jpeg",
-  "https://berkleyestates.co.uk/wp-content/uploads/elementor/thumbs/image00004-scaled-qz34a6pis0cu7hfo47l55jwskglklzwcylu567ck5c.jpeg",
+  "/image00002-scaled-r5g2kjpj9kwe3xnexl0mg75ndfukxe3rhxqon459mo.jpeg",
+  "/image00004-scaled-qz34a6pis0cu7hfo47l55jwskglklzwcylu567ck5c.jpeg",
 ];
 
 const largeImage =
-  "https://berkleyestates.co.uk/wp-content/uploads/elementor/thumbs/image00009-scaled-qz3445l2a33m7e7wh6ehasg9jj110gtzd8v5t36104.jpeg";
+  "/image00009-scaled-qz3445l2a33m7e7wh6ehasg9jj110gtzd8v5t36104.jpeg";
 
 const imagesBottom = [
-  "https://berkleyestates.co.uk/wp-content/uploads/elementor/thumbs/image00007-scaled-7hqv5oxovf7apfivv9dzzhjlc65ukp7m6blyafkfpbg.jpeg",
-  "https://berkleyestates.co.uk/wp-content/uploads/elementor/thumbs/image00001-scaled-7jigpmo1dh0wvapnwtli3kdqviigk190bllglsnvzsc.jpeg",
-  "https://berkleyestates.co.uk/wp-content/uploads/elementor/thumbs/image00005-scaled-7jigpjsn4l8zbtlu3lct4y3u664m6ijlujdp7085ass.jpeg",
+  "/image00007-scaled-7hqv5oxovf7apfivv9dzzhjlc65ukp7m6blyafkfpbg.jpeg",
+  "/image00001-scaled-7jigpmo1dh0wvapnwtli3kdqviigk190bllglsnvzsc.jpeg",
+  "/image00005-scaled-7jigpjsn4l8zbtlu3lct4y3u664m6ijlujdp7085ass.jpeg",
 ];
 
 export default function BerkleyEstatesSection() {
