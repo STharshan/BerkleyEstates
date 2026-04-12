@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
-import { Mail, Phone } from 'lucide-react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
+import { Phone } from 'lucide-react';
 
 const teamMembers = [
   {
@@ -34,19 +36,32 @@ const teamMembers = [
   },
 ];
 
+const useIsMobile = () => {
+  const [isMobile, setIsMobile] = React.useState(
+    typeof window !== 'undefined' ? window.innerWidth < 640 : false
+  );
+  React.useEffect(() => {
+    const handler = () => setIsMobile(window.innerWidth < 640);
+    window.addEventListener('resize', handler);
+    return () => window.removeEventListener('resize', handler);
+  }, []);
+  return isMobile;
+};
+
 const FlipCard = ({ member }) => {
   const [flipped, setFlipped] = useState(false);
+  const isMobile = useIsMobile();
 
   return (
-    <div className="flex flex-col items-center">
+    <div className="flex flex-col items-center font-primary">
       <div
-        className="relative w-full aspect-[4/3] [perspective:1200px] cursor-pointer"
-        onMouseEnter={() => setFlipped(true)}
-        onMouseLeave={() => setFlipped(false)}
+        className={`relative w-full aspect-[4/3] [perspective:1200px] ${!isMobile ? 'cursor-pointer' : ''}`}
+        onMouseEnter={() => !isMobile && setFlipped(true)}
+        onMouseLeave={() => !isMobile && setFlipped(false)}
       >
         <div
           className={`relative w-full h-full [transform-style:preserve-3d] transition-transform duration-700 ease-in-out ${
-            flipped ? '[transform:rotateY(180deg)]' : '[transform:rotateY(0deg)]'
+            !isMobile && flipped ? '[transform:rotateY(180deg)]' : '[transform:rotateY(0deg)]'
           }`}
         >
           {/* Front */}
@@ -58,29 +73,52 @@ const FlipCard = ({ member }) => {
             />
           </div>
 
-          {/* Back */}
-          <div className="absolute inset-0 [backface-visibility:hidden] [transform:rotateY(180deg)] bg-[#0e2045] flex flex-col items-center justify-center gap-5 px-6">
-            <a
-              href={`mailto:${member.email}`}
-              className="flex items-center gap-3 text-white text-sm hover:opacity-70 transition-opacity duration-200"
-            >
-              <Mail size={15} className="shrink-0" />
-              <span>{member.email}</span>
-            </a>
-            <a
-              href={`tel:${member.phone.replace(/\s/g, '')}`}
-              className="flex items-center gap-3 text-white text-sm hover:opacity-70 transition-opacity duration-200"
-            >
-              <Phone size={15} className="shrink-0" />
-              <span>{member.phone}</span>
-            </a>
-          </div>
+          {/* Back - Desktop only */}
+          {!isMobile && (
+            <div className="absolute inset-0 [backface-visibility:hidden] [transform:rotateY(180deg)] bg-[#001C56] flex flex-col items-center justify-center gap-5 px-6">
+              <a
+                href={`mailto:${member.email}`}
+                className="flex items-center gap-3 text-white text-[16px] hover:opacity-70 transition-opacity duration-200"
+              >
+                <FontAwesomeIcon icon={faEnvelope} size="sm" className="shrink-0 text-white" />
+                <span>{member.email}</span>
+              </a>
+              <a
+                href={`tel:${member.phone.replace(/\s/g, '')}`}
+                className="flex items-center gap-3 text-white text-[16px] hover:opacity-70 transition-opacity duration-200"
+              >
+                <Phone size={15} className="shrink-0 text-white" />
+                <span>{member.phone}</span>
+              </a>
+            </div>
+          )}
         </div>
       </div>
 
-      <p className="mt-4 text-[13px] text-center font-light text-black tracking-tight">
+      {/* Name */}
+      <p className="mt-4 text-[16px] text-center font-normal text-black tracking-tight">
         {member.name}
       </p>
+
+      {/* Mobile: always show email + phone below name */}
+      {isMobile && (
+        <div className="mt-2 flex flex-col items-center gap-2">
+          <a
+            href={`mailto:${member.email}`}
+            className="flex items-center gap-2 text-[14px] text-black"
+          >
+            <FontAwesomeIcon icon={faEnvelope} size="sm" className="shrink-0" />
+            <span>{member.email}</span>
+          </a>
+          <a
+            href={`tel:${member.phone.replace(/\s/g, '')}`}
+            className="flex items-center gap-2 text-[14px] text-black"
+          >
+            <Phone size={14} className="shrink-0" />
+            <span>{member.phone}</span>
+          </a>
+        </div>
+      )}
     </div>
   );
 };
@@ -89,11 +127,10 @@ const LettingsTeam = () => {
   return (
     <section className="bg-white min-h-screen py-16 px-8 font-sans">
       <div className="max-w-5xl mx-auto">
-        <h2 className="text-center text-xl font-medium tracking-widest uppercase mb-16 text-gray-800">
+        <h2 className="text-center text-[20px] font-medium tracking-widest uppercase mb-16 text-black">
           Lettings
         </h2>
-
-        <div className="grid grid-cols-2 gap-x-16 gap-y-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 sm:gap-x-16 gap-y-12">
           {teamMembers.map((member, index) => (
             <FlipCard key={index} member={member} />
           ))}
