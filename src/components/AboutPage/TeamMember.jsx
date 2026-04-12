@@ -9,7 +9,7 @@ const TeamMember = () => {
     role: "Director",
     email: "scott.burrows@berkleyestates.co.uk",
     phone: "0116 254 4755",
-    image: "https://berkleyestates.co.uk/wp-content/uploads/2025/03/Scott-Burrows-1024x792.webp"
+    image: "/Scott-Burrows-1024x792.webp"
   };
 
   return (
