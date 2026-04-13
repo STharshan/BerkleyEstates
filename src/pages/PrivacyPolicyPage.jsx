@@ -197,10 +197,10 @@ export default function PrivacyPolicy() {
         </p>
         <p className="text-black text-[17px] mt-3 leading-relaxed">
           Please contact us at email:{" "}
-          <a href="mailto:email:leicester@mistyrose-ram-467524.hostingersite.comleicester@mistyrose-ram-467524.hostingersite.com" className="text-black hover:underline">
+          <a href="mailto:leicester@mistyrose-ram-467524.hostingersite.com" className="text-black hover:underline">
             leicester@mistyrose-ram-467524.hostingersite.com
           </a>{" "}
-          or 75 Hinckley Road, Leicester, LE3 OTD if you wish to make a request.
+          or 75 Hinckley Road, Leicester, LE3 0TD if you wish to make a request.
         </p>
       </Section>
 

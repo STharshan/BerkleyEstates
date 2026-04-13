@@ -12,6 +12,8 @@ const imagesBottom = [
   "/image00005-scaled-7jigpjsn4l8zbtlu3lct4y3u664m6ijlujdp7085ass.jpeg",
 ];
 
+import { Link } from "react-router-dom";
+
 function AngleRightIcon({ className }) {
   return (
     <svg
@@ -78,13 +80,13 @@ export default function BerkleyEstatesSection() {
               delivering results the right way—with integrity, compassion, and a
               commitment to exceeding expectations.
             </p>
-            <a
-              href="/contact"
+            <Link
+              to="/contact"
               className="inline-flex items-center gap-3 text-[15px] md:text-[18px] font-medium uppercase tracking-wide text-black transition hover:opacity-70"
             >
               <AngleRightIcon className="w-4 h-4 fill-current" />
               VISIT US
-            </a>
+            </Link>
           </div>
         </div>
       </div>

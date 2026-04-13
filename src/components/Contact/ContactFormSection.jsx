@@ -1,4 +1,82 @@
+import { useState } from "react";
+import emailjs from "@emailjs/browser";
+
 const ContactFormSection = () => {
+  const [formData, setFormData] = useState({
+    firstName: "",
+    lastName: "",
+    email: "",
+    phone: "",
+    propertyAddress: "",
+    message: "",
+    consent: false,
+  });
+  const [status, setStatus] = useState(null);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const handleChange = (e) => {
+    const { name, value, type, checked } = e.target;
+    setFormData((prev) => ({
+      ...prev,
+      [name]: type === "checkbox" ? checked : value,
+    }));
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setStatus(null);
+
+    if (!formData.consent) {
+      setStatus({ type: "error", message: "Please accept the privacy policy." });
+      return;
+    }
+
+    const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+    const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+    const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
+
+    if (!serviceId || !templateId || !publicKey) {
+      setStatus({
+        type: "error",
+        message:
+          "EmailJS is not configured. Add VITE_EMAILJS_SERVICE_ID, VITE_EMAILJS_TEMPLATE_ID, and VITE_EMAILJS_PUBLIC_KEY to your .env file.",
+      });
+      return;
+    }
+
+    setIsSubmitting(true);
+
+    try {
+      await emailjs.send(serviceId, templateId, {
+        first_name: formData.firstName,
+        last_name: formData.lastName,
+        email: formData.email,
+        phone: formData.phone,
+        property_address: formData.propertyAddress,
+        message: formData.message,
+      }, publicKey);
+
+      setStatus({ type: "success", message: "Message sent successfully!" });
+      setFormData({
+        firstName: "",
+        lastName: "",
+        email: "",
+        phone: "",
+        propertyAddress: "",
+        message: "",
+        consent: false,
+      });
+    } catch (error) {
+      setStatus({
+        type: "error",
+        message:
+          error?.text || error?.message || "Unable to send your message right now. Please try again later.",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
   return (
     <section className="w-full bg-[#d8d5cf] py-16 md:py-20 lg:py-24 px-4 md:px-8">
       <div className="max-w-[860px] mx-auto">
@@ -6,17 +84,37 @@ const ContactFormSection = () => {
           "*" indicates required fields
         </p>
 
-        <form className="space-y-7">
+        {status && (
+          <div
+            className={`mb-6 rounded border px-4 py-3 text-sm ${
+              status.type === "success"
+                ? "border-green-500 bg-green-50 text-green-700"
+                : "border-red-500 bg-red-50 text-red-700"
+            }`}
+          >
+            {status.message}
+          </div>
+        )}
+
+        <form onSubmit={handleSubmit} className="space-y-7">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-7">
             <input
               type="text"
+              name="firstName"
+              value={formData.firstName}
+              onChange={handleChange}
               placeholder="First Name*"
+              required
               className="w-full h-[40px] bg-white px-4 text-[15px] text-[#6b7280] outline-none border-0 font-primary"
             />
 
             <input
               type="text"
+              name="lastName"
+              value={formData.lastName}
+              onChange={handleChange}
               placeholder="Surname*"
+              required
               className="w-full h-[40px] bg-white px-4 text-[15px] text-[#6b7280] outline-none border-0 font-primary"
             />
           </div>
@@ -24,24 +122,39 @@ const ContactFormSection = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-7">
             <input
               type="email"
+              name="email"
+              value={formData.email}
+              onChange={handleChange}
               placeholder="Email Address*"
+              required
               className="w-full h-[40px] bg-white px-4 text-[15px] text-[#6b7280] outline-none border-0 font-primary"
             />
 
             <input
               type="text"
+              name="phone"
+              value={formData.phone}
+              onChange={handleChange}
               placeholder="Telephone Number*"
+              required
               className="w-full h-[40px] bg-white px-4 text-[15px] text-[#6b7280] outline-none border-0 font-primary"
             />
           </div>
 
           <textarea
+            name="propertyAddress"
+            value={formData.propertyAddress}
+            onChange={handleChange}
             placeholder="Property Address*"
             rows={6}
+            required
             className="w-full min-h-[140px] bg-white px-4 py-3 text-[15px] text-[#6b7280] outline-none border-0 resize-none font-primary"
           />
 
           <textarea
+            name="message"
+            value={formData.message}
+            onChange={handleChange}
             placeholder="How can we help you?"
             rows={6}
             className="w-full min-h-[140px] bg-white px-4 py-3 text-[15px] text-[#6b7280] outline-none border-0 resize-none font-primary"
@@ -50,6 +163,9 @@ const ContactFormSection = () => {
           <label className="flex items-start gap-3 cursor-pointer">
             <input
               type="checkbox"
+              name="consent"
+              checked={formData.consent}
+              onChange={handleChange}
               className="mt-1 h-5 w-5 border-0 accent-[#001C56]"
             />
             <span className="text-[14px] text-black font-primary">
@@ -60,9 +176,10 @@ const ContactFormSection = () => {
           <div className="pt-2">
             <button
               type="submit"
-              className="bg-[#001C56] text-white px-7 md:px-8 py-3 text-[15px] font-primary transition duration-300 hover:opacity-90 hover:bg-white hover:text-black"
+              disabled={isSubmitting}
+              className="bg-[#001C56] text-white px-7 md:px-8 py-3 text-[15px] font-primary transition duration-300 hover:opacity-90 hover:bg-white hover:text-black disabled:cursor-not-allowed disabled:opacity-60"
             >
-              Submit
+              {isSubmitting ? "Sending..." : "Submit"}
             </button>
           </div>
         </form>

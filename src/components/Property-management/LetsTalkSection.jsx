@@ -1,5 +1,7 @@
 
 
+import { Link } from "react-router-dom";
+
 const LetsTalkSection = () => {
   return (
     <section className="relative w-full overflow-hidden">
@@ -26,12 +28,12 @@ const LetsTalkSection = () => {
             care at all times.
           </p>
 
-          <a
-            href="/contact"
-            className="mt-10 inline-flex  items-center justify-center border border-white px-[24px] py-[12px]  leading-none text-[15px] font-medium uppercase tracking-[0.04em] text-white transition duration-300  hover:bg-[#001C56] hover:text-white hover:border-[#001C56] rounded-[3px]"
+          <Link
+            to="/contact"
+            className="mt-10 inline-flex items-center justify-center border border-white px-[24px] py-[12px] leading-none text-[15px] font-medium uppercase tracking-[0.04em] text-white transition duration-300 hover:bg-[#001C56] hover:text-white hover:border-[#001C56] rounded-[3px]"
           >
             Let&apos;s Talk
-          </a>
+          </Link>
         </div>
       </div>
     </section>

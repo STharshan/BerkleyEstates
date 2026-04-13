@@ -9,7 +9,7 @@ const Maintenance = () => {
             bgImage="/maintenance.jpg"
           />
           
-          <AboutSection />
+          <AboutSection sectionId="team" />
 
           <FixfloSection />
           

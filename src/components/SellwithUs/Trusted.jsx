@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const Trusted = () => {
   return (
     <section className="w-full bg-white py-20 lg:py-0">
@@ -37,8 +39,8 @@ const Trusted = () => {
             </p>
 
             {/* CTA */}
-            <a
-              href="/about"
+            <Link
+              to="/about"
               className="inline-flex items-center gap-3 text-[16px] md:text-[16px] font-primary text-black group leading-[25px]"
             >
              <span className="transition-transform duration-300 group-hover:translate-x-1">
@@ -51,7 +53,7 @@ const Trusted = () => {
   </svg>
 </span>
               MEET THE TEAM
-            </a>
+            </Link>
 
           </div>
 
