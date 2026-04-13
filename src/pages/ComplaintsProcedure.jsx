@@ -1,7 +1,9 @@
-const Section = ({ title, children }) => (
-  <div className="px-4 py-6 bg-white ">
+const Section = ({ title, children, className = "" }) => (
+  <div className={`px-4 py-6 bg-white ${className}`}>
     <div className="max-w-7xl mx-auto">
-      <h3 className="text-[17px] font-medium text-gray-900 mb-4">{title}</h3>
+      {title && (
+        <h3 className="text-[17px] font-medium text-gray-900 mb-4">{title}</h3>
+      )}
       {children}
     </div>
   </div>
@@ -70,7 +72,7 @@ export default function ComplaintsProcedure() {
       </Section>
 
       {/* Please note */}
-      <Section title="Please note the following"   class="border border-red-400">
+      <Section title="Please note the following">
         <p className="text-black text-[16px] leading-relaxed mb-4">
           You will need to submit your complaint to The Property Ombudsman within 12 months of receiving our final viewpoint letter, including any evidence to support your case.
         </p>

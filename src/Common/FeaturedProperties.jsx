@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { propertyDataStore } from "../Data/sectionData"; // Import your data
 
 const FeaturedProperties = ({ id }) => {
@@ -43,12 +44,21 @@ const FeaturedProperties = ({ id }) => {
         </div>
 
         <div className="flex justify-center mt-14">
-          <a
-            href={sectionData.buttonLink}
-            className="inline-flex items-center  justify-center border border-black px-8 md:px-16 py-3 text-[14px] md:text-[16px] uppercase text-black font-primary tracking-[0.5px] transition-all duration-300 hover:bg-[#001C56] hover:text-white hover:border-transparent"
-          >
-            {sectionData.buttonText}
-          </a>
+          {sectionData.buttonLink?.startsWith("/") ? (
+            <Link
+              to={sectionData.buttonLink}
+              className="inline-flex items-center justify-center border border-black px-8 md:px-16 py-3 text-[14px] md:text-[16px] uppercase text-black font-primary tracking-[0.5px] transition-all duration-300 hover:bg-[#001C56] hover:text-white hover:border-transparent"
+            >
+              {sectionData.buttonText}
+            </Link>
+          ) : (
+            <a
+              href={sectionData.buttonLink}
+              className="inline-flex items-center justify-center border border-black px-8 md:px-16 py-3 text-[14px] md:text-[16px] uppercase text-black font-primary tracking-[0.5px] transition-all duration-300 hover:bg-[#001C56] hover:text-white hover:border-transparent"
+            >
+              {sectionData.buttonText}
+            </a>
+          )}
         </div>
       </div>
     </section>
