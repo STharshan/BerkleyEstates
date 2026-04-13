@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 export default function OffMarketDiscretionSection() {
   return (
     <section className="w-full bg-[#041C55] px-6 py-20 md:px-10 lg:px-16 xl:px-20">
@@ -13,12 +15,12 @@ export default function OffMarketDiscretionSection() {
           discreet selling or buying process.
         </p>
 
-        <a
-          href="/contact"
+        <Link
+          to="/contact"
           className="mt-12 inline-flex min-h-13 min-w-58 items-center justify-center rounded-sm border border-white px-6 py-2 text-base font-medium uppercase tracking-wide text-white transition duration-300 hover:bg-white hover:text-[#012169] md:min-w-[320px] md:text-[15px]"
         >
           Speak To Our Team
-        </a>
+        </Link>
       </div>
     </section>
   );

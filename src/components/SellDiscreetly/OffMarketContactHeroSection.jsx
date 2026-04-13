@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 export default function OffMarketContactHeroSection() {
   return (
     <section className="relative w-full overflow-hidden">
@@ -22,12 +24,12 @@ export default function OffMarketContactHeroSection() {
             for your unique situation.
           </p>
 
-          <a
-            href="/contact"
+          <Link
+            to="/contact"
             className="mt-10 inline-flex items-center justify-center border border-white px-18 py-3 text-[16px] font-normal uppercase tracking-wide text-white transition duration-300 hover:bg-white hover:text-black "
           >
             Get In Touch
-          </a>
+          </Link>
         </div>
       </div>
     </section>
