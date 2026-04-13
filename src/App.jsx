@@ -14,6 +14,7 @@ import AboutPage from "./pages/AboutPage";
 import Contact from "./pages/Contact";
 import PrivacyPolicy from "./pages/PrivacyPolicyPage";
 import ComplaintsProcedure from "./pages/ComplaintsProcedure";
+import SellDiscreetly from "./pages/SellDiscreetly";
 
 function App() {
 
@@ -23,15 +24,16 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/homeowners" element={<HomeOwner />} />
-      
+
         <Route path="/let" element={<Let />} />
-       <Route path="/property-management" element={<Propertymanagement />} />
+        <Route path="/property-management" element={<Propertymanagement />} />
         <Route path="/maintenance" element={<Maintenance />} />
         <Route path="/sell-with-us" element={<SellwithUs />} />
         <Route path="/about" element={<AboutPage />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
         <Route path="/complaints" element={<ComplaintsProcedure />} />
+        <Route path="/sell-discreetly" element={<SellDiscreetly />} />
       </Routes>
       <Footer />
     </Router>
