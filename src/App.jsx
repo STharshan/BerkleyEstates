@@ -1,6 +1,7 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
+import ScrollToTop from "./components/ScrollToTop";
 
 import Home from "./pages/Home";
 
@@ -15,11 +16,13 @@ import Contact from "./pages/Contact";
 import PrivacyPolicy from "./pages/PrivacyPolicyPage";
 import ComplaintsProcedure from "./pages/ComplaintsProcedure";
 import SellDiscreetly from "./pages/SellDiscreetly";
-
+import TermsPage from "./pages/TermsPage";
+import ValuationForm from "./pages/ValuationForm";
 function App() {
 
   return (
     <Router>
+      <ScrollToTop />
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
@@ -34,6 +37,8 @@ function App() {
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
         <Route path="/complaints" element={<ComplaintsProcedure />} />
         <Route path="/sell-discreetly" element={<SellDiscreetly />} />
+        <Route path="/terms" element={<TermsPage />} />
+        <Route path="/valuation" element={<ValuationForm />} />
       </Routes>
       <Footer />
     </Router>

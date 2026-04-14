@@ -19,4 +19,4 @@ const Let = () => {
   )
 }
 
-export default Let  
+export default Let ;

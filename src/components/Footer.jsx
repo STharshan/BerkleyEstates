@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { FaFacebookF, FaLinkedinIn, FaInstagram } from "react-icons/fa";
 
 export default function Footer() {
@@ -36,12 +37,12 @@ export default function Footer() {
             </div>
 
             {/* Button */}
-            <a
-              href="/valuation"
-              className="text-sm  transition"
+            <Link
+              to="/valuation"
+              className="text-sm transition"
             >
               Request a valuation
-            </a>
+            </Link>
 
             {/* Social Icons */}
             <div className="flex gap-5 text-2xl mt-5">
@@ -66,17 +67,17 @@ export default function Footer() {
 
             {/* Policy Links */}
             <div className="flex flex-wrap justify-center lg:justify-start gap-3">
-              <a href="/privacy-policy" className="hover:underline">
+              <Link to="/privacy-policy" className="hover:underline">
                 Privacy Policy
-              </a>
+              </Link>
               <span className="opacity-50">|</span>
-              <a href="/terms" className="hover:underline">
+              <Link to="/terms" className="hover:underline">
                 Terms and Conditions
-              </a>
+              </Link>
               <span className="opacity-50">|</span>
-              <a href="/complaints" className="hover:underline">
+              <Link to="/complaints" className="hover:underline">
                 Complaints Procedure
-              </a>
+              </Link>
             </div>
 
             {/* Copyright */}

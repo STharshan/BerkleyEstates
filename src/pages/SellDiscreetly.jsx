@@ -19,4 +19,4 @@ const SellDiscreetly = () => {
   )
 }
 
-export default SellDiscreetly  
+export default SellDiscreetly ;
