@@ -17,6 +17,7 @@ import PrivacyPolicy from "./pages/PrivacyPolicyPage";
 import ComplaintsProcedure from "./pages/ComplaintsProcedure";
 import SellDiscreetly from "./pages/SellDiscreetly";
 import TermsPage from "./pages/TermsPage";
+import ValuationForm from "./pages/ValuationForm";
 function App() {
 
   return (
@@ -37,6 +38,7 @@ function App() {
         <Route path="/complaints" element={<ComplaintsProcedure />} />
         <Route path="/sell-discreetly" element={<SellDiscreetly />} />
         <Route path="/terms" element={<TermsPage />} />
+        <Route path="/valuation" element={<ValuationForm />} />
       </Routes>
       <Footer />
     </Router>
