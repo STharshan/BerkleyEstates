@@ -16,7 +16,7 @@ import Contact from "./pages/Contact";
 import PrivacyPolicy from "./pages/PrivacyPolicyPage";
 import ComplaintsProcedure from "./pages/ComplaintsProcedure";
 import SellDiscreetly from "./pages/SellDiscreetly";
-
+import TermsPage from "./pages/TermsPage";
 function App() {
 
   return (
@@ -36,6 +36,7 @@ function App() {
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
         <Route path="/complaints" element={<ComplaintsProcedure />} />
         <Route path="/sell-discreetly" element={<SellDiscreetly />} />
+        <Route path="/terms" element={<TermsPage />} />
       </Routes>
       <Footer />
     </Router>
