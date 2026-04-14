@@ -40,7 +40,7 @@ export default function TermsPage() {
 
         <div className="flex justify-left">
           <img
-            src="https://berkleyestates.co.uk/wp-content/uploads/2025/04/LANDLORD-GUIDE-TO-FEES-791x1024.png"
+            src="/LANDLORD-GUIDE-TO-FEES-791x1024.png"
             alt="Landlord Guide to Fees"
             className="w-full max-w-md md:max-w-lg lg:max-w-xl rounded-lg shadow"
           />
