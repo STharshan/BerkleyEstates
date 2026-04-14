@@ -28,7 +28,7 @@ const MakeMoveCTA = () => {
 
         {/* Action Button */}
         <div className="flex justify-center">
-          <button className="border border-white/80 bg-transparent rounded-sm backdrop-blur-sm px-8 py-3 text-sm md:text-base uppercase transition-all duration-300 hover:bg-white hover:text-slate-900">
+          <button className="border border-white/80 bg-transparent rounded-sm  px-6 py-2 text-sm md:text-base uppercase transition-all duration-300 hover:bg-white hover:text-slate-900">
             Book a Valuation
           </button>
         </div>
