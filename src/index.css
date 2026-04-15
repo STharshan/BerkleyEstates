@@ -1,9 +1,10 @@
 @import "tailwindcss";
 @font-face {
     font-family: 'BwAletaNo10';
-    src: url('https://mistyrose-ram-467524.hostingersite.com/wp-content/uploads/2025/01/BwAletaNo10-Regular-1.woff2') format('woff2');
+    src: url('/fonts/BwAletaNo10-Regular.woff2') format('woff2');
     font-weight: normal;
     font-style: normal;
+    font-display: swap;
 }
 
 
