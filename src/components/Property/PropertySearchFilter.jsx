@@ -38,7 +38,7 @@ const PropertySearchFilter = ({ onSearch }) => {
   };
 
   const selectClass =
-    "w-full h-[46px] px-3 pr-7 text-[15px] bg-white border border-[#cccccc] rounded text-[#333333] appearance-none outline-none bg-no-repeat";
+    "w-full h-[46px] px-3 pr-7 text-[15px] font-medium font-primary bg-white border border-[#cccccc] rounded text-black appearance-none outline-none bg-no-repeat";
   const selectStyle = {
     backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6'%3E%3Cpath d='M1 1l4 4 4-4' stroke='%23888' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E")`,
     backgroundPosition: "right 8px center",
@@ -46,10 +46,10 @@ const PropertySearchFilter = ({ onSearch }) => {
   
   return (
     <div className="bg-[#EEEEEE] p-6">
-      {/* Main Container: Horizontal Flexbox (Left 80% + Right 20%) */}
+      {/* Main Container: Horizontal Flexbox (Left 75% + Right 25%) */}
       <div className="flex flex-row gap-4">
-        {/* LEFT SIDE: Input Grid (80% width) */}
-        <div className="flex-grow space-y-3">
+        {/* LEFT SIDE: Input Grid (75% width) */}
+        <div className="w-[75%] space-y-3">
           {/* Row 1: 6 Select Boxes (grid-cols-6) */}
           <div className="grid grid-cols-6 gap-4">
             {/* Department */}
@@ -195,7 +195,7 @@ const PropertySearchFilter = ({ onSearch }) => {
                 onChange={handleLocationChange}
                 placeholder="Type the location here"
                 autoComplete="off"
-                className="w-full h-[46px] pl-3 pr-10 text-[15px] bg-white border border-[#cccccc] rounded text-[#333333] placeholder:text-[#999] outline-none"
+                className="w-full h-[46px] pl-3 pr-10 text-[15px] font-medium font-primary bg-white border border-[#cccccc] rounded text-black placeholder:text-[#999] outline-none"
               />
               {/* Location Icon */}
               <svg
@@ -221,7 +221,7 @@ const PropertySearchFilter = ({ onSearch }) => {
                     {autocompleteResults.map((result, index) => (
                       <li
                         key={index}
-                        className="px-4 py-2 hover:bg-[#f0f0f0] cursor-pointer text-[14px] text-[#333]"
+                        className="px-4 py-2 hover:bg-[#f0f0f0] cursor-pointer text-[14px] font-medium font-primary text-black"
                         onClick={() => {
                           setFormData((prev) => ({ ...prev, address_keyword: result }));
                           setAutocompleteResults([]);
@@ -237,10 +237,10 @@ const PropertySearchFilter = ({ onSearch }) => {
           </div>
         </div>
 
-        {/* RIGHT SIDE: Filters & Search Button (20% width) */}
-        <div className="flex flex-col gap-3 items-stretch justify-start">
-          {/* Checkboxes Group - Horizontal Layout */}
-          <div className="flex gap-4 items-center">
+        {/* RIGHT SIDE: Filters & Search Button (25% width) - All on Same Line */}
+        <div className="w-[25%] flex flex-row gap-3 items-center justify-center">
+          {/* Checkboxes Group - Horizontal */}
+          <div className="flex flex-row gap-4 items-center">
             {/* For Sale Checkbox */}
             <label className="flex items-center gap-2 cursor-pointer whitespace-nowrap">
               <input
@@ -250,7 +250,7 @@ const PropertySearchFilter = ({ onSearch }) => {
                 onChange={handleChange}
                 className="w-4 h-4 cursor-pointer"
               />
-              <span className="text-[14px] text-[#333]">For Sale</span>
+              <span className="text-[14px] font-medium font-primary text-black">For Sale</span>
             </label>
 
             {/* Exclude Sold Checkbox */}
@@ -262,14 +262,14 @@ const PropertySearchFilter = ({ onSearch }) => {
                 onChange={handleChange}
                 className="w-4 h-4 cursor-pointer"
               />
-              <span className="text-[14px] text-[#333]">Exclude Sold</span>
+              <span className="text-[14px] font-medium font-primary text-black">Exclude Sold</span>
             </label>
           </div>
 
-          {/* Search Button - Full Width */}
+          {/* Search Button */}
           <button
             onClick={handleSubmit}
-            className="w-full bg-[#001C56] hover:bg-[#000f39] text-white h-[46px] px-6 text-[15px] font-semibold rounded transition-colors duration-200"
+            className="bg-[#001C56] hover:bg-[#000f39] text-white h-[46px] px-6 text-[14px] font-medium font-primary rounded transition-colors duration-200 whitespace-nowrap"
           >
             Search
           </button>
