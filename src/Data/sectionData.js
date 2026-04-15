@@ -34,7 +34,7 @@ export const about = {
 export const trustedContent = {
   "Propertymanagement": {
     heading: "Your Trusted Partner",
-    description: "Finding and keeping reliable tenants to preserving your property’s value and staying on top of legal requirements...",
+    description: "Finding and keeping reliable tenants to preserving your property’s value and staying on top of legal requirements, we handle every aspect with precision—giving you the freedom to enjoy worry-free ownership.",
     image: "/trust.jpeg",
     accordions: [
       {

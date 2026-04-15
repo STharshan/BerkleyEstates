@@ -36,7 +36,7 @@ const TestimonialSection = ({ pageId }) => {
               </p>
 
               {/* Author Name */}
-              <p className="mt-6 text-[16px] font-bold uppercase tracking-wider text-white font-primary">
+              <p className="mt-6 text-[16px] font-bold  tracking-wider text-white font-primary">
                 {item.author}
               </p>
               

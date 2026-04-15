@@ -5,11 +5,11 @@ const Icon = ({ isOpen }) => {
   return (
     <span className="flex shrink-0 items-center justify-center">
       {isOpen ? (
-        <svg viewBox="0 0 448 512" className="h-[13px] w-[13px] fill-black">
+        <svg viewBox="0 0 448 512" className="h-[15px] w-[15px] fill-black">
           <path d="M416 208H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h384c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z" />
         </svg>
       ) : (
-        <svg viewBox="0 0 448 512" className="h-[13px] w-[13px] fill-black">
+        <svg viewBox="0 0 448 512" className="h-[15px] w-[15px] fill-black">
           <path d="M416 208H272V64c0-17.67-14.33-32-32-32h-32c-17.67 0-32 14.33-32 32v144H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h144v144c0 17.67 14.33 32 32 32h32c17.67 0 32-14.33 32-32V304h144c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z" />
         </svg>
       )}
@@ -31,7 +31,7 @@ const TrustedPartnerSection = ({ pageId }) => {
 
   return (
     <section className="w-full bg-white px-5 py-16 md:px-10 lg:py-24">
-      <div className="mx-auto grid max-w-[1200px] grid-cols-1 items-center gap-8 md:grid-cols-2">
+      <div className="mx-auto grid max-w-[1200px] grid-cols-1 items-center gap-4 md:grid-cols-2 ">
         
         {/* LEFT IMAGE - Now Dynamic */}
         <div className="w-full">
@@ -44,17 +44,17 @@ const TrustedPartnerSection = ({ pageId }) => {
         </div>
 
         {/* RIGHT CONTENT - Now Dynamic */}
-        <div className="w-full font-primary">
+        <div className="w-full font-primary 2xl:pe-16">
           <h3 className="mb-4 text-[24px] md:text-[28px] lg:text-[25.88px] text-black">
             {data.heading}
           </h3>
 
-          <p className="mb-6 text-[14px] leading-[22px] md:text-[18px] text-black lg:leading-[25.88px]">
+          <p className="mb-6 text-[14px] leading-[22px] md:text-[16px] text-black lg:leading-[25.88px]">
             {data.description}
           </p>
 
           {/* ACCORDION LOOP */}
-          <div>
+          <div class="2xl:pt-4">
             {data.accordions.map((item, index) => {
               const isOpen = activeIndex === index;
 
