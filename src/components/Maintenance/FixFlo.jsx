@@ -6,6 +6,7 @@ const FixfloSection = () => {
           src="https://berkleyestates.fixflo.com/issue/plugin"
           title="Fixflo Issue Plugin"
           className="w-full h-[700px] border-0 overflow-hidden"
+          sandbox="allow-same-origin allow-scripts allow-popups allow-forms"
           scrolling="no"
         />
       </div>

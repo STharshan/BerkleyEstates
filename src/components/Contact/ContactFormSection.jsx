@@ -14,6 +14,16 @@ const ContactFormSection = () => {
   const [status, setStatus] = useState(null);
   const [isSubmitting, setIsSubmitting] = useState(false);
 
+  const validateEmail = (email) => {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
+  };
+
+  const validatePhone = (phone) => {
+    const phoneRegex = /^[\d\s\-\+\(\)]{10,}$/;
+    return phoneRegex.test(phone.replace(/\s/g, ""));
+  };
+
   const handleChange = (e) => {
     const { name, value, type, checked } = e.target;
     setFormData((prev) => ({
@@ -26,20 +36,41 @@ const ContactFormSection = () => {
     e.preventDefault();
     setStatus(null);
 
+    // Validation checks
+    if (!formData.firstName.trim()) {
+      setStatus({ type: "error", message: "First name is required." });
+      return;
+    }
+    if (!formData.lastName.trim()) {
+      setStatus({ type: "error", message: "Last name is required." });
+      return;
+    }
+    if (!validateEmail(formData.email)) {
+      setStatus({ type: "error", message: "Please enter a valid email address." });
+      return;
+    }
+    if (!validatePhone(formData.phone)) {
+      setStatus({ type: "error", message: "Please enter a valid phone number (at least 10 digits)." });
+      return;
+    }
+    if (!formData.propertyAddress.trim()) {
+      setStatus({ type: "error", message: "Property address is required." });
+      return;
+    }
     if (!formData.consent) {
       setStatus({ type: "error", message: "Please accept the privacy policy." });
       return;
     }
 
     const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID;
-    const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+    const templateId = import.meta.env.VITE_EMAILJS_CONTACT_TEMPLATE_ID;
     const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
 
     if (!serviceId || !templateId || !publicKey) {
       setStatus({
         type: "error",
         message:
-          "EmailJS is not configured. Add VITE_EMAILJS_SERVICE_ID, VITE_EMAILJS_TEMPLATE_ID, and VITE_EMAILJS_PUBLIC_KEY to your .env file.",
+          "EmailJS is not configured. Add VITE_EMAILJS_SERVICE_ID, VITE_EMAILJS_CONTACT_TEMPLATE_ID, and VITE_EMAILJS_PUBLIC_KEY to your .env file.",
       });
       return;
     }
