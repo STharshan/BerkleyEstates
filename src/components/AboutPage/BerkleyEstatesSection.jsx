@@ -38,6 +38,7 @@ export default function BerkleyEstatesSection() {
                 <img
                   src={src}
                   alt=""
+                  loading="lazy"
                   className="h-[140px] sm:h-[180px] md:h-[220px] w-full object-cover transition duration-500 group-hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-black/0 transition duration-500 group-hover:bg-black/40" />
@@ -48,6 +49,7 @@ export default function BerkleyEstatesSection() {
             <img
               src={largeImage}
               alt=""
+              loading="lazy"
               className="h-[220px] sm:h-[300px] md:h-[500px] w-full object-cover transition duration-500 group-hover:scale-105"
             />
             <div className="absolute inset-0 bg-black/0 transition duration-500 group-hover:bg-black/40" />
@@ -58,6 +60,7 @@ export default function BerkleyEstatesSection() {
                 <img
                   src={src}
                   alt=""
+                  loading="lazy"
                   className="h-[100px] sm:h-[150px] md:h-[300px] w-full object-cover transition duration-500 group-hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-black/0 transition duration-500 group-hover:bg-black/40" />

@@ -14,6 +14,7 @@ export default function Footer() {
             <img
               src="logo.png"
               alt="logo"
+              loading="lazy"
               className="w-[180px]"
             />
           </div>
@@ -89,16 +90,19 @@ export default function Footer() {
             <img
               src="/f1.png"
               alt="rightmove"
+              loading="lazy"
               className="h-15 object-contain"
             />
             <img
               src="/f2.png"
               alt="tpo"
+              loading="lazy"
               className="h-15 object-contain"
             />
             <img
               src="/f3.png"
               alt="tsi"
+              loading="lazy"
               className="h-17 object-contain"
             />
           </div>

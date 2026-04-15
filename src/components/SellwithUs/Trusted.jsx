@@ -12,6 +12,7 @@ const Trusted = () => {
             <img
               src="/872a5a67-7872-42b8-a35c-4996bab5b356.webp"
               alt="Property expert"
+              loading="lazy"
               className="w-full h-[300px] md:h-[400px] lg:h-[380px] object-cover"
             />
           </div>

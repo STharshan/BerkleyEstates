@@ -39,6 +39,7 @@ const AboutSection = () => {
               <img
                 src="https://berkleyestates.co.uk/wp-content/uploads/2025/01/IMG_0268-1.webp"
                 alt="Berkley Estates home exterior"
+                loading="lazy"
                 className="block h-auto w-full object-cover"
               />
             </div>
@@ -50,6 +51,7 @@ const AboutSection = () => {
               <img
                 src="https://berkleyestates.co.uk/wp-content/uploads/elementor/thumbs/IMG_5418-2-r04po368vqxzr3zyh71sonx8gmbazcx5jlntcmelee.webp"
                 alt="Berkley Estates agent"
+                loading="lazy"
                 className="block h-auto w-full object-cover"
               />
             </div>
@@ -69,6 +71,7 @@ const AboutSection = () => {
               <img
                 src="https://berkleyestates.co.uk/wp-content/uploads/2025/01/IMG_8293-1.webp"
                 alt="Berkley Estates interior"
+                loading="lazy"
                 className="block h-auto w-full object-cover"
               />
             </div>
@@ -98,6 +101,7 @@ const AboutSection = () => {
             <img
               src="https://berkleyestates.co.uk/wp-content/uploads/2025/01/IMG_6282-1024x768.webp"
               alt="Berkley Estates aerial property view"
+              loading="lazy"
               className="block h-auto w-full object-cover"
             />
           </div>

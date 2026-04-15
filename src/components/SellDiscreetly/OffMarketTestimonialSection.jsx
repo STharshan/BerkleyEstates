@@ -11,6 +11,7 @@ export default function OffMarketTestimonialSection() {
                     <img
                         src="/sell1.webp"
                         alt="sell-discreetly"
+                        loading="lazy"
                         className="h-65 w-full object-cover sm:h-85 md:h-100 "
                     />
                 </div>

@@ -7,6 +7,7 @@ export default function SeamlessExperienceSection() {
             <img
               src="/ss4.webp"
               alt="Luxury property exterior"
+              loading="lazy"
               className="h-65 w-full object-cover sm:h-85 md:h-105 lg:h-135 xl:h-143"
             />
           </div>
@@ -15,6 +16,7 @@ export default function SeamlessExperienceSection() {
             <img
               src="s3.jpeg"
               alt="Luxury interior view"
+              loading="lazy"
               className="h-65 w-full object-cover sm:h-85 md:h-105 lg:h-135 xl:h-143"
             />
           </div>

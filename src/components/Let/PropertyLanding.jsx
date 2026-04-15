@@ -15,8 +15,9 @@ const PropertyLandingSection = () => {
                     <div className="mb-6 flex justify-center" onMouseEnter={() => setIsHovered(true)}
                         onMouseLeave={() => setIsHovered(false)}>
                         <img
-                            src={isHovered ? "/l6.png" : "/l5.png"} // normal vs hover
+                            src={isHovered ? "/l6.png" : "/l5.png"}
                             alt="Rightmove Logo"
+                            loading="lazy"
                             className="h-10 md:h-14 w-auto object-contain transition-all duration-300"
                         />
                     </div>

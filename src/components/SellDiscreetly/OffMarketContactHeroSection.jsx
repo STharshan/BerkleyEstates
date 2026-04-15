@@ -7,6 +7,7 @@ export default function OffMarketContactHeroSection() {
         <img
           src="s5.jpeg"
           alt="Off-market home selling"
+          loading="lazy"
           className="h-full w-full object-cover"
         />
         <div className="absolute inset-0 bg-black/55" />

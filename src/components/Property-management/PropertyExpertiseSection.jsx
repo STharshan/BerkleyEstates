@@ -60,6 +60,7 @@ const PropertyExpertiseSection = () => {
           <img
             src="/property-door.jpeg"
             alt="Property entrance"
+            loading="lazy"
             className="w-full h-auto object-cover block m-0 shadow-sm"
           />
         </div>

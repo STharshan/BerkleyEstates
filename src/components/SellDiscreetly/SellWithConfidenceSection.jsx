@@ -39,8 +39,9 @@ const PropertySection = () => {
                 {/* Right Image Side */}
                 <div className="relative h-180 w-full overflow-hidden shadow-xl">
                     <img
-                        src="s4.jpeg" // Placeholder for the modern property image
+                        src="s4.jpeg"
                         alt="Modern home with glass bifold doors"
+                        loading="lazy"
                         className="w-full h-full object-cover"
                     />
                 </div>

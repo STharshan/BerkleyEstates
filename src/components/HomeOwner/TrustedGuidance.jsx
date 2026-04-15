@@ -7,7 +7,8 @@ const TrustedGuidance = () => {
       <div className="w-full md:w-1/2 h-88 md:h-auto">
         <img 
           src="/h1.webp" 
-          alt="English Estate Row Houses" 
+          alt="English Estate Row Houses"
+          loading="lazy"
           className="w-full h-full object-cover"
         />
       </div>

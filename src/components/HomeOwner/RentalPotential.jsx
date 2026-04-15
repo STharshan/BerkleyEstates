@@ -27,7 +27,8 @@ const RentalPotential = () => {
       <div className="w-full md:w-1/2 h-88 md:h-auto">
         <img 
           src="/h2.webp" 
-          alt="Elegant interior hallway with staircase" 
+          alt="Elegant interior hallway with staircase"
+          loading="lazy"
           className="w-full h-full object-cover"
         />
       </div>

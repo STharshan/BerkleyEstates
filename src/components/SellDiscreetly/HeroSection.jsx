@@ -9,6 +9,7 @@ const HeroSection = () => {
         <img
           src="/sell.webp"
           alt="Hero Background"
+          loading="lazy"
           className="h-full w-full object-cover"
         />
         <div className="absolute inset-0 bg-black/30" />
