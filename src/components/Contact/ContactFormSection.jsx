@@ -20,12 +20,31 @@ const ContactFormSection = () => {
   };
 
   const validatePhone = (phone) => {
-    const phoneRegex = /^[\d\s\-\+\(\)]{10,}$/;
-    return phoneRegex.test(phone.replace(/\s/g, ""));
+    const digitsOnly = phone.replace(/\D/g, "");
+
+    if (digitsOnly.startsWith("44")) {
+      return digitsOnly.length === 12;
+    }
+
+    if (digitsOnly.startsWith("0")) {
+      return digitsOnly.length === 11;
+    }
+
+    return false;
   };
 
   const handleChange = (e) => {
     const { name, value, type, checked } = e.target;
+
+    if (name === "phone") {
+      const sanitizedValue = value.replace(/[^\d\s()+-]/g, "");
+      setFormData((prev) => ({
+        ...prev,
+        phone: sanitizedValue,
+      }));
+      return;
+    }
+
     setFormData((prev) => ({
       ...prev,
       [name]: type === "checkbox" ? checked : value,
@@ -50,7 +69,10 @@ const ContactFormSection = () => {
       return;
     }
     if (!validatePhone(formData.phone)) {
-      setStatus({ type: "error", message: "Please enter a valid phone number (at least 10 digits)." });
+      setStatus({
+        type: "error",
+        message: "Please enter a valid UK phone number starting with 0 or +44.",
+      });
       return;
     }
     if (!formData.propertyAddress.trim()) {
@@ -79,12 +101,12 @@ const ContactFormSection = () => {
 
     try {
       await emailjs.send(serviceId, templateId, {
-        first_name: formData.firstName,
-        last_name: formData.lastName,
-        email: formData.email,
-        phone: formData.phone,
-        property_address: formData.propertyAddress,
-        message: formData.message,
+        first_name: formData.firstName.trim(),
+        last_name: formData.lastName.trim(),
+        email: formData.email.trim(),
+        phone: formData.phone.trim(),
+        property_address: formData.propertyAddress.trim(),
+        message: formData.message.trim(),
       }, publicKey);
 
       setStatus({ type: "success", message: "Message sent successfully!" });
@@ -109,8 +131,8 @@ const ContactFormSection = () => {
   };
 
   return (
-    <section className="w-full bg-[#d8d5cf] py-16 md:py-20 lg:py-24 px-4 md:px-8">
-      <div className="max-w-[860px] mx-auto">
+    <section className="w-full bg-[#d8d5cf] py-16 md:py-20 lg:py-24 px-4 md:px-6">
+      <div className="max-w-[960px] mx-auto">
         <p className="text-[14px] text-black mb-10 font-primary">
           "*" indicates required fields
         </p>
@@ -162,12 +184,16 @@ const ContactFormSection = () => {
             />
 
             <input
-              type="text"
+              type="tel"
               name="phone"
               value={formData.phone}
               onChange={handleChange}
-              placeholder="Telephone Number*"
+              placeholder="07123 456789 or +44 7123 456789*"
               required
+              inputMode="numeric"
+              autoComplete="tel"
+              maxLength={18}
+              pattern="^(\+44\s?7\d{3}|\(?07\d{3}\)?)\s?\d{3}\s?\d{3}$|^(\+44\s?1\d{2,4}|\(?01\d{2,4}\)?)\s?\d{3,4}\s?\d{3,4}$|^(\+44\s?2\d{2,3}|\(?02\d{2,3}\)?)\s?\d{3,4}\s?\d{4}$"
               className="w-full h-[40px] bg-white px-4 text-[15px] text-[#6b7280] outline-none border-0 font-primary"
             />
           </div>
@@ -197,6 +223,7 @@ const ContactFormSection = () => {
               name="consent"
               checked={formData.consent}
               onChange={handleChange}
+              required
               className="mt-1 h-5 w-5 border-0 accent-[#001C56]"
             />
             <span className="text-[14px] text-black font-primary">

@@ -55,7 +55,7 @@ const PropertyExpertiseSection = () => {
         </div>
 
         {/* RIGHT IMAGE */}
-        <div className="w-full order-1 md:order-2">
+        <div className="w-full order-2 md:order-2">
           {/* block and m-0 ensure the image starts exactly where the container starts */}
           <img
             src="/property-door.jpeg"
