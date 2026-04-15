@@ -31,6 +31,7 @@ const MarketingSection = () => {
             <img
               src="/IMG_9026.jpeg"
               alt="Berkley Estates kitchen interior"
+              loading="lazy"
               className="w-full  h-[300px] md:h-[380px] lg:h-[380px] object-cover rounded-sm shadow-sm"
             />
           </div>

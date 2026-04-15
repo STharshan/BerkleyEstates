@@ -201,6 +201,7 @@ const PropertySearchFilter = ({ onSearch }) => {
               <img
                 src="/current-location.png"
                 alt="Location"
+                loading="lazy"
                 className="absolute right-3 top-1/2 -translate-y-1/2 w-5 h-5 pointer-events-none"
               />
 

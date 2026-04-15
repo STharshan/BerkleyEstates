@@ -41,6 +41,7 @@ const Partner = () => {
             <img
               src="/DSC09716-1536x994.webp"
               alt="Jake Brogden testimonial"
+              loading="lazy"
               className=" max-w-full md:max-w-[560px] h-[280px] md:h-[380px] lg:h-[380px] object-cover"
             />
           </div>

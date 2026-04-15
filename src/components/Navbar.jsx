@@ -56,6 +56,7 @@ const Navbar = () => {
         <img
           src="/logo.png"
           alt="Berkley Logo"
+          loading="lazy"
           className="w-full h-auto brightness-0 invert"
         />
       </div>

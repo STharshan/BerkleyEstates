@@ -11,7 +11,8 @@ const SolutionsSection = () => {
         <div className="md:col-span-4 h-125 md:h-150">
           <img 
             src="/h3.webp" 
-            alt="Modern bathroom interior" 
+            alt="Modern bathroom interior"
+            loading="lazy"
             className="w-full h-full object-cover"
           />
         </div>
@@ -20,7 +21,8 @@ const SolutionsSection = () => {
         <div className="md:col-span-8 h-88 md:h-125">
           <img 
             src="/h4.webp" 
-            alt="Brick house with garden" 
+            alt="Brick house with garden"
+            loading="lazy"
             className="w-full h-full object-cover"
           />
         </div>

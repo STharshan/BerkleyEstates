@@ -38,6 +38,7 @@ const TrustedPartnerSection = ({ pageId }) => {
           <img
             src={data.image}
             alt={data.heading}
+            loading="lazy"
             className="mx-auto w-full max-w-[450px] object-cover"
           />
         </div>

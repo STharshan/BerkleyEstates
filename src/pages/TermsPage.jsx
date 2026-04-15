@@ -42,6 +42,7 @@ export default function TermsPage() {
           <img
             src="/LANDLORD-GUIDE-TO-FEES-791x1024.png"
             alt="Landlord Guide to Fees"
+            loading="lazy"
             className="w-full max-w-md md:max-w-lg lg:max-w-xl rounded-lg shadow"
           />
         </div>

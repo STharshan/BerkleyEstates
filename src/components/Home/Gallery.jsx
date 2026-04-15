@@ -73,6 +73,7 @@ const GallerySection = () => {
                   <img
                     src={image}
                     alt={`Abode ${index + 1}`}
+                    loading="lazy"
                     className="block h-80 w-full object-cover md:h-120"
                   />
                 </div>

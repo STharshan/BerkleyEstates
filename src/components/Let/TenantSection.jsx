@@ -20,10 +20,10 @@ const PropertyPage = () => {
                 <div className="max-w-6xl mx-auto">
                     <div className="flex flex-col md:flex-row items-center justify-center gap-12 mb-16">
                         <div className="w-full md:w-[35%] aspect-3/4 overflow-hidden">
-                            <img src="l3.webp" alt="Interior" className="w-full h-full object-cover" />
+                            <img src="l3.webp" alt="Interior" loading="lazy" className="w-full h-full object-cover" />
                         </div>
                         <div className="w-full md:w-[60%] aspect-16/10 overflow-hidden">
-                            <img src="l4.webp" alt="Exterior" className="w-full h-full object-cover" />
+                            <img src="l4.webp" alt="Exterior" loading="lazy" className="w-full h-full object-cover" />
                         </div>
                     </div>
 

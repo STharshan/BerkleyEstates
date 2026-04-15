@@ -10,6 +10,7 @@ const LetsTalkSection = () => {
         <img
           src="/lets-talk-bg.jpeg"
           alt="Let's Talk Background"
+          loading="lazy"
           className="h-full w-full object-cover object-top"
         />
         <div className="absolute inset-0 bg-black/45" />

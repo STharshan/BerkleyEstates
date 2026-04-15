@@ -9,6 +9,7 @@ const HeroSection = ({ title, bgImage, overlay = true }) => {
         <img
           src={bgImage}
           alt={title}
+          loading="lazy"
           className="h-full w-full object-cover"
         />
 
