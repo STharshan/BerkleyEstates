@@ -21,12 +21,31 @@ const ContactPropertyManagementSection = () => {
   };
 
   const validatePhone = (phone) => {
-    const phoneRegex = /^[\d\s()+-]{10,}$/;
-    return phoneRegex.test(phone.replace(/\s/g, ""));
+    const digitsOnly = phone.replace(/\D/g, "");
+
+    if (digitsOnly.startsWith("44")) {
+      return digitsOnly.length === 12;
+    }
+
+    if (digitsOnly.startsWith("0")) {
+      return digitsOnly.length === 11;
+    }
+
+    return false;
   };
 
   const handleChange = (e) => {
     const { name, value, type, checked } = e.target;
+
+    if (name === "phone") {
+      const sanitizedValue = value.replace(/[^\d\s()+-]/g, "");
+      setFormData((prev) => ({
+        ...prev,
+        phone: sanitizedValue,
+      }));
+      return;
+    }
+
     setFormData((prev) => ({
       ...prev,
       [name]: type === "checkbox" ? checked : value,
@@ -58,7 +77,8 @@ const ContactPropertyManagementSection = () => {
     if (!validatePhone(formData.phone)) {
       setStatus({
         type: "error",
-        message: "Please enter a valid phone number (at least 10 digits).",
+        message:
+          "Please enter a valid UK phone number starting with 0 or +44.",
       });
       return;
     }
@@ -124,14 +144,14 @@ const ContactPropertyManagementSection = () => {
   };
 
   return (
-    <section className="w-full bg-white px-5 py-16 md:px-8 lg:px-80 lg:py-24 font-primary">
+    <section className="w-full bg-white px-5 py-16 md:px-8 lg:px-12 lg:py-24 xl:px-80 font-primary">
       <div className="mx-auto max-w-[1150px] font-primary">
         <div className="mx-auto max-w-[1120px] text-center">
           <h2 className="text-[28px] leading-[1.15] text-[#333333] md:text-[32px] lg:text-[32px] font-primary">
             Let’s talk about how we can meet your property management needs.
           </h2>
 
-          <p className="mx-auto mt-8 max-w-[1100px] text-[18px] leading-[1.7] text-black md:text-[18px]">
+          <p className="mx-auto mt-6 max-w-[1100px] text-[14px] leading-[1.7] text-black md:text-[16px]">
             Discover the talented agents, creatives, and operational specialists
             behind the Berkley Estates team.
           </p>
@@ -151,10 +171,10 @@ const ContactPropertyManagementSection = () => {
 
         <form
           onSubmit={handleSubmit}
-          className="mx-auto mt-14 max-w-[1128px] space-y-10"
+          className="mx-auto mt-14 max-w-[1128px] space-y-8"
         >
           <div>
-            <label className="mb-2 block text-[14px] font-semibold text-black">
+            <label className="mb-2 block text-[12px] font-semibold text-black">
               First Name <span className="text-[#c85b68]">*</span>
             </label>
             <input
@@ -163,12 +183,12 @@ const ContactPropertyManagementSection = () => {
               value={formData.firstName}
               onChange={handleChange}
               required
-              className="h-[50px] w-full border border-[#c8b2b2] bg-transparent px-4 text-[16px] outline-none transition focus:border-[#24364b]"
+              className="h-[40px] w-full border border-[#c8b2b2] bg-transparent px-4 text-[16px] outline-none transition focus:border-[#24364b]"
             />
           </div>
 
           <div>
-            <label className="mb-2 block text-[14px] font-semibold text-black">
+            <label className="mb-2 block text-[12px] font-semibold text-black">
               Last Name <span className="text-[#c85b68]">*</span>
             </label>
             <input
@@ -177,12 +197,12 @@ const ContactPropertyManagementSection = () => {
               value={formData.lastName}
               onChange={handleChange}
               required
-              className="h-[50px] w-full border border-[#c8b2b2] bg-transparent px-4 text-[16px] outline-none transition focus:border-[#24364b]"
+              className="h-[40px] w-full border border-[#c8b2b2] bg-transparent px-4 text-[16px] outline-none transition focus:border-[#24364b]"
             />
           </div>
 
           <div>
-            <label className="mb-2 block text-[14px] font-semibold text-black">
+            <label className="mb-2 block text-[12px] font-semibold text-black">
               Your Email Address <span className="text-[#c85b68]">*</span>
             </label>
             <input
@@ -191,30 +211,35 @@ const ContactPropertyManagementSection = () => {
               value={formData.email}
               onChange={handleChange}
               required
-              className="h-[50px] w-full border border-[#c8b2b2] bg-transparent px-4 text-[16px] outline-none transition focus:border-[#24364b]"
+              className="h-[45px] w-full border border-[#c8b2b2] bg-transparent px-4 text-[16px] outline-none transition focus:border-[#24364b]"
             />
           </div>
 
           <div>
-            <label className="mb-2 block text-[14px] font-semibold text-black">
+            <label className="mb-2 block text-[12px] font-semibold text-black">
               Mobile Phone <span className="text-[#c85b68]">*</span>
             </label>
             <input
-              type="text"
+              type="tel"
               name="phone"
               value={formData.phone}
               onChange={handleChange}
               required
-              className="h-[50px] w-full border border-[#c8b2b2] bg-transparent px-4 text-[16px] outline-none transition focus:border-[#24364b]"
+              inputMode="numeric"
+              autoComplete="tel"
+              placeholder=" 07123 456789 or +44 7123 456789"
+              maxLength={18}
+              pattern="^(\+44\s?7\d{3}|\(?07\d{3}\)?)\s?\d{3}\s?\d{3}$|^(\+44\s?1\d{2,4}|\(?01\d{2,4}\)?)\s?\d{3,4}\s?\d{3,4}$|^(\+44\s?2\d{2,3}|\(?02\d{2,3}\)?)\s?\d{3,4}\s?\d{4}$"
+              className="h-[45px] w-full border border-[#c8b2b2] bg-transparent px-4 text-[16px] outline-none transition focus:border-[#24364b]"
             />
           </div>
 
           <div>
             <div className="mb-2 flex items-center justify-between gap-4">
-              <label className="block text-[14px] font-semibold text-black">
+              <label className="block text-[12px] font-semibold text-black">
                 How can we help?
               </label>
-              <span className="text-[15px] text-black">
+              <span className="text-[12px] text-black">
                 {formData.message.length} / {maxLength}
               </span>
             </div>
@@ -239,7 +264,7 @@ const ContactPropertyManagementSection = () => {
               className="mt-1 h-6 w-6 shrink-0 border border-[#8f8f8f] accent-[#24364b]"
             />
 
-            <p className="text-[16px] leading-[1.6] text-black">
+            <p className="text-[14px] leading-[1.6] text-black">
               Please confirm that it is okay for us to contact you about this
               information as well as products and services. (You will always be
               given the right to unsubscribe at any point in the future)
@@ -250,7 +275,7 @@ const ContactPropertyManagementSection = () => {
             <button
               type="submit"
               disabled={isSubmitting}
-              className="inline-flex min-h-[50px] min-w-[126px] items-center justify-center border border-[#24364b] px-10 py-3 text-[16px] font-medium text-[#0a2a67] transition hover:bg-[#0a2a67] hover:text-white"
+              className="inline-flex min-h-[40px] w-full items-center justify-center border border-[#24364b] px-8 py-2 text-[14px] font-medium text-[#0a2a67] transition hover:bg-[#041c55] hover:text-white lg:min-w-[40px] lg:w-auto"
             >
               {isSubmitting ? "Sending..." : "Send"}
             </button>

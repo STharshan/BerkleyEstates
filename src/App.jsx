@@ -48,7 +48,7 @@ function App() {
           <Route path="/homeowners" element={<HomeOwner />} />
 
           <Route path="/let" element={<Let />} />
-          <Route path="/property-management" element={<Propertymanagement />} />
+          <Route path="/property-management/" element={<Propertymanagement />} />
           <Route path="/maintenance" element={<Maintenance />} />
           <Route path="/sell-with-us" element={<SellwithUs />} />
           <Route path="/about" element={<AboutPage />} />

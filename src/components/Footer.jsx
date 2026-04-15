@@ -12,7 +12,7 @@ export default function Footer() {
           {/* LEFT - LOGO */}
           <div className="w-full lg:w-auto flex justify-center lg:justify-start">
             <img
-              src="logo.png"
+              src="/logo.png"
               alt="logo"
               loading="lazy"
               className="w-[180px]"

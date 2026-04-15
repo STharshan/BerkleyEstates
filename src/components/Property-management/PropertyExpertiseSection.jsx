@@ -23,9 +23,9 @@ const propertyPoints = [
 
 const PropertyExpertiseSection = () => {
   return (
-    <section className="w-full bg-[#D8D6D0] py-16 px-6 md:px-10 lg:px-32 xl:px-56 lg:py-24">
+    <section className="w-full bg-[#D8D6D0] py-16 px-6 md:px-10 lg:px-32 xl:px-48 lg:py-24">
       {/* items-start makes sure both columns start at the exact same top line */}
-      <div className="mx-auto grid max-w-[1450px] grid-cols-1 md:grid-cols-2 items-start gap-10 lg:gap-16">
+      <div className="mx-auto grid max-w-[1450px] grid-cols-1 md:grid-cols-2 items-center gap-10 lg:gap-4">
         
         {/* LEFT CONTENT */}
         <div className="font-primary order-2 md:order-1">
@@ -34,14 +34,14 @@ const PropertyExpertiseSection = () => {
             Handling your property with expertise and care
           </h3>
 
-          <p className="mt-6 text-[18px] leading-[28px] text-black md:text-[19px] lg:text-[20px] font-normal">
+          <p className="mt-6 text-[18px] leading-[28px] text-black md:text-[19px] lg:text-[20px] font-normal 2xl:pe-4">
             Choosing Berkley Estates means collaborating with a team that
             prioritises design, trust, and outstanding service. We’re committed
             to surpassing your expectations and maximising the value of your
             investment.
           </p>
 
-          <ul className="mt-8 space-y-5 text-[14px] md:text-[16px] leading-relaxed text-black">
+          <ul className="mt-8 space-y-5 text-[14px] md:text-[16px] leading-relaxed text-black ms-0 2xl:ms-8">
             {propertyPoints.map((item, index) => (
               <li key={index} className="flex items-start gap-3">
                 <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-black" />
@@ -55,7 +55,7 @@ const PropertyExpertiseSection = () => {
         </div>
 
         {/* RIGHT IMAGE */}
-        <div className="w-full order-1 md:order-2">
+        <div className="w-full order-2 md:order-2">
           {/* block and m-0 ensure the image starts exactly where the container starts */}
           <img
             src="/property-door.jpeg"
