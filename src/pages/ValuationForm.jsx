@@ -1,4 +1,5 @@
 import { useState } from "react";
+import emailjs from "@emailjs/browser";
 
 export default function ValuationPage() {
   const [formData, setFormData] = useState({
@@ -14,6 +15,18 @@ export default function ValuationPage() {
     source: "",
     consent: false,
   });
+  const [status, setStatus] = useState(null);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const validateEmail = (email) => {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
+  };
+
+  const validatePhone = (phone) => {
+    const phoneRegex = /^[\d\s\-\+\(\)]{10,}$/;
+    return phoneRegex.test(phone.replace(/\s/g, ""));
+  };
 
   const handleChange = (e) => {
     const { name, value, type, checked } = e.target;
@@ -23,10 +36,93 @@ export default function ValuationPage() {
     }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log("Form Data:", formData);
-    // Add your form submission logic here
+    setStatus(null);
+
+    // Validation checks
+    if (!formData.valuationType) {
+      setStatus({ type: "error", message: "Please select a valuation type." });
+      return;
+    }
+    if (!formData.firstName.trim()) {
+      setStatus({ type: "error", message: "First name is required." });
+      return;
+    }
+    if (!formData.surname.trim()) {
+      setStatus({ type: "error", message: "Surname is required." });
+      return;
+    }
+    if (!validateEmail(formData.email)) {
+      setStatus({ type: "error", message: "Please enter a valid email address." });
+      return;
+    }
+    if (!validatePhone(formData.phone)) {
+      setStatus({ type: "error", message: "Please enter a valid phone number (at least 10 digits)." });
+      return;
+    }
+    if (!formData.propertyAddress.trim()) {
+      setStatus({ type: "error", message: "Property address is required." });
+      return;
+    }
+    if (!formData.preferredDate) {
+      setStatus({ type: "error", message: "Please select a preferred date." });
+      return;
+    }
+    if (!formData.consent) {
+      setStatus({ type: "error", message: "Please accept the privacy policy." });
+      return;
+    }
+
+    const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+    const templateId = import.meta.env.VITE_EMAILJS_VALUATION_TEMPLATE_ID;
+    const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
+
+    if (!serviceId || !templateId || !publicKey) {
+      setStatus({
+        type: "error",
+        message: "EmailJS is not configured. Add VITE_EMAILJS_SERVICE_ID, VITE_EMAILJS_VALUATION_TEMPLATE_ID, and VITE_EMAILJS_PUBLIC_KEY to your .env file.",
+      });
+      return;
+    }
+
+    setIsSubmitting(true);
+
+    try {
+      await emailjs.send(serviceId, templateId, {
+        valuation_type: formData.valuationType,
+        first_name: formData.firstName,
+        surname: formData.surname,
+        email: formData.email,
+        phone: formData.phone,
+        preferred_date: formData.preferredDate,
+        preferred_time: `${formData.preferredTimeHours || "00"}:${formData.preferredTimeMinutes || "00"}`,
+        property_address: formData.propertyAddress,
+        source: formData.source,
+      }, publicKey);
+
+      setStatus({ type: "success", message: "Valuation request sent successfully! We'll contact you soon." });
+      setFormData({
+        valuationType: "",
+        firstName: "",
+        surname: "",
+        email: "",
+        phone: "",
+        preferredDate: "",
+        preferredTimeHours: "",
+        preferredTimeMinutes: "",
+        propertyAddress: "",
+        source: "",
+        consent: false,
+      });
+    } catch (error) {
+      setStatus({
+        type: "error",
+        message: error?.text || error?.message || "Unable to submit your valuation request. Please try again later.",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -50,6 +146,18 @@ export default function ValuationPage() {
       <section className="w-full bg-[#d8d5cf] py-16 md:py-20 lg:py-24 px-4 md:px-8">
         <div className="max-w-[860px] mx-auto">
           <p className="text-[14px] mb-10">"*" indicates required fields</p>
+
+          {status && (
+            <div
+              className={`mb-6 rounded border px-4 py-3 text-sm ${
+                status.type === "success"
+                  ? "border-green-500 bg-green-50 text-green-700"
+                  : "border-red-500 bg-red-50 text-red-700"
+              }`}
+            >
+              {status.message}
+            </div>
+          )}
 
           <form onSubmit={handleSubmit} className="space-y-7">
             {/* Valuation Type */}
@@ -207,9 +315,10 @@ export default function ValuationPage() {
             <div className="pt-2">
               <button
                 type="submit"
-                className="bg-[#001C56] text-white text-[15px] px-7 md:px-8 py-3 hover:opacity-90 transition duration-300 hover:bg-white hover:text-black"
+                disabled={isSubmitting}
+                className="bg-[#001C56] text-white text-[15px] px-7 md:px-8 py-3 font-primary transition duration-300 hover:opacity-90 hover:bg-white hover:text-black disabled:cursor-not-allowed disabled:opacity-60"
               >
-                Submit
+                {isSubmitting ? "Sending..." : "Submit"}
               </button>
             </div>
           </form>

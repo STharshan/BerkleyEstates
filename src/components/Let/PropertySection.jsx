@@ -3,7 +3,7 @@ import { IoIosArrowForward } from 'react-icons/io';
 
 const PropertySection = () => {
     return (
-        <section className="bg-white py-12 px-36 md:py-20">
+        <section className="bg-white py-12 px-4 sm:px-6 md:px-8 lg:px-12 md:py-20">
             <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
 
                 {/* Left Content Side */}
