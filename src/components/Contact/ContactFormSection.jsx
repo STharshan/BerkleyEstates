@@ -132,8 +132,8 @@ const ContactFormSection = () => {
 
   return (
     <section className="w-full bg-[#d8d5cf] py-16 md:py-20 lg:py-24 px-4 md:px-6">
-      <div className="max-w-[960px] mx-auto">
-        <p className="text-[14px] text-black mb-10 font-primary">
+      <div className="max-w-[900px] mx-auto">
+        <p className="text-[16px] text-black mb-10 font-primary">
           "*" indicates required fields
         </p>
 
@@ -149,7 +149,7 @@ const ContactFormSection = () => {
           </div>
         )}
 
-        <form onSubmit={handleSubmit} className="space-y-7">
+        <form onSubmit={handleSubmit} className="space-y-7 font-medium">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-7">
             <input
               type="text"
@@ -235,7 +235,7 @@ const ContactFormSection = () => {
             <button
               type="submit"
               disabled={isSubmitting}
-              className="bg-[#001C56] text-white px-7 md:px-8 py-3 text-[15px] font-primary transition duration-300 hover:opacity-90 hover:bg-white hover:text-black disabled:cursor-not-allowed disabled:opacity-60"
+              className="w-full bg-[#001C56] px-7 py-3 text-[15px] text-white font-primary transition duration-300 hover:opacity-90 hover:bg-white hover:text-black disabled:cursor-not-allowed disabled:opacity-60 lg:w-auto lg:px-8"
             >
               {isSubmitting ? "Sending..." : "Submit"}
             </button>

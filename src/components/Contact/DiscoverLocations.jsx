@@ -21,7 +21,7 @@ const locations = [
 
 const DiscoverLocations = () => {
   return (
-    <section className="w-full bg-white py-16 md:py-20 lg:py-24 px-4 md:px-8 lg:px-32">
+    <section className="w-full bg-white py-16 md:py-20 lg:py-20 px-4 md:px-8 lg:px-32">
       <div className="max-w-[1520px] mx-auto">
         <div className=" mb-10">
           <h2 className="text-[25px] md:text-[25px] font-primary text-[#0A0A0A] mb-4 text-center font-medium">
@@ -57,7 +57,7 @@ const DiscoverLocations = () => {
                 </div>
 
                 <p className="mt-5 text-[14px] md:text-[14px]">
-                  <span className="font-medium">T: </span>
+                  <span className="font-bold">T: </span>
                   {office.phone}
                 </p>
               </div>
