@@ -198,21 +198,11 @@ const PropertySearchFilter = ({ onSearch }) => {
                 className="w-full h-[46px] pl-3 pr-10 text-[15px] font-medium font-primary bg-white border border-[#cccccc] rounded text-black placeholder:text-[#999] outline-none"
               />
               {/* Location Icon */}
-              <svg
-                className="absolute right-3 top-1/2 -translate-y-1/2 text-[#666] pointer-events-none"
-                width="20"
-                height="20"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              >
-                <circle cx="12" cy="12" r="10" />
-                <line x1="12" y1="8" x2="12" y2="16" />
-                <line x1="8" y1="12" x2="16" y2="12" />
-              </svg>
+              <img
+                src="/current-location.png"
+                alt="Location"
+                className="absolute right-3 top-1/2 -translate-y-1/2 w-5 h-5 pointer-events-none"
+              />
 
               {/* Autocomplete Dropdown */}
               {autocompleteResults.length > 0 && (
