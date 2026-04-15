@@ -82,7 +82,7 @@ export default function Footer() {
             </div>
 
             {/* Copyright */}
-            <p className="opacity-80">© 2025 Berkley Estates</p>
+            <p className="opacity-80">© 2026 Berkley Estates</p>
           </div>
 
           {/* RIGHT SIDE LOGOS */}
