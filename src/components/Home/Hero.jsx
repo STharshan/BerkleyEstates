@@ -2,32 +2,27 @@ import React from 'react';
 
 const HeroSection = () => {
   return (
-    <section className="relative h-screen w-full overflow-hidden flex items-center justify-center">
-      {/* Background Video */}
-      <video
-        autoPlay
-        loop
-        muted
-        playsInline
-        className="absolute z-10 w-auto min-w-full min-h-full max-w-none object-cover"
-      >
-        <source 
-          src="https://assets.mixkit.co/videos/preview/mixkit-exterior-of-a-modern-house-in-the-city-21111-large.mp4" 
-          type="video/mp4" 
-        />
-        Your browser does not support the video tag.
-      </video>
+    <section className="relative flex h-screen min-h-[100svh] w-full items-center justify-center overflow-hidden bg-black">
+      {/* Vimeo Video Embed */}
+      <iframe
+        src="https://player.vimeo.com/video/1047730947?h=4c98c5ce3b&autoplay=1&loop=1&muted=1&background=1"
+        title="Berkley Estates hero video"
+        className="pointer-events-none absolute left-1/2 top-1/2 z-10 h-[56.25vw] min-h-full w-[177.78vh] min-w-full -translate-x-1/2 -translate-y-1/2"
+        frameBorder="0"
+        allow="autoplay; fullscreen; picture-in-picture"
+        allowFullScreen
+      ></iframe>
 
       {/* Dark Overlay to match image style */}
-      <div className="absolute z-20 inset-0 bg-black/40"></div>
+      <div className="absolute inset-0 z-20 bg-black/40"></div>
 
       {/* Content */}
-      <div className="relative z-30 text-center px-4 max-w-4xl">
+      <div className="relative z-30 max-w-4xl px-4 text-center">
         <h1 className="text-white text-5xl md:text-7xl font-semibold tracking-tight mb-10 leading-tight">
           Your property,<br />our passion.
         </h1>
 
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 md:gap-6">
+        <div className="flex flex-col items-center justify-center gap-4 sm:flex-row md:gap-6">
           <a 
             href="#properties" 
             className="w-full sm:w-48 px-8 py-3 border border-white text-white text-sm tracking-widest  hover:bg-white hover:text-[#041C55] transition-all duration-300 ease-in-out"
