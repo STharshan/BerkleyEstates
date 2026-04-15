@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import emailjs from "@emailjs/browser";
 
 const ContactPropertyManagementSection = () => {
   const [formData, setFormData] = useState({
@@ -9,8 +10,20 @@ const ContactPropertyManagementSection = () => {
     message: "",
     consent: false,
   });
+  const [status, setStatus] = useState(null);
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const maxLength = 180;
+
+  const validateEmail = (email) => {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
+  };
+
+  const validatePhone = (phone) => {
+    const phoneRegex = /^[\d\s()+-]{10,}$/;
+    return phoneRegex.test(phone.replace(/\s/g, ""));
+  };
 
   const handleChange = (e) => {
     const { name, value, type, checked } = e.target;
@@ -20,9 +33,94 @@ const ContactPropertyManagementSection = () => {
     }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log("Submitted Data:", formData);
+    setStatus(null);
+
+    if (!formData.firstName.trim()) {
+      setStatus({ type: "error", message: "First name is required." });
+      return;
+    }
+
+    if (!formData.lastName.trim()) {
+      setStatus({ type: "error", message: "Last name is required." });
+      return;
+    }
+
+    if (!validateEmail(formData.email)) {
+      setStatus({
+        type: "error",
+        message: "Please enter a valid email address.",
+      });
+      return;
+    }
+
+    if (!validatePhone(formData.phone)) {
+      setStatus({
+        type: "error",
+        message: "Please enter a valid phone number (at least 10 digits).",
+      });
+      return;
+    }
+
+    if (!formData.consent) {
+      setStatus({
+        type: "error",
+        message: "Please confirm that we can contact you.",
+      });
+      return;
+    }
+
+    const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+    const templateId =
+      import.meta.env.VITE_EMAILJS_PROPERTY_MANAGEMENT_TEMPLATE_ID;
+    const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
+
+    if (!serviceId || !templateId || !publicKey) {
+      setStatus({
+        type: "error",
+        message:
+          "EmailJS is not configured. Add VITE_EMAILJS_SERVICE_ID, VITE_EMAILJS_PROPERTY_MANAGEMENT_TEMPLATE_ID, and VITE_EMAILJS_PUBLIC_KEY to your .env file.",
+      });
+      return;
+    }
+
+    setIsSubmitting(true);
+
+    try {
+      await emailjs.send(
+        serviceId,
+        templateId,
+        {
+          first_name: formData.firstName,
+          last_name: formData.lastName,
+          email: formData.email,
+          phone: formData.phone,
+          message: formData.message,
+        },
+        publicKey
+      );
+
+      setStatus({ type: "success", message: "Message sent successfully!" });
+      setFormData({
+        firstName: "",
+        lastName: "",
+        email: "",
+        phone: "",
+        message: "",
+        consent: false,
+      });
+    } catch (error) {
+      setStatus({
+        type: "error",
+        message:
+          error?.text ||
+          error?.message ||
+          "Unable to send your message right now. Please try again later.",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -38,6 +136,18 @@ const ContactPropertyManagementSection = () => {
             behind the Berkley Estates team.
           </p>
         </div>
+
+        {status && (
+          <div
+            className={`mx-auto mt-10 max-w-[1128px] rounded border px-4 py-3 text-sm ${
+              status.type === "success"
+                ? "border-green-500 bg-green-50 text-green-700"
+                : "border-red-500 bg-red-50 text-red-700"
+            }`}
+          >
+            {status.message}
+          </div>
+        )}
 
         <form
           onSubmit={handleSubmit}
@@ -139,9 +249,10 @@ const ContactPropertyManagementSection = () => {
           <div className="pt-2">
             <button
               type="submit"
+              disabled={isSubmitting}
               className="inline-flex min-h-[50px] min-w-[126px] items-center justify-center border border-[#24364b] px-10 py-3 text-[16px] font-medium text-[#0a2a67] transition hover:bg-[#0a2a67] hover:text-white"
             >
-              Send
+              {isSubmitting ? "Sending..." : "Send"}
             </button>
           </div>
         </form>
