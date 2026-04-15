@@ -171,7 +171,7 @@ export const propertyDataStore = {
 export const allTestimonials = {
   Propertymanagement: {
     heading: "What Our Clients Are Saying",
-    subHeading: "Our customers' words speak louder than ours.",
+    subHeading: "Our customers words speak louder than ours.",
     reviews: [
       {
         text: "As an overseas landlord, Daniel Newton’s excellent communication and management give me real peace of mind. He keeps me informed and ensures my property is well looked after. Highly recommend his professional and reliable service!",
