@@ -1,9 +1,9 @@
 
 const Partner = () => {
   return (
-    <section className="w-full bg-white py-20 lg:py-28">
+    <section className="w-full bg-white py-10 lg:py-28">
       <div className="max-w-[1300px] mx-auto px-6 md:px-18">
-        <div className="grid grid-cols-1 lg:grid-cols-[1fr_650px] gap-14 lg:gap-0 items-center">
+        <div className="grid grid-cols-1 gap-14 items-center lg:grid-cols-[minmax(0,1fr)_minmax(0,520px)] lg:gap-8 xl:grid-cols-[1fr_650px] xl:gap-0">
           
           {/* Left Content */}
           <div className="max-w-full">
@@ -37,12 +37,12 @@ const Partner = () => {
           </div>
 
           {/* Right Image */}
-          <div className="w-full 2xl:ms-24 ms-0">
+          <div className="ms-0 w-full lg:justify-self-end 2xl:ms-24">
             <img
               src="/DSC09716-1536x994.webp"
               alt="Jake Brogden testimonial"
               loading="lazy"
-              className=" max-w-full md:max-w-[560px] h-[280px] md:h-[380px] lg:h-[380px] object-cover"
+              className="h-[280px] w-full object-cover md:h-[380px] lg:max-w-[520px] xl:max-w-[560px] 2xl:max-w-full"
             />
           </div>
 

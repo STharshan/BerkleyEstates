@@ -5,15 +5,24 @@ import { propertyDataStore } from "../Data/sectionData"; // Import your data
 const FeaturedProperties = ({ id }) => {
   // Find the specific data using the ID, or default to Sales if not found
   const sectionData = propertyDataStore[id] ;
+  const isSellWithUs = id === "SellwithUs";
 
   return (
-    <section className="w-full bg-white py-20 px-6 md:px-10 lg:px-48">
+    <section
+      className={`w-full bg-white px-6 py-20 md:px-10 ${
+        isSellWithUs ? "lg:px-16 xl:px-48" : "lg:px-48"
+      }`}
+    >
       <div className="max-w-[1400px] mx-auto">
         <h3 className="text-[16px] tracking-[2px] uppercase mb-10 text-[#0A0A0A] font-primary leading-[16px]">
           {sectionData.title}
         </h3>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-14 gap-y-12">
+        <div
+          className={`grid grid-cols-1 gap-x-14 gap-y-12 sm:grid-cols-2 ${
+            isSellWithUs ? "lg:grid-cols-2 xl:grid-cols-3" : "lg:grid-cols-3"
+          }`}
+        >
           {sectionData.items.map((item) => (
             <div key={item.id} className="bg-white overflow-hidden group">
               <div className="w-full aspect-[3/2] overflow-hidden">

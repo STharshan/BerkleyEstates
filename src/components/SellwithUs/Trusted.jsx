@@ -2,13 +2,13 @@ import { Link } from "react-router-dom";
 
 const Trusted = () => {
   return (
-    <section className="w-full bg-white py-20 lg:py-0">
+    <section className="w-full bg-white py-10  lg:py-0">
       <div className="max-w-[1300px] mx-auto px-6 md:px-10">
         
-        <div className="grid grid-cols-1 lg:grid-cols-[600px_1fr] gap-12 lg:gap-10 items-center">
+        <div className="grid grid-cols-1 gap-12 items-center lg:grid-cols-[520px_minmax(0,1fr)] lg:gap-8 xl:grid-cols-[600px_minmax(0,1fr)] xl:gap-10">
           
           {/* Image */}
-          <div>
+          <div className="order-1 2xl:order-0">
             <img
               src="/872a5a67-7872-42b8-a35c-4996bab5b356.webp"
               alt="Property expert"
@@ -18,7 +18,7 @@ const Trusted = () => {
           </div>
 
           {/* Content */}
-          <div className="max-w-[560px]">
+          <div className="max-w-[560px] lg:max-w-none xl:max-w-[560px]">
             
             {/* Small Heading */}
             <h4 className="text-[16px] md:text-[16px] tracking-[2px] text-[#0A0A0A] mb-4 font-primary uppercase 2xl:-mt-24 font-normal -mt-0">
