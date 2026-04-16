@@ -23,15 +23,15 @@ const DiscoverLocations = () => {
   return (
     <section className="w-full bg-white py-16 md:py-20 lg:py-20 px-4 md:px-8 lg:px-32">
       <div className="max-w-[1520px] mx-auto">
-        <div className=" mb-10">
+        <div className="mb-10">
           <h2 className="text-[25px] md:text-[25px] font-primary text-[#0A0A0A] mb-4 text-center font-medium">
             Discover our locations
           </h2>
           <p className="max-w-[1350px] text-left mx-auto text-[15px] md:text-[16px] leading-[1.8] text-black font-primary">
-            Each Berkley Estates office serves as a hub for real estate innovation.
-            We’re at our happiest when building authentic relationships with clients;
-            if you’d like to chat with our dedicated team of experts, do drop by and
-            say hello.
+            Each Berkley Estates office serves as a hub for real estate
+            innovation. We&apos;re at our happiest when building authentic
+            relationships with clients; if you&apos;d like to chat with our
+            dedicated team of experts, do drop by and say hello.
           </p>
         </div>
 
