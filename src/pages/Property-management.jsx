@@ -10,7 +10,7 @@ const Propertymanagement = () => {
         <div>
           <HeroSection
             title="Property Management"
-            bgImage="/hero-property-management.jpeg"
+            bgImage="/hero-property-management.webp"
           />
           
           {/* Injecting data using id */}
