@@ -41,7 +41,7 @@ const PropertyExpertiseSection = () => {
             investment.
           </p>
 
-          <ul className="mt-8 space-y-5 text-[14px] md:text-[16px] leading-relaxed text-black ms-0 2xl:ms-8">
+          <ul className="mt-8 space-y-5 text-[14px] md:text-[16px] leading-relaxed text-black ms-0 2xl:ms-8 ms-6">
             {propertyPoints.map((item, index) => (
               <li key={index} className="flex items-start gap-3">
                 <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-black" />
