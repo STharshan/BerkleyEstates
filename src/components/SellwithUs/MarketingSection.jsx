@@ -1,11 +1,11 @@
 const MarketingSection = () => {
   return (
-    <section className="w-full bg-white dark:bg-black py-16 md:py-20 lg:py-24 px-4 md:px-8 lg:px-40">
+    <section className="w-full bg-white px-4 py-4 dark:bg-black md:px-8 md:py-20 lg:px-16 lg:py-24 xl:px-40">
       
       <div className="max-w-[1280px] mx-auto">
         
         {/* Grid eka 1280px athule fit wenna fixed widths nathiwa 1fr units use kara */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-start">
+        <div className="grid grid-cols-1 gap-12 items-start lg:grid-cols-2 lg:gap-12 xl:gap-20">
           
           {/* Left Content */}
           <div className="w-full ">
@@ -27,7 +27,7 @@ const MarketingSection = () => {
           </div>
 
           {/* Right Image */}
-          <div className="w-full">
+          <div className="w-full ">
             <img
               src="/IMG_9026.jpeg"
               alt="Berkley Estates kitchen interior"
