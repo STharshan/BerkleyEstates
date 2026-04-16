@@ -128,7 +128,7 @@ const LettingsTeam = () => {
   return (
     <section className="bg-white min-h-screen py-16 px-8 font-sans">
       <div className="max-w-5xl mx-auto">
-        <h2 className="text-center text-[20px] font-medium tracking-widest uppercase mb-16 text-black">
+        <h2 className="text-center text-xl 2xl:text-[24px] font-medium tracking-widest uppercase mb-16 text-black">
           Lettings
         </h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 sm:gap-x-16 gap-y-12">
