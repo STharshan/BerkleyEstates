@@ -21,7 +21,7 @@ const TestimonialSection = ({ pageId }) => {
         </p>
 
         {/* Grid Layout: Stacked on mobile and tablet, 2 cols on lg+ */}
-        <div className="mt-12 grid grid-cols-1 gap-12 lg:mt-20 lg:grid-cols-2 lg:gap-8 2xl:mt-10 2xl:px-20">
+        <div className="mt-12 grid grid-cols-1 gap-12 lg:mt-20 lg:grid-cols-2 lg:gap-6 2xl:mt-10 2xl:px-20">
           {data.reviews.map((item, index) => (
             <div key={index} className="flex flex-col text-left">
               
@@ -31,7 +31,7 @@ const TestimonialSection = ({ pageId }) => {
               </div>
 
               {/* Testimonial Text */}
-              <p className="mt-2 text-[14px] leading-[1.7] text-white font-normal lg:text-[16px] font-primary">
+              <p className="mt-2 text-[14px] leading-[1.7] text-white font-normal lg:text-[16px] font-primary  pe-0 ">
                 {item.text}
               </p>
 
