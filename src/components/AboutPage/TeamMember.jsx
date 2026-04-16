@@ -18,9 +18,9 @@ const TeamMember = () => {
     <div className="bg-white min-h-screen flex flex-col items-center py-12 px-4">
 
       {/* Header */}
-      <div className="text-center max-w-2xl mb-12">
+      <div className="text-center max-w-5xl mb-12 2xl:px-6">
         <h2 className="text-4xl font-semibold text-black mb-4">Meet our team</h2>
-        <p className="text-black leading-relaxed">
+        <p className="text-black leading-relaxed text-[14px] md:text-[17px]">
           Meet the team at Berkley Estates & Letting Agents! Friendly, dedicated, and always happy to help,
           our expert local agents—born and raised in Leicestershire—offer professional, knowledgeable advice
           for all your property needs.
@@ -28,7 +28,7 @@ const TeamMember = () => {
       </div>
 
       <div className="w-full max-w-md">
-        <h3 className="text-center text-xl font-bold tracking-widest text-black mb-8 uppercase">
+        <h3 className="text-center text-xl 2xl:text-[24px] font-medium  text-black mb-8 uppercase font-primary">
           Directors
         </h3>
 

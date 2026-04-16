@@ -52,7 +52,7 @@ function App() {
           <Route path="/property-management/" element={<Propertymanagement />} />
           <Route path="/maintenance" element={<Maintenance />} />
           <Route path="/sell-with-us" element={<SellwithUs />} />
-          <Route path="/about" element={<AboutPage />} />
+          <Route path="/about/" element={<AboutPage />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />
           <Route path="/complaints" element={<ComplaintsProcedure />} />
