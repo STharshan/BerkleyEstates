@@ -19,7 +19,7 @@ const HeroSection = ({ title, bgImage, overlay = true }) => {
 
       {/* Center Content */}
       <div className="relative z-10 flex h-full w-full items-center justify-center px-6 text-center">
-        <h1 className="text-white leading-[40px] tracking-tight font-primary font-normal  tracking-[-1px] md:leading-[70px]
+        <h1 className="text-white leading-[40px] tracking-tight font-primary font-normal max-w-6xl mx-auto tracking-[-1px] md:leading-[70px]
           text-[32px] 
           md:text-[40px] 
           lg:text-[70px]"
@@ -31,7 +31,7 @@ const HeroSection = ({ title, bgImage, overlay = true }) => {
    
       <a
         href="#team"
-        className="absolute bottom-44 left-1/2 z-10 -translate-x-1/2 text-white transition hover:scale-110"
+        className="absolute bottom-28 left-1/2 z-10 -translate-x-1/2 text-white transition hover:scale-110"
       >
         <svg
           viewBox="0 0 320 512"

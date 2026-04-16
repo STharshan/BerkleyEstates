@@ -20,6 +20,7 @@ import SellDiscreetly from "./pages/SellDiscreetly";
 import TermsPage from "./pages/TermsPage";
 import ValuationForm from "./pages/ValuationForm";
 import PropertiesPage from "./pages/Properties";
+import SinglePropertyPage from "./pages/SinglePropertyPage";
 function App() {
   // 404 Not Found component
   const NotFound = () => (
@@ -59,6 +60,7 @@ function App() {
           <Route path="/terms" element={<TermsPage />} />
           <Route path="/valuation" element={<ValuationForm />} />
           <Route path="/properties" element={<PropertiesPage />} />
+          <Route path="/single-property" element={<SinglePropertyPage />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
         <Footer />

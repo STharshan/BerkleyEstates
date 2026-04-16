@@ -1,5 +1,6 @@
 import { useState } from "react";
 import emailjs from "@emailjs/browser";
+import { ChevronDown } from 'lucide-react';
 
 export default function ValuationPage() {
   const [formData, setFormData] = useState({
@@ -128,13 +129,13 @@ export default function ValuationPage() {
   return (
     <div className="w-full font-sans text-black">
       {/* HERO SECTION */}
-      <section className="w-full bg-[#f3f3f3] min-h-[520px] flex items-center justify-center px-6">
+      <section className="w-full bg-white py-20 md:py-24 lg:py-28 px-4 md:px-8 2xl:pt-40">
         <div className="max-w-5xl mx-auto text-center">
           <h1 className="text-[52px] md:text-[82px] leading-[1.05] font-normal tracking-tight mb-8">
             Discover your home's value
           </h1>
 
-          <p className="max-w-4xl mx-auto text-[22px] leading-[1.55] text-black">
+          <p className="max-w-4xl mx-auto text-[18px] leading-[1.55] text-black">
             Start the process with a complimentary market valuation. We’ll then
             connect you with an agent whose local market knowledge and
             experience is second to none. Book your appointment today.
@@ -149,11 +150,10 @@ export default function ValuationPage() {
 
           {status && (
             <div
-              className={`mb-6 rounded border px-4 py-3 text-sm ${
-                status.type === "success"
+              className={`mb-6 rounded border px-4 py-3 text-sm ${status.type === "success"
                   ? "border-green-500 bg-green-50 text-green-700"
                   : "border-red-500 bg-red-50 text-red-700"
-              }`}
+                }`}
             >
               {status.message}
             </div>
@@ -162,7 +162,7 @@ export default function ValuationPage() {
           <form onSubmit={handleSubmit} className="space-y-7">
             {/* Valuation Type */}
             <div>
-              <select 
+              <select
                 name="valuationType"
                 value={formData.valuationType}
                 onChange={handleChange}
@@ -275,36 +275,46 @@ export default function ValuationPage() {
             </div>
 
             {/* Source */}
-            <div>
+            <div className="w-full">
               <label className="block text-[15px] font-semibold mb-2">
                 Please select
               </label>
-              <select 
-                name="source"
-                value={formData.source}
-                onChange={handleChange}
-                className="w-full h-[40px] px-4 text-[15px] bg-white border-0 text-[#6b7280] outline-none appearance-none">
-                <option value="">Where did you hear about us?*</option>
-                <option value="recommendations">Recommendations</option>
-                <option value="social">Social Media</option>
-                <option value="google">Google Search</option>
-                <option value="magazine">Magazine or Newspaper</option>
-                <option value="leaflet">Posted Leaflet</option>
-                <option value="rightmove">Rightmove or Zoopla</option>
-                <option value="board">For Sale / To Let Board</option>
-                <option value="other">Not Sure</option>
-              </select>
+
+              {/* Wrap the select in a relative container */}
+              <div className="relative">
+                <select
+                  name="source"
+                  value={formData.source}
+                  onChange={handleChange}
+                  className="w-full h-[40px] px-4 text-[15px] bg-white border-0 text-[#6b7280] outline-none appearance-none pr-10"
+                >
+                  <option value="">Where did you hear about us?*</option>
+                  <option value="recommendations">Recommendations</option>
+                  <option value="social">Social Media</option>
+                  <option value="google">Google Search</option>
+                  <option value="magazine">Magazine or Newspaper</option>
+                  <option value="leaflet">Posted Leaflet</option>
+                  <option value="rightmove">Rightmove or Zoopla</option>
+                  <option value="board">For Sale / To Let Board</option>
+                  <option value="other">Not Sure</option>
+                </select>
+
+                {/* The Arrow Icon */}
+                <div className="absolute inset-y-0 right-0 flex items-center px-3 pointer-events-none">
+                  <ChevronDown className="w-4 h-4 text-[#6b7280]" />
+                </div>
+              </div>
             </div>
 
             {/* Checkbox */}
             <label className="flex items-start gap-3 cursor-pointer">
-              <input 
-                type="checkbox" 
+              <input
+                type="checkbox"
                 name="consent"
                 checked={formData.consent}
                 onChange={handleChange}
                 required
-                className="mt-1 h-5 w-5 border-0 accent-[#001C56]" 
+                className="mt-1 h-5 w-5 border-0 accent-[#001C56]"
               />
               <p className="text-[14px] leading-7 text-black">
                 I have read and understand the privacy policy.
