@@ -1,6 +1,9 @@
 import { useState } from "react";
 import emailjs from "@emailjs/browser";
 
+const ukPhonePattern =
+  /^(?:(?:\+44\s?7\d{3}|\(?07\d{3}\)?)\s?\d{3}\s?\d{3}|(?:\+44\s?1\d{2,4}|\(?01\d{2,4}\)?)\s?\d{3,4}\s?\d{3,4}|(?:\+44\s?2\d{2,3}|\(?02\d{2,3}\)?)\s?\d{3,4}\s?\d{4})$/;
+
 const ContactFormSection = () => {
   const [formData, setFormData] = useState({
     firstName: "",
@@ -20,17 +23,7 @@ const ContactFormSection = () => {
   };
 
   const validatePhone = (phone) => {
-    const digitsOnly = phone.replace(/\D/g, "");
-
-    if (digitsOnly.startsWith("44")) {
-      return digitsOnly.length === 12;
-    }
-
-    if (digitsOnly.startsWith("0")) {
-      return digitsOnly.length === 11;
-    }
-
-    return false;
+    return ukPhonePattern.test(phone.trim());
   };
 
   const handleChange = (e) => {
@@ -151,71 +144,125 @@ const ContactFormSection = () => {
 
         <form onSubmit={handleSubmit} className="space-y-7 font-medium">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-7">
-            <input
-              type="text"
-              name="firstName"
-              value={formData.firstName}
-              onChange={handleChange}
-              placeholder="First Name*"
-              required
-              className="w-full h-[40px] bg-white px-4 text-[15px] text-[#6b7280] outline-none border-0 font-primary"
-            />
+            <div>
+              <label
+                htmlFor="contact-first-name"
+                className="mb-2 block text-[14px] text-black font-primary"
+              >
+                First Name*
+              </label>
+              <input
+                id="contact-first-name"
+                type="text"
+                name="firstName"
+                value={formData.firstName}
+                onChange={handleChange}
+                placeholder="First Name*"
+                required
+                className="w-full h-[40px] bg-white px-4 text-[15px] text-[#6b7280] outline-none border-0 font-primary"
+              />
+            </div>
 
-            <input
-              type="text"
-              name="lastName"
-              value={formData.lastName}
-              onChange={handleChange}
-              placeholder="Surname*"
-              required
-              className="w-full h-[40px] bg-white px-4 text-[15px] text-[#6b7280] outline-none border-0 font-primary"
-            />
+            <div>
+              <label
+                htmlFor="contact-last-name"
+                className="mb-2 block text-[14px] text-black font-primary"
+              >
+                Surname*
+              </label>
+              <input
+                id="contact-last-name"
+                type="text"
+                name="lastName"
+                value={formData.lastName}
+                onChange={handleChange}
+                placeholder="Surname*"
+                required
+                className="w-full h-[40px] bg-white px-4 text-[15px] text-[#6b7280] outline-none border-0 font-primary"
+              />
+            </div>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-7">
-            <input
-              type="email"
-              name="email"
-              value={formData.email}
-              onChange={handleChange}
-              placeholder="Email Address*"
-              required
-              className="w-full h-[40px] bg-white px-4 text-[15px] text-[#6b7280] outline-none border-0 font-primary"
-            />
+            <div>
+              <label
+                htmlFor="contact-email"
+                className="mb-2 block text-[14px] text-black font-primary"
+              >
+                Email Address*
+              </label>
+              <input
+                id="contact-email"
+                type="email"
+                name="email"
+                value={formData.email}
+                onChange={handleChange}
+                placeholder="Email Address*"
+                required
+                className="w-full h-[40px] bg-white px-4 text-[15px] text-[#6b7280] outline-none border-0 font-primary"
+              />
+            </div>
 
-            <input
-              type="tel"
-              name="phone"
-              value={formData.phone}
+            <div>
+              <label
+                htmlFor="contact-phone"
+                className="mb-2 block text-[14px] text-black font-primary"
+              >
+                Telephone Number*
+              </label>
+              <input
+                id="contact-phone"
+                type="tel"
+                name="phone"
+                value={formData.phone}
+                onChange={handleChange}
+                placeholder="07123 456789 or +44 7123 456789*"
+                required
+                inputMode="numeric"
+                autoComplete="tel"
+                maxLength={18}
+                pattern={ukPhonePattern.source}
+                className="w-full h-[40px] bg-white px-4 text-[15px] text-[#6b7280] outline-none border-0 font-primary"
+              />
+            </div>
+          </div>
+
+          <div>
+            <label
+              htmlFor="contact-property-address"
+              className="mb-2 block text-[14px] text-black font-primary"
+            >
+              Property Address*
+            </label>
+            <textarea
+              id="contact-property-address"
+              name="propertyAddress"
+              value={formData.propertyAddress}
               onChange={handleChange}
-              placeholder="07123 456789 or +44 7123 456789*"
+              placeholder="Property Address*"
+              rows={6}
               required
-              inputMode="numeric"
-              autoComplete="tel"
-              maxLength={18}
-              pattern="^(\+44\s?7\d{3}|\(?07\d{3}\)?)\s?\d{3}\s?\d{3}$|^(\+44\s?1\d{2,4}|\(?01\d{2,4}\)?)\s?\d{3,4}\s?\d{3,4}$|^(\+44\s?2\d{2,3}|\(?02\d{2,3}\)?)\s?\d{3,4}\s?\d{4}$"
-              className="w-full h-[40px] bg-white px-4 text-[15px] text-[#6b7280] outline-none border-0 font-primary"
+              className="w-full min-h-[140px] bg-white px-4 py-3 text-[15px] text-[#6b7280] outline-none border-0 resize-none font-primary"
             />
           </div>
 
-          <textarea
-            name="propertyAddress"
-            value={formData.propertyAddress}
-            onChange={handleChange}
-            placeholder="Property Address*"
-            rows={6}
-            required
-            className="w-full min-h-[140px] bg-white px-4 py-3 text-[15px] text-[#6b7280] outline-none border-0 resize-none font-primary"
-          />
-
-          <textarea
-            name="message"
-            value={formData.message}
-            onChange={handleChange}
-            placeholder="How can we help you?"
-            rows={6}
-            className="w-full min-h-[140px] bg-white px-4 py-3 text-[15px] text-[#6b7280] outline-none border-0 resize-none font-primary"
-          />
+          <div>
+            <label
+              htmlFor="contact-message"
+              className="mb-2 block text-[14px] text-black font-primary"
+            >
+              How can we help you?
+            </label>
+            <textarea
+              id="contact-message"
+              name="message"
+              value={formData.message}
+              onChange={handleChange}
+              placeholder="How can we help you?"
+              rows={6}
+              className="w-full min-h-[140px] bg-white px-4 py-3 text-[15px] text-[#6b7280] outline-none border-0 resize-none font-primary"
+            />
+          </div>
 
           <label className="flex items-start gap-3 cursor-pointer">
             <input
