@@ -23,7 +23,7 @@ const LetsTalkSection = () => {
             Leave the details to us and reap the benefits.
           </h2>
 
-          <p className="mt-6 max-w-[1200px] text-[16px] leading-[1.8] text-white md:text-[16px] font-normal">
+          <p className="mt-6 max-w-[1200px] text-[14px] leading-[22px] text-white md:text-[16px] font-normal">
             We blend proactive maintenance, tailored service, and a dedication
             to quality, ensuring your property receives the highest level of
             care at all times.

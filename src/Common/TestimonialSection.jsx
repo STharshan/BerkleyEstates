@@ -16,7 +16,7 @@ const TestimonialSection = ({ pageId }) => {
         </h2>
 
         {/* Dynamic Sub-heading */}
-        <p className="mt-4 text-[18px] text-white lg:text-[24px] font-normal font-primary">
+        <p className="mt-4 text-[22px] text-white lg:text-[24px] font-normal font-primary">
           {data.subHeading}
         </p>
 
@@ -27,7 +27,7 @@ const TestimonialSection = ({ pageId }) => {
               
               {/* Fixed Quote Icon - Adjusted leading to prevent overlap */}
               <div className="h-12 text-[80px] leading-none text-[#f9fafa] select-none font-serif-new lg:text-[100px]">
-                “
+                  “
               </div>
 
               {/* Testimonial Text */}
