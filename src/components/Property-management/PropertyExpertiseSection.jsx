@@ -23,7 +23,7 @@ const propertyPoints = [
 
 const PropertyExpertiseSection = () => {
   return (
-    <section className="w-full bg-[#D8D6D0] py-16 px-6 md:px-10 lg:px-32 xl:px-48 lg:py-24">
+    <section className="w-full bg-[#D8D6D0] py-16 px-6 md:px-10 lg:px-16 xl:px-48 lg:py-24">
       {/* items-start makes sure both columns start at the exact same top line */}
       <div className="mx-auto grid max-w-[1450px] grid-cols-1 md:grid-cols-2 items-center gap-10 lg:gap-4">
         
