@@ -171,7 +171,7 @@ const ContactPropertyManagementSection = () => {
 
         <form
           onSubmit={handleSubmit}
-          className="mx-auto mt-14 max-w-[1128px] space-y-8"
+          className="mx-auto mt-8 max-w-[1128px] space-y-8"
         >
           <div>
             <label className="mb-2 block text-[12px] font-semibold text-black">

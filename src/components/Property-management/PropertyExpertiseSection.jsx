@@ -23,7 +23,7 @@ const propertyPoints = [
 
 const PropertyExpertiseSection = () => {
   return (
-    <section className="w-full bg-[#D8D6D0] py-16 px-6 md:px-10 lg:px-32 xl:px-48 lg:py-24">
+    <section className="w-full bg-[#D8D6D0] py-16 px-6 md:px-10 lg:px-16 xl:px-48 lg:py-24">
       {/* items-start makes sure both columns start at the exact same top line */}
       <div className="mx-auto grid max-w-[1450px] grid-cols-1 md:grid-cols-2 items-center gap-10 lg:gap-4">
         
@@ -41,7 +41,7 @@ const PropertyExpertiseSection = () => {
             investment.
           </p>
 
-          <ul className="mt-8 space-y-5 text-[14px] md:text-[16px] leading-relaxed text-black ms-0 2xl:ms-8">
+          <ul className="mt-8 space-y-5 text-[14px] md:text-[16px] leading-relaxed text-black ms-0 2xl:ms-8 ms-6">
             {propertyPoints.map((item, index) => (
               <li key={index} className="flex items-start gap-3">
                 <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-black" />

@@ -6,7 +6,7 @@ const Maintenance = () => {
         <div>
           <HeroSection
             title="Maintenance"
-            bgImage="/maintenance.jpg"
+            bgImage="/maintenance.webp"
           />
           
           <AboutSection sectionId="team" />
