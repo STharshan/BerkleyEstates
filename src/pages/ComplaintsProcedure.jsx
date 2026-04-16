@@ -11,12 +11,12 @@ const Section = ({ title, children, className = "" }) => (
 
 export default function ComplaintsProcedure() {
   return (
-    <div className="min-h-screen bg-white font-primary pt-28 px-4 md:px-10 2xl:px-40 pb-12">
+    <div className="min-h-screen bg-white font-primary pt-10 2xl:pt-28 px-4 md:px-10 2xl:px-32 pb-12">
 
       
       <div className="bg-white py-10 px-4 ms-0 2xl:ms-10">
         <div className="max-w-7xl mx-auto md:text-left text-center">
-          <h1 className="2xl:text-[70px] md:text-[32px] text-[28px] font-medium text-black leading-[28px]">In-house Complaints Procedure</h1>
+          <h1 className="2xl:text-[70px] lg:text-[70px] md:text-[32px] text-[28px] font-medium text-black leading-[28px]">In-house Complaints Procedure</h1>
         </div>
       </div>
 
