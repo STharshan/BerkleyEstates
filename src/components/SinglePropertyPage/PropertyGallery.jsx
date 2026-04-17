@@ -1,59 +1,66 @@
-import React from 'react';
+import { propertyGalleryCopy } from "../../Data/propertyDetails";
 
-const PropertyGallery = () => {
-  // Mock array for the 6 visible images
-  const images = [
-    { id: 1, src: "/api/placeholder/600/400", alt: "Aerial view of fields" },
-    { id: 2, src: "/api/placeholder/600/400", alt: "Rear view of barn conversion" },
-    { id: 3, src: "/api/placeholder/600/400", alt: "Living room with log burner" },
-    { id: 4, src: "/api/placeholder/600/400", alt: "Modern kitchen island" },
-    { id: 5, src: "/api/placeholder/600/400", alt: "Aerial side view" },
-    { id: 6, src: "/api/placeholder/600/400", alt: "Kitchen secondary view" },
-  ];
+const PropertyGallery = ({ property, onOpenGallery }) => {
+  const previewImages = property.gallery.slice(0, 6);
 
   return (
-    <section className="bg-white py-12">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
-        {/* Image Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-1 mb-12">
-          {images.map((img, index) => (
-            <div key={img.id} className="relative group overflow-hidden aspect-[3/2]">
-              <img 
-                src={img.src} 
-                alt={img.alt} 
-                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-              />
-              
-              {/* Overlay on the last image (index 5) */}
-              {index === 5 && (
-                <div className="absolute inset-0 bg-black/40 flex items-center justify-center cursor-pointer hover:bg-black/50 transition-colors">
-                  <span className="text-white text-lg font-medium border-b border-white/60 pb-1">
-                    See all 28 images
-                  </span>
-                </div>
-              )}
-            </div>
-          ))}
+    <section className="bg-white px-6 py-6 md:px-10 lg:px-16 xl:px-20">
+      <div className="mx-auto max-w-[1280px] font-primary">
+        <div className="grid grid-cols-1 gap-[3px] md:grid-cols-2 xl:grid-cols-3">
+          {previewImages.map((image, index) => {
+            const showDesktopOverlay = index === 5 && property.gallery.length > 6;
+            const showMobileOverlay = index === 1 && property.gallery.length > 2;
+
+            return (
+              <button
+                key={image}
+                type="button"
+                onClick={() => onOpenGallery(index)}
+                className={`group relative aspect-[4/3] overflow-hidden bg-[#dce2ea] text-left ${
+                  index > 1 ? "hidden md:block" : ""
+                }`}
+              >
+                <img
+                  src={image}
+                  alt={`${property.fullTitle} gallery ${index + 1}`}
+                  className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                />
+
+                {showMobileOverlay ? (
+                  <div className="absolute inset-0 flex items-center justify-center bg-black/45 text-white md:hidden">
+                    <span className="border-b border-white/60 pb-1 text-[15px]">
+                      See all {property.gallery.length} images
+                    </span>
+                  </div>
+                ) : null}
+
+                {showDesktopOverlay ? (
+                  <div className="absolute inset-0 hidden items-center justify-center bg-black/45 text-white md:flex">
+                    <span className="border-b border-white/60 pb-1 text-[17px]">
+                      See all {property.gallery.length} images
+                    </span>
+                  </div>
+                ) : null}
+              </button>
+            );
+          })}
         </div>
 
-        {/* Text Content */}
-        <div className="max-w-4xl space-y-6 text-slate-800 text-[15px] sm:text-[16px] leading-relaxed">
+        <div className="mt-10 max-w-[950px] space-y-6 text-[15px] leading-8 text-[#293143] md:text-[16px]">
+          <p>{propertyGalleryCopy[0]}</p>
           <p>
-            At Berkley Estates, we invest time heavily in the visual and digital representation of our 
-            client's properties with the in-house marketing department we have.
+            Follow us{" "}
+            <a
+              href="https://www.instagram.com/berkleyestates/"
+              target="_blank"
+              rel="noreferrer"
+              className="font-medium text-[#001C56] underline-offset-4 hover:underline"
+            >
+              @berkleyestates
+            </a>
           </p>
-          
-          <p className="font-medium">
-            Follow us <span className="text-blue-900 cursor-pointer hover:underline">@berkleyestates</span>
-          </p>
-          
-          <p>
-            Our property descriptions are short because we would rather talk with you about the 
-            properties we sell and let and of course meet with you and show you around.
-          </p>
+          <p>{propertyGalleryCopy[2]}</p>
         </div>
-
       </div>
     </section>
   );

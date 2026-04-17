@@ -1,10 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { propertyDataStore } from "../Data/sectionData"; // Import your data
+import { propertyDataStore } from "../Data/sectionData";
 
 const FeaturedProperties = ({ id }) => {
-  // Find the specific data using the ID, or default to Sales if not found
-  const sectionData = propertyDataStore[id] ;
+  const sectionData = propertyDataStore[id];
   const isSellWithUs = id === "SellwithUs";
 
   return (
@@ -23,34 +22,54 @@ const FeaturedProperties = ({ id }) => {
             isSellWithUs ? "lg:grid-cols-2 xl:grid-cols-3" : "lg:grid-cols-3"
           }`}
         >
-          {sectionData.items.map((item) => (
-            <div key={item.id} className="bg-white overflow-hidden group">
-              <div className="w-full aspect-[3/2] overflow-hidden">
-                <img
-                  src={item.image}
-                  alt={item.title}
-                  loading="lazy"
-                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                />
-              </div>
+          {sectionData.items.map((item) => {
+            const cardContent = (
+              <>
+                <div className="w-full aspect-[3/2] overflow-hidden">
+                  <img
+                    src={item.image}
+                    alt={item.title}
+                    loading="lazy"
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  />
+                </div>
 
-              <div className="bg-[#001C56] text-white text-center py-2 text-[14px] md:text-[16px] font-primary">
-                {id === "Maintenance" ? "Under Care" : "For Sale"}
-              </div>
+                <div className="bg-[#001C56] text-white text-center py-2 text-[14px] md:text-[16px] font-primary">
+                  {id === "Maintenance" ? "Under Care" : item.status || "For Sale"}
+                </div>
 
-              <div className="pt-4 pb-1">
-                <div className="grid grid-cols-2 gap-4 items-start">
-                  <p className="text-[14px] md:text-[15px] text-black font-primary font-medium hover:text-[#B62025] cursor-pointer">
-                    {item.title}
-                  </p>
-                  <div className="text-right">
-                    <p className="text-[14px] md:text-[15px] text-black font-primary">{item.price}</p>
-                    <p className="text-[14px] text-black font-primary font-normal mt-1">{item.beds}</p>
+                <div className="pt-4 pb-1">
+                  <div className="grid grid-cols-2 gap-4 items-start">
+                    <p className="text-[14px] md:text-[15px] text-black font-primary font-medium transition-colors duration-300 group-hover:text-[#B62025]">
+                      {item.title}
+                    </p>
+                    <div className="text-right">
+                      <p className="text-[14px] md:text-[15px] text-black font-primary">{item.price}</p>
+                      <p className="text-[14px] text-black font-primary font-normal mt-1">{item.beds}</p>
+                    </div>
                   </div>
                 </div>
+              </>
+            );
+
+            if (item.slug) {
+              return (
+                <Link
+                  key={item.title}
+                  to={`/property/${item.slug}`}
+                  className="block bg-white overflow-hidden group"
+                >
+                  {cardContent}
+                </Link>
+              );
+            }
+
+            return (
+              <div key={item.title} className="bg-white overflow-hidden group">
+                {cardContent}
               </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
 
         <div className="flex justify-center mt-14">
