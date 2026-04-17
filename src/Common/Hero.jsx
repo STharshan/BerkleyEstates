@@ -8,7 +8,8 @@ const HeroSection = ({ title, bgImage, overlay = true }) => {
       <div className="absolute inset-0">
         <img
           src={bgImage}
-          alt={title}
+          alt=""
+          aria-hidden="true"
           className="h-full w-full object-cover"
         />
 

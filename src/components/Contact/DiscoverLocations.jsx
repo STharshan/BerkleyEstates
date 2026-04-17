@@ -41,7 +41,7 @@ const DiscoverLocations = () => {
               <div className="w-full overflow-hidden">
                 <img
                   src={office.image}
-                  alt={office.title}
+                  alt={`${office.title} exterior`}
                   loading="lazy"
                   className="w-full aspect-[4/3] object-cover"
                 />

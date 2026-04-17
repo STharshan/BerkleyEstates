@@ -11,7 +11,7 @@ const Trusted = () => {
           <div className="order-1 2xl:order-0">
             <img
               src="/872a5a67-7872-42b8-a35c-4996bab5b356.webp"
-              alt="Property expert"
+              alt="Berkley Estates property expert portrait"
               loading="lazy"
               className="w-full h-[300px] md:h-[400px] lg:h-[380px] object-cover"
             />

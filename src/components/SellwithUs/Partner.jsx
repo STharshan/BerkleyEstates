@@ -40,7 +40,7 @@ const Partner = () => {
           <div className="ms-0 w-full lg:justify-self-end 2xl:ms-24">
             <img
               src="/DSC09716-1536x994.webp"
-              alt="Jake Brogden testimonial"
+              alt="Jake Brogden, partner at Berkley Estates"
               loading="lazy"
               className="h-[280px] w-full object-cover md:h-[380px] lg:max-w-[520px] xl:max-w-[560px] 2xl:max-w-full"
             />
