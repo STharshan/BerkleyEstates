@@ -9,7 +9,8 @@ const LetsTalkSection = () => {
       <div className="absolute inset-0">
         <img
           src="/lets-talk-bg.jpeg"
-          alt="Let's Talk Background"
+          alt=""
+          aria-hidden="true"
           loading="lazy"
           className="h-full w-full object-cover object-top"
         />

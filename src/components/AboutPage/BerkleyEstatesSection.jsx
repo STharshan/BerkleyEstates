@@ -1,15 +1,32 @@
 const imagesTop = [
-  "/image00002-scaled-r5g2kjpj9kwe3xnexl0mg75ndfukxe3rhxqon459mo.jpeg",
-  "/image00004-scaled-qz34a6pis0cu7hfo47l55jwskglklzwcylu567ck5c.jpeg",
+  {
+    src: "/image00002-scaled-r5g2kjpj9kwe3xnexl0mg75ndfukxe3rhxqon459mo.jpeg",
+    alt: "Berkley Estates gallery image 1",
+  },
+  {
+    src: "/image00004-scaled-qz34a6pis0cu7hfo47l55jwskglklzwcylu567ck5c.jpeg",
+    alt: "Berkley Estates gallery image 2",
+  },
 ];
 
-const largeImage =
-  "/image00009-scaled-qz3445l2a33m7e7wh6ehasg9jj110gtzd8v5t36104.jpeg";
+const largeImage = {
+  src: "/image00009-scaled-qz3445l2a33m7e7wh6ehasg9jj110gtzd8v5t36104.jpeg",
+  alt: "Berkley Estates gallery feature image",
+};
 
 const imagesBottom = [
-  "/image00007-scaled-7hqv5oxovf7apfivv9dzzhjlc65ukp7m6blyafkfpbg.jpeg",
-  "/image00001-scaled-7jigpmo1dh0wvapnwtli3kdqviigk190bllglsnvzsc.jpeg",
-  "/image00005-scaled-7jigpjsn4l8zbtlu3lct4y3u664m6ijlujdp7085ass.jpeg",
+  {
+    src: "/image00007-scaled-7hqv5oxovf7apfivv9dzzhjlc65ukp7m6blyafkfpbg.jpeg",
+    alt: "Berkley Estates gallery image 3",
+  },
+  {
+    src: "/image00001-scaled-7jigpmo1dh0wvapnwtli3kdqviigk190bllglsnvzsc.jpeg",
+    alt: "Berkley Estates gallery image 4",
+  },
+  {
+    src: "/image00005-scaled-7jigpjsn4l8zbtlu3lct4y3u664m6ijlujdp7085ass.jpeg",
+    alt: "Berkley Estates gallery image 5",
+  },
 ];
 
 import { Link } from "react-router-dom";
@@ -33,11 +50,11 @@ export default function BerkleyEstatesSection() {
       <div className="mx-auto grid max-w-[1150px] grid-cols-1 gap-6 2xl:gap-12 px-4 lg:grid-cols-[1.35fr_0.95fr]">
         <div className="space-y-[5px]">
           <div className="grid grid-cols-2 gap-[5px]">
-            {imagesTop.map((src, index) => (
+            {imagesTop.map((image, index) => (
               <div key={index} className="group relative overflow-hidden">
                 <img
-                  src={src}
-                  alt=""
+                  src={image.src}
+                  alt={image.alt}
                   loading="lazy"
                   className="h-[140px] sm:h-[180px] md:h-[220px] w-full object-cover transition duration-500 group-hover:scale-105"
                 />
@@ -47,19 +64,19 @@ export default function BerkleyEstatesSection() {
           </div>
           <div className="group relative overflow-hidden">
             <img
-              src={largeImage}
-              alt=""
+              src={largeImage.src}
+              alt={largeImage.alt}
               loading="lazy"
               className="h-[220px] sm:h-[300px] md:h-[500px] w-full object-cover transition duration-500 group-hover:scale-105"
             />
             <div className="absolute inset-0 bg-black/0 transition duration-500 group-hover:bg-black/40" />
           </div>
           <div className="grid grid-cols-3 gap-[5px]">
-            {imagesBottom.map((src, index) => (
+            {imagesBottom.map((image, index) => (
               <div key={index} className="group relative overflow-hidden">
                 <img
-                  src={src}
-                  alt=""
+                  src={image.src}
+                  alt={image.alt}
                   loading="lazy"
                   className="h-[100px] sm:h-[150px] md:h-[300px] w-full object-cover transition duration-500 group-hover:scale-105"
                 />

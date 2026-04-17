@@ -59,7 +59,7 @@ const PropertyExpertiseSection = () => {
           {/* block and m-0 ensure the image starts exactly where the container starts */}
           <img
             src="/property-door.jpeg"
-            alt="Property entrance"
+            alt="Front entrance of a managed residential property"
             loading="lazy"
             className="w-full h-auto object-cover block m-0 shadow-sm"
           />

@@ -28,7 +28,7 @@ const FeaturedProperties = ({ id }) => {
                 <div className="w-full aspect-[3/2] overflow-hidden">
                   <img
                     src={item.image}
-                    alt={item.title}
+                    alt={`${item.title} featured property`}
                     loading="lazy"
                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                   />
