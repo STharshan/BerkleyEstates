@@ -1,29 +1,28 @@
-import React from 'react';
+import { Link } from "react-router-dom";
 
 const PropertyCTA = () => {
   return (
-    <section className="bg-[#001449] py-20 px-6 mb-20 sm:px-12 md:px-20 lg:px-32">
-      <div className="max-w-7xl mx-auto">
+    <section className="mb-20 mt-10 bg-[#001449] px-6 py-16 sm:px-12 md:px-20 lg:px-32">
+      <div className="mx-auto max-w-[1280px] font-primary">
         <div className="flex flex-col space-y-8">
-          
-          {/* Heading */}
-          <h2 className="text-white text-3xl sm:text-4xl font-normal tracking-tight">
+          <h2 className="text-[34px] font-normal tracking-tight text-white sm:text-[40px]">
             Like this property?
           </h2>
 
-          {/* Buttons Container */}
-          <div className="flex flex-col sm:flex-row items-start sm:items-center gap-6 sm:gap-12">
-            
-            {/* Primary Action Button */}
-            <button className="bg-white text-[#001449] px-10 py-3.5 text-lg font-medium hover:bg-slate-100 transition-colors duration-200">
+          <div className="flex flex-col items-start gap-6 sm:flex-row sm:items-center sm:gap-12">
+            <Link
+              to="/contact"
+              className="inline-flex min-w-[230px] items-center justify-center bg-white px-10 py-3.5 text-[15px] uppercase tracking-[0.18em] text-[#001449] transition-colors duration-200 hover:bg-slate-100"
+            >
               Arrange a viewing
-            </button>
+            </Link>
 
-            {/* Secondary Action Button (Outlined) */}
-            <button className="border border-white text-white px-10 py-3.5 text-lg font-medium hover:bg-white/10 transition-all duration-200">
+            <Link
+              to="/properties"
+              className="inline-flex min-w-[230px] items-center justify-center border border-white px-10 py-3.5 text-[15px] uppercase tracking-[0.18em] text-white transition-all duration-200 hover:bg-white/10"
+            >
               View similar properties
-            </button>
-            
+            </Link>
           </div>
         </div>
       </div>
