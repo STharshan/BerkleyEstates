@@ -6,16 +6,16 @@ const AboutSection = () => {
       <div className="mx-auto max-w-6xl px-6 md:px-10 lg:px-16">
         {/* Top Section */}
         <div className="grid grid-cols-1 lg:grid-cols-2">
-          <div className="max-w-120">
+          <div className="max-w-100">
             <div className="mb-8 h-px w-full bg-[#3b3b3b]" />
-            <h2 className="text-[42px] font-light leading-none   text-[#2f2f2f] md:text-[46px]">
+            <h2 className="text-[38px] leading-none   text-[#2f2f2f]">
               Exceptional homes, extraordinary service—more than agents, true
               partners in property
             </h2>
           </div>
 
           <div className=" lg:pt-1">
-            <p className="text-xl leading-none text-[#1f1f1f]">
+            <p className="text-base leading-none text-[#1f1f1f]">
               We are a team of committed professionals passionate about
               providing a seamless and stress-free property experience. Our
               personalised approach, creative marketing strategies, and
@@ -37,7 +37,7 @@ const AboutSection = () => {
           <div className="flex justify-center lg:justify-start lg:pt-28">
             <div className="w-full max-w-105">
               <img
-                src="https://berkleyestates.co.uk/wp-content/uploads/2025/01/IMG_0268-1.webp"
+                src="a1.webp"
                 alt="Berkley Estates home exterior"
                 loading="lazy"
                 className="block h-auto w-full object-cover"
@@ -49,7 +49,7 @@ const AboutSection = () => {
           <div className="flex flex-col items-center lg:-mt-8">
             <div className="w-full max-w-105">
               <img
-                src="https://berkleyestates.co.uk/wp-content/uploads/elementor/thumbs/IMG_5418-2-r04po368vqxzr3zyh71sonx8gmbazcx5jlntcmelee.webp"
+                src="a2.webp"
                 alt="Berkley Estates agent"
                 loading="lazy"
                 className="block h-auto w-full object-cover"
@@ -69,7 +69,7 @@ const AboutSection = () => {
           <div className="flex justify-center lg:justify-end lg:pt-28">
             <div className="w-full max-w-105">
               <img
-                src="https://berkleyestates.co.uk/wp-content/uploads/2025/01/IMG_8293-1.webp"
+                src="a3.webp"
                 alt="Berkley Estates interior"
                 loading="lazy"
                 className="block h-auto w-full object-cover"

@@ -21,6 +21,7 @@ import TermsPage from "./pages/TermsPage";
 import ValuationForm from "./pages/ValuationForm";
 import PropertiesPage from "./pages/Properties";
 import SinglePropertyPage from "./pages/SinglePropertyPage";
+import GDPRConsent from "./components/GDPRButton";
 
 const NotFound = () => (
   <div className="min-h-screen bg-white flex items-center justify-center px-4">
@@ -47,11 +48,10 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/homeowners" element={<HomeOwner />} />
-
           <Route path="/let" element={<Let />} />
           <Route path="/property-management/" element={<Propertymanagement />} />
           <Route path="/maintenance" element={<Maintenance />} />
-          <Route path="/sell-with-us" element={<SellwithUs />} />
+          <Route path="/sell-berkley-estate" element={<SellwithUs />} />
           <Route path="/about/" element={<AboutPage />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />
@@ -65,6 +65,7 @@ function App() {
           <Route path="*" element={<NotFound />} />
         </Routes>
         <Footer />
+        <GDPRConsent />
       </Router>
     </ErrorBoundary>
   );

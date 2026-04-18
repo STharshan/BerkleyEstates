@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const TrustedGuidance = () => {
   return (
@@ -27,9 +28,9 @@ const TrustedGuidance = () => {
           we put your needs first, ensuring a seamless and successful sale.
         </p>
 
-        <button className="border border-white px-10 py-3 text-sm font-medium tracking-widest uppercase transition-all duration-300 hover:bg-white hover:text-[#4a4743]">
+        <Link to="/sell-berkley-estate" className="border border-white px-10 py-3 text-sm font-medium tracking-widest uppercase transition-all duration-300 hover:bg-white hover:text-[#4a4743]">
           Find Out More
-        </button>
+        </Link>
       </div>
     </section>
   );

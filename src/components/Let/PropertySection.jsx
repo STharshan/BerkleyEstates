@@ -1,5 +1,6 @@
 import React from 'react';
 import { IoIosArrowForward } from 'react-icons/io';
+import { Link } from 'react-router-dom';
 
 const PropertySection = () => {
     return (
@@ -12,7 +13,7 @@ const PropertySection = () => {
                         <span className="text-sm font-semibold tracking-widest text-black uppercase">
                             Your Trusted Local Property Experts
                         </span>
-                        <h2 className="mt-4 text-2xl mt-5 text-black tracking-tight leading-10">
+                        <h2 className="mt-4 text-2xl text-black tracking-tight leading-10">
                             We pride ourselves on unwavering attention to detail and dedicated personal service.
                         </h2>
                     </header>
@@ -26,15 +27,15 @@ const PropertySection = () => {
                     </div>
 
                     <div className="pt-4">
-                        <a
-                            href="#meet-the-team"
+                        <Link
+                            to="/about/"
                             className="group flex items-center text-black tracking-wide uppercase"
                         >
                             <span className="mr-4 text-xl transition-transform group-hover:translate-x-1">
                                 <IoIosArrowForward />
                             </span>
                             Meet the faces of the brand
-                        </a>
+                        </Link>
                     </div>
                 </div>
 
@@ -44,6 +45,7 @@ const PropertySection = () => {
                         src="l6.webp" // Placeholder for the modern property image
                         alt="Modern home with glass bifold doors"
                         className="w-full h-full object-cover"
+                        loading="lazy"
                     />
                 </div>
 

@@ -15,7 +15,7 @@ export default function Footer() {
               src="/logo.png"
               alt="logo"
               loading="lazy"
-              className="w-[180px]"
+              className="w-45"
             />
           </div>
 
@@ -24,15 +24,15 @@ export default function Footer() {
 
             {/* Locations */}
             <div className="flex flex-wrap justify-center lg:justify-end items-center gap-3 text-xl font-semibold">
-              <a href="tel:01162544755" className="hover:underline">
+              <a href="tel:01162544755">
                 Leicester
               </a>
-              <span className="opacity-50">|</span>
-              <a href="tel:01162796161" className="hover:underline">
+              <span >|</span>
+              <a href="tel:01162796161">
                 Kibworth
               </a>
-              <span className="opacity-50">|</span>
-              <a href="tel:01509414787" className="hover:underline">
+              <span >|</span>
+              <a href="tel:01509414787">
                 Barrow Upon Soar
               </a>
             </div>

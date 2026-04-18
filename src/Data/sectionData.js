@@ -174,6 +174,79 @@ export const propertyDataStore = {
 
 };
 
+export const propertyStore = {
+  "Home": {
+    title: "FEATURED PROPERTIES",
+    buttonText: "THINKING OF SELLING YOUR HOME?",
+    buttonLink: "/contact",
+    items: [
+      {
+        image: "/p1.jpg",
+        title: "The Moor",
+        price: "\u00a31,400,000 Price Guide",
+        beds: "6 Bedrooms",
+        slug: "the-moor",
+      },
+      {
+        image: "/p2.jpg",
+        title: "Cotes Road",
+        price: "\u00a31,300,000 Price Guide",
+        beds: "6 Bedrooms",
+        slug: "cotes-road",
+      },
+      {
+        image: "/p3.jpg",
+        title: "Workhouse Lane",
+        price: "\u00a3900,000 Price Guide",
+        beds: "5 Bedrooms",
+        slug: "workhouse-lane",
+      },
+      {
+        image: "/p4.jpg",
+        title: "Manor View Close",
+        price: "\u00a3895,000",
+        beds: "4 Bedrooms",
+        slug: "manor-view-close",
+      },
+      {
+        image: "/p5.jpg",
+        title: "Iris Close",
+        price: "\u00a3895,000",
+        beds: "4 Bedrooms",
+        slug: "iris-close-appleby-magna",
+      },
+      {
+        image: "/p6.jpg",
+        title: "Ticknall Road",
+        price: "\u00a3875,000 Guide Price",
+        beds: "4 Bedrooms",
+        slug: "ticknall-road",
+      },
+      {
+        image: "/p7.jpg",
+        title: "Mill Street",
+        price: "\u00a3850,000 Price Guide",
+        beds: "4 Bedrooms",
+        slug: "mill-street",
+      },
+      {
+        image: "/p8.jpg",
+        title: "Potter Street",
+        price: "\u00a3680,000",
+        beds: "5 Bedrooms",
+        slug: "potter-street",
+      },
+      {
+        image: "/p9.jpg",
+        title: "Hinckley Road",
+        price: "\u00a3550,000",
+        beds: "4 Bedrooms",
+        slug: "hinckley-road",
+      },
+    ]
+  },
+
+};
 
 
 

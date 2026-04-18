@@ -1,9 +1,9 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const HeroSection = () => {
   return (
-    <section className="relative flex h-screen min-h-[100svh] w-full items-center justify-center overflow-hidden bg-black">
-      {/* Vimeo Video Embed */}
+    <section className="relative flex h-screen w-full items-center justify-center overflow-hidden bg-black">
       <iframe
         src="https://player.vimeo.com/video/1047730947?h=4c98c5ce3b&autoplay=1&loop=1&muted=1&background=1"
         title="Berkley Estates hero video"
@@ -11,6 +11,8 @@ const HeroSection = () => {
         frameBorder="0"
         allow="autoplay; fullscreen; picture-in-picture"
         allowFullScreen
+        poster="/fall.png"
+        onError={(e) => (e.currentTarget.style.display = "none")}
       ></iframe>
 
       {/* Dark Overlay to match image style */}
@@ -23,18 +25,18 @@ const HeroSection = () => {
         </h1>
 
         <div className="flex flex-col items-center justify-center gap-4 sm:flex-row md:gap-6">
-          <a 
-            href="#properties" 
+          <Link 
+            to="/properties" 
             className="w-full sm:w-48 px-8 py-3 border border-white text-white text-sm tracking-widest  hover:bg-white hover:text-[#041C55] transition-all duration-300 ease-in-out"
           >
             Properties
-          </a>
-          <a 
-            href="#valuation" 
+          </Link>
+          <Link 
+            to="/valuation"
             className="w-full sm:w-48 px-8 py-3 border border-white text-white text-sm tracking-widest  hover:bg-white hover:text-[#041C55] transition-all duration-300 ease-in-out"
           >
             Valuation
-          </a>
+          </Link>
         </div>
       </div>
     </section>

@@ -48,8 +48,8 @@ const PropertyLightbox = ({ images, initialIndex = 0, title, onClose }) => {
   };
 
   return (
-    <div className="fixed inset-0 z-[80] bg-black/90 px-4 py-6 md:px-10" role="dialog" aria-modal="true">
-      <div className="mx-auto flex h-full max-w-[1400px] flex-col">
+    <div className="fixed inset-0 z-80 bg-black/90 px-4 py-6 md:px-10" role="dialog" aria-modal="true">
+      <div className="mx-auto flex h-full max-w-350 flex-col">
         <div className="flex items-center justify-between gap-4 border-b border-white/15 pb-4 text-white">
           <div>
             <p className="font-primary text-[18px] font-medium md:text-[22px]">{title}</p>
@@ -83,6 +83,7 @@ const PropertyLightbox = ({ images, initialIndex = 0, title, onClose }) => {
           <img
             src={images[currentIndex]}
             alt={`${title} ${currentIndex + 1}`}
+            loading="lazy"
             className="max-h-full max-w-full object-contain shadow-[0_30px_90px_rgba(0,0,0,0.45)]"
           />
 

@@ -3,7 +3,7 @@ import { HiChevronDown } from 'react-icons/hi2'; // Heroicons v2
 
 const LetHero = () => {
   return (
-    <section className="relative w-full h-[60vh] md:h-[80vh] lg:h-screen overflow-hidden bg-black font-sans">
+    <section className="relative w-full h-screen overflow-hidden bg-black font-sans">
       
       {/* 1. Background Image Container */}
       <div 

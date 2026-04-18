@@ -125,7 +125,7 @@ const ContactFormSection = () => {
 
   return (
     <section className="w-full bg-[#d8d5cf] py-16 md:py-20 lg:py-24 px-4 md:px-6">
-      <div className="max-w-[900px] mx-auto">
+      <div className="max-w-225 mx-auto">
         <p className="text-[16px] text-black mb-10 font-primary">
           "*" indicates required fields
         </p>
@@ -159,7 +159,7 @@ const ContactFormSection = () => {
                 onChange={handleChange}
                 placeholder="First Name*"
                 required
-                className="w-full h-[40px] bg-white px-4 text-[15px] text-[#6b7280] outline-none border-0 font-primary"
+                className="w-full h-10 bg-white px-4 text-[15px] text-[#6b7280] outline-none border-0 font-primary"
               />
             </div>
 
@@ -178,7 +178,7 @@ const ContactFormSection = () => {
                 onChange={handleChange}
                 placeholder="Surname*"
                 required
-                className="w-full h-[40px] bg-white px-4 text-[15px] text-[#6b7280] outline-none border-0 font-primary"
+                className="w-full h-10 bg-white px-4 text-[15px] text-[#6b7280] outline-none border-0 font-primary"
               />
             </div>
           </div>
@@ -199,7 +199,7 @@ const ContactFormSection = () => {
                 onChange={handleChange}
                 placeholder="Email Address*"
                 required
-                className="w-full h-[40px] bg-white px-4 text-[15px] text-[#6b7280] outline-none border-0 font-primary"
+                className="w-full h-10 bg-white px-4 text-[15px] text-[#6b7280] outline-none border-0 font-primary"
               />
             </div>
 
@@ -222,7 +222,7 @@ const ContactFormSection = () => {
                 autoComplete="tel"
                 maxLength={18}
                 pattern={ukPhonePattern.source}
-                className="w-full h-[40px] bg-white px-4 text-[15px] text-[#6b7280] outline-none border-0 font-primary"
+                className="w-full h-10 bg-white px-4 text-[15px] text-[#6b7280] outline-none border-0 font-primary"
               />
             </div>
           </div>
@@ -242,7 +242,7 @@ const ContactFormSection = () => {
               placeholder="Property Address*"
               rows={6}
               required
-              className="w-full min-h-[140px] bg-white px-4 py-3 text-[15px] text-[#6b7280] outline-none border-0 resize-none font-primary"
+              className="w-full min-h-35 bg-white px-4 py-3 text-[15px] text-[#6b7280] outline-none border-0 resize-none font-primary"
             />
           </div>
 
@@ -260,7 +260,7 @@ const ContactFormSection = () => {
               onChange={handleChange}
               placeholder="How can we help you?"
               rows={6}
-              className="w-full min-h-[140px] bg-white px-4 py-3 text-[15px] text-[#6b7280] outline-none border-0 resize-none font-primary"
+              className="w-full min-h-35 bg-white px-4 py-3 text-[15px] text-[#6b7280] outline-none border-0 resize-none font-primary"
             />
           </div>
 

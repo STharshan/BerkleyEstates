@@ -5,8 +5,8 @@ const PropertyGallery = ({ property, onOpenGallery }) => {
 
   return (
     <section className="bg-white px-6 py-6 md:px-10 lg:px-16 xl:px-20">
-      <div className="mx-auto max-w-[1280px] font-primary">
-        <div className="grid grid-cols-1 gap-[3px] md:grid-cols-2 xl:grid-cols-3">
+      <div className="mx-auto max-w-7xl font-primary">
+        <div className="grid grid-cols-1 gap-1 md:grid-cols-2 xl:grid-cols-3">
           {previewImages.map((image, index) => {
             const showDesktopOverlay = index === 5 && property.gallery.length > 6;
             const showMobileOverlay = index === 1 && property.gallery.length > 2;
@@ -16,12 +16,13 @@ const PropertyGallery = ({ property, onOpenGallery }) => {
                 key={image}
                 type="button"
                 onClick={() => onOpenGallery(index)}
-                className={`group relative aspect-[4/3] overflow-hidden bg-[#dce2ea] text-left ${
+                className={`group relative aspect-4/3 overflow-hidden bg-[#dce2ea] text-left ${
                   index > 1 ? "hidden md:block" : ""
                 }`}
               >
                 <img
                   src={image}
+                  loading="lazy"
                   alt={`${property.fullTitle} gallery ${index + 1}`}
                   className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
                 />
@@ -46,7 +47,7 @@ const PropertyGallery = ({ property, onOpenGallery }) => {
           })}
         </div>
 
-        <div className="mt-10 max-w-[950px] space-y-6 text-[15px] leading-8 text-[#293143] md:text-[16px]">
+        <div className="mt-10 max-w-6xl space-y-2 text-[15px] leading-8 text-black md:text-[16px]">
           <p>{propertyGalleryCopy[0]}</p>
           <p>
             Follow us{" "}

@@ -26,17 +26,17 @@ export default function PropertiesPage() {
 
       <PropertySearchFilter onSearch={handleSearch} />
 
-      <section className="w-full bg-white py-20">
+      <section className="w-full bg-white py-5">
         <div className="max-w-350 mx-auto">
           {filteredProperties.length > 0 ? (
-            <div className="grid grid-cols-1 gap-x-6 gap-y-12 sm:grid-cols-2 lg:grid-cols-3">
+            <div className="grid grid-cols-1 gap-x-6 gap-y-12 sm:grid-cols-2 lg:grid-cols-4 p-10 md:p-14">
               {filteredProperties.map((property) => (
                 <Link
                   key={property.id}
                   to={`/property/${property.slug}`}
                   className="block bg-white overflow-hidden group"
                 >
-                  <div className="w-full aspect-[3/2] overflow-hidden">
+                  <div className="w-full aspect-3/2 overflow-hidden">
                     <img
                       src={property.image}
                       alt={property.fullTitle}

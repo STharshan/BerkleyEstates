@@ -145,14 +145,14 @@ export default function ValuationPage() {
 
       {/* FORM SECTION */}
       <section className="w-full bg-[#d8d5cf] py-16 md:py-20 lg:py-24 px-4 md:px-8">
-        <div className="max-w-[860px] mx-auto">
+        <div className="max-w-215 mx-auto">
           <p className="text-[14px] mb-10">"*" indicates required fields</p>
 
           {status && (
             <div
               className={`mb-6 rounded border px-4 py-3 text-sm ${status.type === "success"
-                  ? "border-green-500 bg-green-50 text-green-700"
-                  : "border-red-500 bg-red-50 text-red-700"
+                ? "border-green-500 bg-green-50 text-green-700"
+                : "border-red-500 bg-red-50 text-red-700"
                 }`}
             >
               {status.message}
@@ -166,7 +166,7 @@ export default function ValuationPage() {
                 name="valuationType"
                 value={formData.valuationType}
                 onChange={handleChange}
-                className="w-full h-[40px] px-4 text-[15px] bg-white border-0 text-[#6b7280] outline-none appearance-none">
+                className="w-full h-10 px-4 text-[15px] bg-white border-0 text-[#6b7280] outline-none appearance-none">
                 <option value="">Valuation Type</option>
                 <option value="sales">Sales Valuation</option>
                 <option value="lettings">Lettings Valuation</option>
@@ -182,7 +182,7 @@ export default function ValuationPage() {
                 onChange={handleChange}
                 placeholder="First Name*"
                 required
-                className="w-full h-[40px] px-4 text-[15px] bg-white border-0 text-[#6b7280] outline-none placeholder:text-[#6b7280]"
+                className="w-full h-10 px-4 text-[15px] bg-white border-0 text-[#6b7280] outline-none placeholder:text-[#6b7280]"
               />
               <input
                 type="text"
@@ -191,7 +191,7 @@ export default function ValuationPage() {
                 onChange={handleChange}
                 placeholder="Surname*"
                 required
-                className="w-full h-[40px] px-4 text-[15px] bg-white border-0 text-[#6b7280] outline-none placeholder:text-[#6b7280]"
+                className="w-full h-10 px-4 text-[15px] bg-white border-0 text-[#6b7280] outline-none placeholder:text-[#6b7280]"
               />
             </div>
 
@@ -204,7 +204,7 @@ export default function ValuationPage() {
                 onChange={handleChange}
                 placeholder="Email Address*"
                 required
-                className="w-full h-[40px] px-4 text-[15px] bg-white border-0 text-[#6b7280] outline-none placeholder:text-[#6b7280]"
+                className="w-full h-10 px-4 text-[15px] bg-white border-0 text-[#6b7280] outline-none placeholder:text-[#6b7280]"
               />
               <input
                 type="tel"
@@ -213,7 +213,7 @@ export default function ValuationPage() {
                 onChange={handleChange}
                 placeholder="Telephone Number*"
                 required
-                className="w-full h-[40px] px-4 text-[15px] bg-white border-0 text-[#6b7280] outline-none placeholder:text-[#6b7280]"
+                className="w-full h-10 px-4 text-[15px] bg-white border-0 text-[#6b7280] outline-none placeholder:text-[#6b7280]"
               />
             </div>
 
@@ -228,7 +228,7 @@ export default function ValuationPage() {
                   name="preferredDate"
                   value={formData.preferredDate}
                   onChange={handleChange}
-                  className="w-full h-[40px] px-4 text-[15px] bg-white border-0 text-[#6b7280] outline-none placeholder:text-[#6b7280]"
+                  className="w-full h-10 px-4 text-[15px] bg-white border-0 text-[#6b7280] outline-none placeholder:text-[#6b7280]"
                 />
               </div>
 
@@ -245,7 +245,7 @@ export default function ValuationPage() {
                     min="0"
                     max="23"
                     placeholder="HH"
-                    className="w-full h-[40px] px-4 text-[15px] bg-white border-0 text-[#6b7280] outline-none placeholder:text-[#6b7280]"
+                    className="w-full h-10 px-4 text-[15px] bg-white border-0 text-[#6b7280] outline-none placeholder:text-[#6b7280]"
                   />
                   <input
                     type="number"
@@ -255,7 +255,7 @@ export default function ValuationPage() {
                     min="0"
                     max="59"
                     placeholder="MM"
-                    className="w-full h-[40px] px-4 text-[15px] bg-white border-0 text-[#6b7280] outline-none placeholder:text-[#6b7280]"
+                    className="w-full h-10 px-4 text-[15px] bg-white border-0 text-[#6b7280] outline-none placeholder:text-[#6b7280]"
                   />
                 </div>
               </div>
@@ -270,7 +270,7 @@ export default function ValuationPage() {
                 placeholder="Property Address*"
                 rows={6}
                 required
-                className="w-full px-4 py-3 text-[15px] min-h-[140px] bg-white border-0 text-[#6b7280] outline-none resize-none placeholder:text-[#6b7280]"
+                className="w-full px-4 py-3 text-[15px] min-h-35 bg-white border-0 text-[#6b7280] outline-none resize-none placeholder:text-[#6b7280]"
               />
             </div>
 
@@ -286,7 +286,7 @@ export default function ValuationPage() {
                   name="source"
                   value={formData.source}
                   onChange={handleChange}
-                  className="w-full h-[40px] px-4 text-[15px] bg-white border-0 text-[#6b7280] outline-none appearance-none pr-10"
+                  className="w-full h-10 px-4 text-[15px] bg-white border-0 text-[#6b7280] outline-none appearance-none pr-10"
                 >
                   <option value="">Where did you hear about us?*</option>
                   <option value="recommendations">Recommendations</option>
@@ -316,7 +316,7 @@ export default function ValuationPage() {
                 required
                 className="mt-1 h-5 w-5 border-0 accent-[#001C56]"
               />
-              <p className="text-[14px] leading-7 text-black">
+              <p className="text-sm leading-7 text-black">
                 I have read and understand the privacy policy.
               </p>
             </label>
@@ -326,7 +326,7 @@ export default function ValuationPage() {
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className="bg-[#001C56] text-white text-[15px] px-7 md:px-8 py-3 font-primary transition duration-300 hover:opacity-90 hover:bg-white hover:text-black disabled:cursor-not-allowed disabled:opacity-60"
+                className="w-full bg-[#001C56] px-7 py-3 text-[15px] text-white font-primary transition duration-300 hover:opacity-90 hover:bg-white hover:text-black disabled:cursor-not-allowed disabled:opacity-60 lg:w-auto lg:px-8"
               >
                 {isSubmitting ? "Sending..." : "Submit"}
               </button>

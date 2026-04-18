@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const RelationshipSection = () => {
   return (
@@ -18,9 +19,9 @@ const RelationshipSection = () => {
         </p>
 
         {/* Centered CTA Button */}
-        <button className="border px-5 py-2.5 rounded-sm text-sm tracking-[0.15em] uppercase transition-all duration-300 hover:bg-[#041C55] hover:text-white">
+        <Link to="/valuation" className="border px-5 py-2.5 rounded-sm text-sm tracking-[0.15em] uppercase transition-all duration-300 hover:bg-[#041C55] hover:text-white">
           Book Your Valuation
-        </button>
+        </Link>
 
       </div>
     </section>

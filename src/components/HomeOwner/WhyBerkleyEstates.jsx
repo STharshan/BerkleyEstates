@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const WhyBerkleyEstates = () => {
   return (
@@ -24,9 +25,9 @@ const WhyBerkleyEstates = () => {
         </p>
 
         {/* CTA Button */}
-        <button className="border border-black px-5 py-2.5 rounded-sm text-sm tracking-widest uppercase transition-colors duration-300 hover:bg-[#001C56] hover:text-white font-medium font-primary">
+        <Link to="/valuation" className="border border-black px-5 py-2.5 rounded-sm text-sm tracking-widest uppercase transition-colors duration-300 hover:bg-[#001C56] hover:text-white font-medium font-primary">
           Book Your Valuation
-        </button>
+        </Link>
 
       </div>
     </section>

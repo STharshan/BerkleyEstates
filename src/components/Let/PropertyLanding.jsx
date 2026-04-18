@@ -7,7 +7,7 @@ const PropertyLandingSection = () => {
         <div className="flex flex-col w-full">
             {/* 2. EXTENSIVE MARKET PRESENCE SECTION */}
             <section
-                className="bg-[#D6D3CD] py-20 text-center"
+                className="bg-[#D6D3CD] py-5 sm:py-20 text-center"
 
             >
                 <div className="max-w-280 mx-auto flex flex-col items-center">
@@ -22,11 +22,11 @@ const PropertyLandingSection = () => {
                         />
                     </div>
 
-                    <h2 className="text-xl md:text-2xl text-black mb-6">
+                    <h2 className="text-xl md:text-2xl text-black">
                         Extensive Market Presence
                     </h2>
 
-                    <p className="text-black text-sm md:text-base text-left leading-relaxed">
+                    <p className="text-black text-sm md:text-base p-4 text-left font-semibold sm:font-normal leading-relaxed">
                         We advertise all our properties on Rightmove, the UK’s most popular property portal,
                         ensuring maximum visibility. Combined with our active social media presence,
                         we give every home the exposure it deserves.

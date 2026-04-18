@@ -17,7 +17,7 @@ export default function OffMarketDiscretionSection() {
 
         <Link
           to="/contact"
-          className="mt-12 inline-flex min-h-13 min-w-58 items-center justify-center rounded-sm border border-white px-6 py-2 text-base font-medium uppercase tracking-wide text-white transition duration-300 hover:bg-white hover:text-[#012169] md:min-w-[320px] md:text-[15px]"
+          className="mt-12 inline-flex min-h-13 min-w-58 items-center justify-center rounded-sm border border-white px-6 py-2 text-base uppercase tracking-wide text-white transition duration-300 hover:bg-white hover:text-black md:min-w-[320px] md:text-[15px]"
         >
           Speak To Our Team
         </Link>

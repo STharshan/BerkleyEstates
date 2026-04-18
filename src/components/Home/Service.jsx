@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const properties = [
     {
         id: 1,
@@ -81,12 +83,12 @@ export default function ServiceSection() {
                 {/* GRID */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                     {properties.map((item) => (
-                        <div
+                        <Link to={`/property/${item.id}`}
                             key={item.id}
                             className="bg-white overflow-hidden shadow-sm"
                         >
                             {/* IMAGE */}
-                            <div className="w-full h-55 overflow-hidden">
+                            <div className="w-full h-75 overflow-hidden">
                                 <img
                                     src={item.image}
                                     alt={item.title}
@@ -113,7 +115,7 @@ export default function ServiceSection() {
                                     {item.bedrooms}
                                 </div>
                             </div>
-                        </div>
+                        </Link>
                     ))}
                 </div>
 

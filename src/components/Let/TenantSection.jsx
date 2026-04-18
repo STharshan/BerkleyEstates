@@ -3,7 +3,6 @@ import React, { useState } from 'react';
 const PropertyPage = () => {
     const [feesOpen, setFeesOpen] = useState(true);
 
-    // Chevron SVG component for the dropdowns
     const Chevron = ({ isOpen, thin }) => (
         <svg
             className={`transition-transform duration-300 ${isOpen ? 'rotate-0' : 'rotate-180'} ${thin ? 'w-3 h-3' : 'w-4 h-4'}`}
@@ -14,11 +13,12 @@ const PropertyPage = () => {
     );
 
     return (
-        <div className="flex flex-col w-full min-h-screen">
+        <div className="flex flex-col w-full min-h-screen bg-[#041C55]">
             {/* SECTION 2: IMAGE GALLERY & DESCRIPTION */}
-            <section className="bg-[#041C55] px-6 pt-10 text-white text-center">
+            <section className="px-6 pt-10 text-white text-center">
                 <div className="max-w-6xl mx-auto">
-                    <div className="flex flex-col md:flex-row items-center justify-center gap-12 mb-16">
+                    <div className="flex flex-col md:flex-row items-center justify-center gap-6 md:gap-12 mb-16">
+                        {/* Aspect ratios wrapped in brackets for Tailwind compatibility */}
                         <div className="w-full md:w-[35%] aspect-3/4 overflow-hidden">
                             <img src="l3.webp" alt="Interior" loading="lazy" className="w-full h-full object-cover" />
                         </div>
@@ -29,16 +29,16 @@ const PropertyPage = () => {
 
                     <div className="max-w-6xl mx-auto">
                         <p className="uppercase mb-4 text-white">Tenants</p>
-                        <h2 className="text-2xl mb-8">Discover your perfect home and enjoy a seamless rental experience.</h2>
-                        <p className="text-white leading-relaxed">
+                        <h2 className="text-2xl mb-8 px-2">Discover your perfect home and enjoy a seamless rental experience.</h2>
+                        <p className="text-white leading-relaxed px-2">
                             We pride ourselves on complete transparency with our service charges—no hidden fees, ever. Below is a clear breakdown of the payments you can expect throughout your tenancy:
                         </p>
                     </div>
                 </div>
             </section>
 
-            {/* SECTION 1: TENANTS FEES DROPDOWN (NEW) */}
-            <section className="bg-[#041C55] py-15 md:px-20">
+            {/* SECTION 1: TENANTS FEES DROPDOWN */}
+            <section className="py-15 px-4 md:px-20">
                 <div className="max-w-5xl mx-auto border border-white">
                     <button
                         onClick={() => setFeesOpen(!feesOpen)}
@@ -47,11 +47,12 @@ const PropertyPage = () => {
                         <span className="text-white">
                             <Chevron isOpen={feesOpen} thin={true} />
                         </span>
-                        <span className="text-white uppercase tracking-widest">Tenants Fees</span>
+                        <span className="text-white uppercase tracking-widest text-sm md:text-base text-left">Tenants Fees</span>
                     </button>
 
+                    {/* Fixed max-height for responsiveness */}
                     <div className={`overflow-hidden transition-all duration-500 ease-in-out ${feesOpen ? 'max-h-300 opacity-100' : 'max-h-0 opacity-0'}`}>
-                        <div className="p-6 md:p-8 space-y-4 text-white text-base leading-relaxed">
+                        <div className="p-5 md:p-8 space-y-4 text-white font-semibold sm:font-normal text-sm md:text-base leading-relaxed">
                             <p>Monthly rent charges.</p>
                             <p>Holding Deposit: capped at one week's rent.</p>
                             <p>Deposit: A maximum of 5 weeks rent, increasing to 6 weeks for properties with rent over £50,000 per year.</p>

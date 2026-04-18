@@ -14,8 +14,8 @@ const LandlordServices = () => {
     );
 
     return (
-        <div className='bg-[#E6E4E1] py-25'>
-            <div className="flex flex-col md:flex-row min-h-screen w-full max-w-6xl mx-auto">
+        <div className='bg-[#E6E4E1] lg:py-25'>
+            <div className="flex flex-col md:flex-row  w-full max-w-6xl mx-auto">
                 {/* Left Section: Content */}
                 <div className="w-full md:w-1/2 flex flex-col justify-center px-8 py-16">
                     <div className="max-w-xl">
@@ -73,7 +73,7 @@ const LandlordServices = () => {
                 </div>
 
                 {/* Right Section: Image */}
-                <div className="w-[full] md:w-1/2 h-100 md:h-auto overflow-hidden">
+                <div className="w-[full] md:w-1/2 h-100 lg:h-auto my-auto p-6 overflow-hidden">
                     <img
                         src="/l2.webp"
                         alt="Interior Design"
