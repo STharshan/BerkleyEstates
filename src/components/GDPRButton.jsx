@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { IoCloseOutline, IoChevronForwardOutline, IoChevronDownOutline } from "react-icons/io5";
+import { Link } from "react-router-dom";
 
 const categories = [
     {
@@ -75,12 +76,12 @@ export default function GDPRConsent() {
                     >
                         <p className="text-sm mb-4">We use cookies to improve your experience.</p>
                         <div className="flex flex-col gap-3">
-                            <button onClick={() => setShowPreferences(true)} className="text-xs text-[#A8844A] underline text-left">
-                                Customise Preferences
-                            </button>
+                            <Link to="/privacy-policy" className="text-[white] hover:underline text-center">
+                                See our Privacy Policy
+                            </Link>
                             <div className="flex gap-2">
-                                <button onClick={closeAll} className="flex-1 bg-[#1A1917] border border-[#3A3633] py-2 rounded text-sm text-gray-400">Reject</button>
-                                <button onClick={closeAll} className="flex-1 bg-[#C9A96E] text-black py-2 rounded text-sm font-bold">Accept</button>
+                                <button onClick={closeAll} className="flex-1 bg-[#1A1917] border border-[#3A3633] py-2 rounded text-sm text-white">Reject</button>
+                                <button onClick={closeAll} className="flex-1 bg-[#001C56] text-white py-2 rounded text-sm font-bold">Accept</button>
                             </div>
                         </div>
                     </motion.div>
@@ -235,7 +236,7 @@ export default function GDPRConsent() {
                 <div className="fixed bottom-4 left-4 md:bottom-6 md:left-6 z-40">
                     <button
                         onClick={() => setShowPreferences(true)}
-                        className="w-12 h-12 rounded-full bg-[#001C56] shadow-xl border border-[#A8844A]/50 flex items-center justify-center hover:scale-110 active:scale-95 transition cursor-pointer group"
+                        className="w-12 h-12 rounded-full bg-[#001C56] shadow-xl border border-[#001C56]/50 flex items-center justify-center hover:scale-110 active:scale-95 transition cursor-pointer group"
                     >
                         <img
                             src="/revisit.svg"
