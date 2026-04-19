@@ -1,16 +1,16 @@
 const MarketingSection = () => {
   return (
-    <section className="w-full bg-white px-4 py-4 dark:bg-black md:px-8 md:py-20 lg:px-16 lg:py-24 xl:px-40">
+    <section className="w-full bg-white px-4 py-4  md:px-8 md:py-20 lg:px-16 lg:py-24 xl:px-40">
       
       <div className="max-w-[1280px] mx-auto">
         
-        {/* Grid eka 1280px athule fit wenna fixed widths nathiwa 1fr units use kara */}
+      
         <div className="grid grid-cols-1 gap-12 items-start lg:grid-cols-2 lg:gap-12 xl:gap-20">
           
           {/* Left Content */}
           <div className="w-full ">
-            <p className="text-[15px] md:text-[15px] leading-[24px] text-black dark:text-white font-primary">
-              At <span className="text-black  font-semibold">Berkley Estates</span>, 
+            <p className="text-[15px] md:text-[15px] leading-[24px] text-black  font-primary">
+              At <span className="text-black ">Berkley Estates</span>, 
               we don’t just list properties—we actively
               market them to ensure they reach the right buyers. Our dynamic
               approach leverages the full power of social media, targeted
