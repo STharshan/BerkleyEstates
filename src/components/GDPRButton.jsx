@@ -102,7 +102,7 @@ export default function GDPRConsent() {
                             animate={{ y: 0, opacity: 1 }}
                             exit={{ y: "100%", opacity: 0 }}
                             transition={{ type: "spring", damping: 55, stiffness: 200 }}
-                            className="bg-white w-full max-w-4xl rounded-t-2xl md:rounded-lg shadow-2xl overflow-hidden flex flex-col max-h-[95vh] md:max-h-[85vh]"
+                            className="bg-white w-full max-w-4xl h-170  rounded-t-2xl md:rounded-lg shadow-2xl overflow-hidden flex flex-col max-h-[95vh] md:max-h-[85vh]"
                         >
                             {/* Header */}
                             <div className="flex justify-between p-4 md:p-6 items-center border-b border-gray-100">

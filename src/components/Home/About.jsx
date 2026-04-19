@@ -8,14 +8,14 @@ const AboutSection = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2">
           <div className="max-w-100">
             <div className="mb-8 h-px w-full bg-[#3b3b3b]" />
-            <h2 className="text-[38px] leading-none   text-[#2f2f2f]">
+            <h2 className="md:text-[38px] leading-none text-[28px]  text-[#2f2f2f]">
               Exceptional homes, extraordinary service—more than agents, true
               partners in property
             </h2>
           </div>
 
           <div className=" lg:pt-1">
-            <p className="text-base leading-none text-[#1f1f1f]">
+            <p className="text-base leading-[1.4] text-[#1f1f1f] mt-5 sm:mt-0">
               We are a team of committed professionals passionate about
               providing a seamless and stress-free property experience. Our
               personalised approach, creative marketing strategies, and
