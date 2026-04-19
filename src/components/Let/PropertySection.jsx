@@ -28,7 +28,7 @@ const PropertySection = () => {
 
                     <div className="pt-4">
                         <Link
-                            to="/about/"
+                            to="/about"
                             className="group flex items-center text-black tracking-wide uppercase"
                         >
                             <span className="mr-4 text-xl transition-transform group-hover:translate-x-1">

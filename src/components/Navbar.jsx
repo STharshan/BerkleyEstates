@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import { motion, AnimatePresence } from "framer-motion";
 import { Link } from "react-router-dom";
 import {
   FaFacebookF,
@@ -8,6 +7,7 @@ import {
   FaPhoneAlt,
 } from "react-icons/fa";
 import { IoMenuOutline, IoCloseOutline } from "react-icons/io5";
+import { crawlableRouteEntries } from "../config/crawlableRoutes";
 
 
 const Navbar = () => {
@@ -175,6 +175,14 @@ const Navbar = () => {
           </div>
         </div>
       )}
+
+      <div style={{ display: "none" }} aria-hidden="true">
+        {crawlableRouteEntries.map((route) => (
+          <a key={route.path} href={route.path}>
+            {route.label}
+          </a>
+        ))}
+      </div>
     </nav>
   );
 };

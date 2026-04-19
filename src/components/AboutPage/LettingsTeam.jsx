@@ -37,11 +37,10 @@ const teamMembers = [
 ];
 
 const useIsMobile = () => {
-  const [isMobile, setIsMobile] = React.useState(
-    typeof window !== 'undefined' ? window.innerWidth < 640 : false
-  );
+  const [isMobile, setIsMobile] = React.useState(false);
   React.useEffect(() => {
     const handler = () => setIsMobile(window.innerWidth < 640);
+    handler();
     window.addEventListener('resize', handler);
     return () => window.removeEventListener('resize', handler);
   }, []);

@@ -3,6 +3,7 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import ScrollToTop from "./components/ScrollToTop";
 import ErrorBoundary from "./components/ErrorBoundary";
+import RouteSeo from "./components/RouteSeo";
 
 import Home from "./pages/Home";
 
@@ -43,16 +44,19 @@ function App() {
   return (
     <ErrorBoundary>
       <Router>
+        <RouteSeo />
         <ScrollToTop />
         <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/homeowners" element={<HomeOwner />} />
           <Route path="/let" element={<Let />} />
-          <Route path="/property-management/" element={<Propertymanagement />} />
+          <Route path="/property-management/" element={<Navigate to="/property-management" replace />} />
+          <Route path="/property-management" element={<Propertymanagement />} />
           <Route path="/maintenance" element={<Maintenance />} />
           <Route path="/sell-berkley-estate" element={<SellwithUs />} />
-          <Route path="/about/" element={<AboutPage />} />
+          <Route path="/about/" element={<Navigate to="/about" replace />} />
+          <Route path="/about" element={<AboutPage />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />
           <Route path="/complaints" element={<ComplaintsProcedure />} />
