@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { trustedContent } from "../Data/sectionData"; // Path check pannikonga
+import { trustedContent } from "../Data/sectionData";
 
 const Icon = ({ isOpen }) => {
   return (
@@ -20,10 +20,9 @@ const Icon = ({ isOpen }) => {
 const TrustedPartnerSection = ({ pageId }) => {
   const [activeIndex, setActiveIndex] = useState(null);
 
-  // pageId vachu correct data-vah choose panrom
   const data = trustedContent[pageId];
 
-  if (!data) return null; // ID thappa iruntha safe-ah ethuvum show pannathu
+  if (!data) return null;
 
   const toggle = (index) => {
     setActiveIndex(activeIndex === index ? null : index);
