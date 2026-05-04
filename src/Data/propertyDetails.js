@@ -1,8 +1,3 @@
-export const propertyGalleryCopy = [
-  "At Berkley Estates, we invest time heavily in the visual and digital representation of our client's properties with the in-house marketing department we have.",
-  "Follow us @berkleyestates.",
-  "Our property descriptions are short because we would rather talk with you about the properties we sell and let and of course meet with you and show you around.",
-];
 
 export const propertyDetails = [
   {

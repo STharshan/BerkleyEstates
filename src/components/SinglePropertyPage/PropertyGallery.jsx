@@ -1,5 +1,3 @@
-import { propertyGalleryCopy } from "../../Data/propertyDetails";
-
 const PropertyGallery = ({ property, onOpenGallery }) => {
   const previewImages = property.gallery.slice(0, 6);
 
@@ -45,22 +43,6 @@ const PropertyGallery = ({ property, onOpenGallery }) => {
               </button>
             );
           })}
-        </div>
-
-        <div className="mt-10 max-w-6xl space-y-2 text-[15px] leading-8 text-black md:text-[16px]">
-          <p>{propertyGalleryCopy[0]}</p>
-          <p>
-            Follow us{" "}
-            <a
-              href="https://www.instagram.com/berkleyestates/"
-              target="_blank"
-              rel="noreferrer"
-              className="font-medium text-[#001C56] underline-offset-4 hover:underline"
-            >
-              @berkleyestates
-            </a>
-          </p>
-          <p>{propertyGalleryCopy[2]}</p>
         </div>
       </div>
     </section>

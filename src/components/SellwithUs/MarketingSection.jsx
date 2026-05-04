@@ -9,7 +9,7 @@ const MarketingSection = () => {
           
           {/* Left Content */}
           <div className="w-full ">
-            <p className="text-[15px] md:text-[15px] leading-[24px] text-black  font-primary">
+            <p className="text-[15px] mt-15 md:text-[15px] leading-[24px] text-black  font-primary">
               At <span className="text-black ">Berkley Estates</span>, 
               we don’t just list properties—we actively
               market them to ensure they reach the right buyers. Our dynamic

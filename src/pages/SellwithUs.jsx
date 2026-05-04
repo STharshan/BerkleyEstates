@@ -6,27 +6,27 @@ import Trusted from "../components/SellwithUs/Trusted"
 import MarketingSection from "../components/SellwithUs/MarketingSection"
 import FeaturedProperties from "../Common/FeaturedProperties"
 const SellwithUs = () => {
-    return (
-        <div>
-          <HeroSection
-            title="Sell with us"
-            bgImage="/sellwithuse.webp"
-          />
-          
-          {/* Injecting data using id */}
-          <AboutSection id="SellwithUs" />
+  return (
+    <div>
+      <HeroSection
+        title="Sell with us"
+        bgImage="/sellwithuse.webp"
+      />
 
-          <RightmoveSection />
+      {/* Injecting data using id */}
+      <AboutSection id="SellwithUs" />
 
-          <Partner />
-           <Trusted />
+      <RightmoveSection />
 
-           <MarketingSection />
-           <FeaturedProperties id="SellwithUs"/>
-          
-       
-        </div>
-    )
+      <Partner />
+      <Trusted />
+
+      <MarketingSection />
+      <FeaturedProperties id="SellwithUs" />
+
+
+    </div>
+  )
 }
 
 export default SellwithUs;
