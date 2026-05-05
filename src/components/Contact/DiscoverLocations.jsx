@@ -14,7 +14,7 @@ const locations = [
   {
     image: "/Untitled-design-4-1024x768.png",
     title: "Barrow Upon Soar Office",
-    address: ["4 High Street", "Barrow Upon Soar", "Leicestershire", "LE12 8PY"],
+    address: ["33-35 High St", "Barrow Upon Soar", "Loughborough", "LE12 8PY"],
     phone: "01509 414787",
   },
 ];

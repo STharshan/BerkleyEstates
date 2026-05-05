@@ -5,20 +5,6 @@ import { Phone } from 'lucide-react';
 
 const teamMembers = [
   {
-    name: "Jake Brogden",
-    email: "jake.brogden@berkleyestates.co.uk",
-    phone: "07463 757896",
-    image: "/Jake-Brogden-r2w5no4e45exzwe32y6iwk8psreflxi789ud2j0h6w.webp",
-    ratio: "aspect-[4/5]",
-  },
-  {
-    name: "Sam Nealon",
-    email: "sam.nealon@berkleyestates.co.uk",
-    phone: "0116 279 6161",
-    image: "/Sam-Nealon-r2w5pe5qitv9c5lb7h5lrfsa8x4cornwgp3kombbeo.webp",
-    ratio: "aspect-[5/3.5]",
-  },
-  {
     name: "Nicole Parker",
     email: "nicole.parker@berkleyestates.co.uk",
     phone: "0116 254 4755",

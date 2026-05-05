@@ -31,11 +31,11 @@ const AboutSection = () => {
           </div>
         </div>
 
-        {/* Middle Image Section */}
-        <div className="mt-20 grid grid-cols-1 items-start gap-y-10 md:grid-cols-2 md:gap-x-10 lg:mt-28 lg:grid-cols-3">
+        {/* Middle Image Section - Modified to show in the same row */}
+        <div className="mt-20 grid grid-cols-1 sm:grid-cols-3 gap-6 lg:mt-28">
           {/* Left Image */}
-          <div className="flex justify-center lg:justify-start lg:pt-28">
-            <div className="w-full max-w-105">
+          <div className="flex justify-center">
+            <div className="w-full">
               <img
                 src="a1.webp"
                 alt="Berkley Estates home exterior"
@@ -45,9 +45,9 @@ const AboutSection = () => {
             </div>
           </div>
 
-          {/* Center Image + Text */}
-          <div className="flex flex-col items-center lg:-mt-8">
-            <div className="w-full max-w-105">
+          {/* Center Image */}
+          <div className="flex flex-col items-center">
+            <div className="w-full">
               <img
                 src="a2.webp"
                 alt="Berkley Estates agent"
@@ -55,19 +55,11 @@ const AboutSection = () => {
                 className="block h-auto w-full object-cover"
               />
             </div>
-
-            <div className="mt-8 w-full max-w-105">
-              <p className="text-5 leading-none text-[#1f1f1f]">
-                Building authentic relationships with clients is at the heart of
-                everything we do. We take the time to listen, understand, and
-                connect on a personal level.
-              </p>
-            </div>
           </div>
 
           {/* Right Image */}
-          <div className="flex justify-center lg:justify-end lg:pt-28">
-            <div className="w-full max-w-105">
+          <div className="flex justify-center">
+            <div className="w-full">
               <img
                 src="a3.webp"
                 alt="Berkley Estates interior"

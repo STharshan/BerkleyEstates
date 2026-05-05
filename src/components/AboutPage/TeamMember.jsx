@@ -7,11 +7,11 @@ const TeamMember = () => {
   const [flipped, setFlipped] = useState(false);
 
   const member = {
-    name: "Scott Burrows",
-    role: "Director",
-    email: "scott.burrows@berkleyestates.co.uk",
-    phone: "0116 254 4755",
-    image: "/Scott-Burrows-1024x792.webp"
+    name: "Jake Brogden",
+    role: "Sales Director",
+    email: "jake.brogden@berkleyestates.co.uk",
+    phone: "07463 757896",
+    image: "/Jake-Brogden-r2w5no4e45exzwe32y6iwk8psreflxi789ud2j0h6w.webp"
   };
 
   return (
@@ -41,7 +41,7 @@ const TeamMember = () => {
         >
           {/* Inner flipper */}
           <div
-            className={`relative w-full [aspect-ratio:1024/792] [transform-style:preserve-3d] transition-transform duration-700 ease-in-out ${
+            className={`relative w-full [aspect-ratio:1024/900] [transform-style:preserve-3d] transition-transform duration-700 ease-in-out ${
               flipped ? '[transform:rotateY(180deg)]' : '[transform:rotateY(0deg)]'
             }`}
           >

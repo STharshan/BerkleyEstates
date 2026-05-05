@@ -129,13 +129,13 @@ export default function ValuationPage() {
   return (
     <div className="w-full font-sans text-black">
       {/* HERO SECTION */}
-      <section className="w-full bg-white py-20 md:py-24 lg:py-28 px-4 md:px-8 2xl:pt-40">
+      <section className="w-full bg-white py-20 px-4 md:px-8">
         <div className="max-w-5xl mx-auto text-center">
           <h1 className="text-[52px] md:text-[82px] leading-[1.05] font-normal tracking-tight mb-8">
             Discover your home's value
           </h1>
 
-          <p className="max-w-4xl mx-auto text-[18px] leading-[1.55] text-black">
+          <p className="max-w-4xl mt-15 mx-auto text-[18px] leading-[1.55] text-black">
             Start the process with a complimentary market valuation. We’ll then
             connect you with an agent whose local market knowledge and
             experience is second to none. Book your appointment today.
